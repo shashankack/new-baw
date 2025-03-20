@@ -1,0 +1,22 @@
+.slide-2-wrapper {
+    height: 200vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 50px;
+  }
+  
+  .slide-2-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #f5f2e9;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  
+  h3 {
+    opacity: 0.1; // Initially very low visibility
+  }
+  
