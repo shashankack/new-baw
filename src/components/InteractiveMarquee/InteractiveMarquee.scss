@@ -1,0 +1,241 @@
+.interactive-marquee-container {
+  width: 100%;
+  height: 100vh;
+  background: #111;
+  color: #fcf3e3;
+  position: relative;
+  overflow: hidden;
+  font-family: Helvetica, sans-serif;
+
+  .marquee {
+    position: absolute;
+    overflow: hidden;
+    will-change: transform;
+
+    &--horizontal {
+      top: 50%;
+      left: 0;
+      width: 100%;
+      transform: translateY(-50%);
+
+      .marquee__text {
+        display: inline-block;
+        white-space: nowrap;
+        font-size: 200px;
+
+        span {
+          display: inline-block;
+          padding-right: 1rem;
+        }
+      }
+    }
+
+    &--vertical {
+      top: 70%;
+      right: 42%;
+      overflow: hidden;
+      height: 350%;
+      transform: translateY(-30%) rotate(15deg); //Right tilt
+      display: flex;
+      align-items: center;
+
+      .marquee__images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        a {
+          display: block;
+          overflow: hidden;
+          border-radius: 10px;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+
+          img {
+            width: 750px;
+            height: auto;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .extra-text {
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+
+    p {
+      width: 10ch;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      position: relative;
+      display: inline-block;
+      color: #fcf3e3;
+      background-color: #1563ff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.5rem;
+      padding: 5px 10px;
+      border-radius: 5px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fcf3e3;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: -1;
+      }
+
+      &:hover {
+        color: #1563ff;
+        transform: translateY(-1px);
+
+        &::before {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    .marquee {
+      &--horizontal {
+        .marquee__text {
+          font-size: 150px;
+        }
+      }
+      &--vertical {
+        right: 35%;
+        height: 300%;
+        transform: translateY(-30%) rotate(10deg);
+        .marquee__images {
+          a {
+            img {
+              width: 600px;
+            }
+          }
+        }
+      }
+    }
+    .extra-text {
+      p {
+        font-size: 1.3rem;
+      }
+      a {
+        font-size: 1.3rem;
+        padding: 4px 8px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .marquee {
+      &--horizontal {
+        .marquee__text {
+          font-size: 100px;
+        }
+      }
+      &--vertical {
+        top: 65%;
+        right: 30%;
+        height: 250%;
+        transform: translateY(-20%) rotate(8deg);
+        .marquee__images {
+          a {
+            img {
+              width: 450px;
+            }
+          }
+        }
+      }
+    }
+    .extra-text {
+      p {
+        font-size: 1.1rem;
+      }
+      a {
+        font-size: 1.1rem;
+        padding: 3px 6px;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .marquee {
+      &--horizontal {
+        .marquee__text {
+          font-size: 50px;
+        }
+      }
+      &--vertical {
+        top: 0%;
+        left: -30%;
+        height: 300%;
+        transform: translateY(-15%)  rotate(15deg);
+        .marquee__images {
+          a {
+            img {
+              width: 500px;
+            }
+          }
+        }
+      }
+    }
+    .extra-text {
+      p {
+        font-size: 1rem;
+      }
+      a {
+        font-size: 1rem;
+        padding: 2px 4px;
+      }
+    }
+  }
+
+  @media (max-wdith: 500px) and (orientation: landscape) {
+    height: 80vh; // Adjust container height for landscape
+
+    .marquee {
+      &--horizontal {
+        .marquee__text {
+          font-size: 180px;
+        }
+      }
+      &--vertical {
+        top: 68%;
+        right: 40%;
+        height: 320%;
+        transform: translateY(-25%) rotate(12deg);
+        .marquee__images {
+          a {
+            img {
+              width: 700px;
+            }
+          }
+        }
+      }
+    }
+    .extra-text {
+      p {
+        font-size: 1.4rem;
+      }
+      a {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
