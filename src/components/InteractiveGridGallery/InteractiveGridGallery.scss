@@ -1,0 +1,48 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-card {
+  width: 450px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-out;
+  padding: 10px;
+}
+
+.gallery-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+@media only screen and (max-width: 1024px) {
+  .gallery-card {
+    width: 400px;
+    height: 533px; // 400 * (600/450) ≈ 533px
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 501px) {
+  .gallery-card {
+    width: 350px;
+    height: 467px; // 350 * (600/450) ≈ 467px
+  }
+}
+
+@media only screen and (max-width: 500px) and (orientation: portrait) {
+  .gallery-card {
+    width: 300px;
+    height: 400px; // 300 * (600/450) = 400px
+  }
+}
+
+@media only screen and (max-width: 500px) and (orientation: landscape) {
+  .gallery-card {
+    width: 400px;
+    height: 300px;
+  }
+}

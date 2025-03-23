@@ -1,0 +1,85 @@
+.works-internal-container {
+  display: flex;
+  height: 100vh;
+  background-color: #121212;
+  justify-content: center;
+  overflow: hidden;
+  gap: 30px;
+  padding: 80px 120px;
+
+  .left-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    gap: 30px;
+
+    .top {
+      display: flex;
+      width: 100%;
+      height: 50%;
+      gap: 30px;
+      overflow: hidden;
+
+      .image-slider {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .logo-section {
+        width: 40%;
+        height: 100%;
+        background-color: #fcf3e3;
+        overflow: hidden;
+        padding: 30px;
+
+        .logo {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    .bottom {
+      display: flex;
+      width: 100%;
+      height: 50%;
+      gap: 30px;
+      overflow: hidden;
+
+      .description {
+        width: 50%;
+        height: 100%;
+        padding: 30px;
+        background-color: #fcf3e3;
+
+        p {
+            
+            font-size: 1.1rem;
+            font-weight: 900;
+            color: #121212;
+            text-align: justify
+        };
+      }
+
+      .image-slider {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .right-container {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+  }
+}

@@ -176,7 +176,7 @@ const HomePage = () => {
         scrollTrigger: {
           trigger: ".slide4",
           start: "top+=5000 top",
-          end: "bottom+=6300 bottom",
+          end: "bottom+=7300 bottom",
           scrub: 4,
         },
       }
@@ -186,13 +186,14 @@ const HomePage = () => {
       ".text-slider h3",
       { x: 1300 },
       {
-        x: -500,
+        x: -1000,
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".slide4",
-          start: "top+=5000 top",
+          start: "top+=4000 top",
           end: "bottom+=7500 bottom",
           scrub: 3,
+          markers: true,
         },
       }
     );
