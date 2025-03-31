@@ -193,7 +193,6 @@ const HomePage = () => {
           start: "top+=4000 top",
           end: "bottom+=7500 bottom",
           scrub: 3,
-          markers: true,
         },
       }
     );
