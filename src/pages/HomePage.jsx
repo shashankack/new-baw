@@ -18,9 +18,56 @@ const HomePage = () => {
   const horizontalRef = useRef(null);
   const slidesRef = useRef(null);
 
+  const breakpoints = {
+    sm: {
+      slide1: { start: "top+=100 top", end: "bottom+=400 bottom" },
+      slide2: { start: "top+=1000 top", end: "bottom+=1900 bottom" },
+      slide3: { start: "top+=3500 top", end: "bottom+=3900 bottom" },
+      slide4: { start: "top+=5000 top", end: "bottom+=7300 bottom" },
+      slide5: { start: "top+=7500 top", end: "bottom+=7700 bottom" },
+    },
+
+    md: {
+      slide1: { start: "top+=100 top", end: "bottom+=400 bottom" },
+      slide2: { start: "top+=1000 top", end: "bottom+=1900 bottom" },
+      slide3: { start: "top+=3500 top", end: "bottom+=3900 bottom" },
+      slide4: { start: "top+=5000 top", end: "bottom+=7300 bottom" },
+      slide5: { start: "top+=7500 top", end: "bottom+=7700 bottom" },
+    },
+
+    lg: {
+      slide1: { start: "top+=100 top", end: "bottom+=400 bottom" },
+      slide2: { start: "top+=1000 top", end: "bottom+=1900 bottom" },
+      slide3: { start: "top+=3500 top", end: "bottom+=3900 bottom" },
+      slide4: { start: "top+=5000 top", end: "bottom+=7300 bottom" },
+      slide5: { start: "top+=7500 top", end: "bottom+=7700 bottom" },
+    },
+
+    xl: {
+      slide1: { start: "top+=100 top", end: "bottom+=400 bottom" },
+      slide2: { start: "top+=1000 top", end: "bottom+=1900 bottom" },
+      slide3: { start: "top+=3500 top", end: "bottom+=3900 bottom" },
+      slide4: { start: "top+=5000 top", end: "bottom+=7300 bottom" },
+      slide5: { start: "top+=7500 top", end: "bottom+=7700 bottom" },
+    },
+  };
+
+  const getBreakpoints = () => {
+    const width = window.innerWidth;
+
+    if (width < 640) return breakpoints.sm;
+    if (width < 768) return breakpoints.md;
+    if (width < 1024) return breakpoints.lg;
+    if (width < 1280) return breakpoints.xl;
+
+    return breakpoints.xl;
+  };
+
   const setupAnimations = useCallback(() => {
     const totalWidth = slidesRef.current.scrollWidth - window.innerWidth;
     const titleMoveDistance = window.innerWidth / 1.5;
+    const currentBreakpoint = getBreakpoints();
+    const breakPointForCurrentSize = breakpoints[currentBreakpoint];
 
     // Kill previous animations
     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -93,8 +140,8 @@ const HomePage = () => {
         stagger: 0.3,
         scrollTrigger: {
           trigger: ".slide2",
-          start: "top+=1000 top",
-          end: "bottom+=1900 bottom",
+          start: breakPointForCurrentSize.slide2.start,
+          end: breakPointForCurrentSize.slide2.end,
           scrub: 1,
         },
       }
@@ -111,8 +158,8 @@ const HomePage = () => {
         ease: "back.out(1.7)",
         scrollTrigger: {
           trigger: ".slide2",
-          start: "top+=1900 top",
-          end: "bottom+=1900 bottom",
+          start: breakPointForCurrentSize.slide2.start,
+          end: breakPointForCurrentSize.slide2.end,
         },
         zIndex: -10,
       }
@@ -164,8 +211,8 @@ const HomePage = () => {
         stagger: 0.1,
         scrollTrigger: {
           trigger: ".slide3",
-          start: "top+=3500 top",
-          end: "bottom+=3900 bottom",
+          start: breakPointForCurrentSize.slide3.start,
+          end: breakPointForCurrentSize.slide3.end,
           scrub: 1,
         },
       }
@@ -180,8 +227,8 @@ const HomePage = () => {
         ease: "back.out(1.7)",
         scrollTrigger: {
           trigger: ".slide3",
-          start: "top+=3800 top",
-          end: "bottom+=3900 bottom",
+          start: breakPointForCurrentSize.slide3.start,
+          end: breakPointForCurrentSize.slide3.end,
         },
       }
     );
@@ -195,8 +242,8 @@ const HomePage = () => {
         ease: "none",
         scrollTrigger: {
           trigger: ".slide4",
-          start: "top+=5000 top",
-          end: "bottom+=7300 bottom",
+          start: breakPointForCurrentSize.slide4.start,
+          end: breakPointForCurrentSize.slide4.end,
           scrub: 4,
         },
       }
@@ -210,8 +257,8 @@ const HomePage = () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".slide4",
-          start: "top+=4000 top",
-          end: "bottom+=7500 bottom",
+          start: breakPointForCurrentSize.slide4.start,
+          end: breakPointForCurrentSize.slide4.end,
           scrub: 3,
         },
       }
@@ -229,8 +276,8 @@ const HomePage = () => {
         stagger: 0.1,
         scrollTrigger: {
           trigger: ".slide3",
-          start: "top+=7500 top",
-          end: "bottom+=7700 bottom",
+          start: breakPointForCurrentSize.slide5.start,
+          end: breakPointForCurrentSize.slide5.end,
           scrub: 1,
         },
       }
