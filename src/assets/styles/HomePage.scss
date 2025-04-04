@@ -16,7 +16,7 @@
 }
 
 .outro-video {
-  z-index: 30;
+  z-index: 20;
   position: absolute;
 }
 
@@ -107,7 +107,6 @@
   .text-container {
     width: 100%;
     height: 650px;
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -215,43 +214,99 @@
 }
 
 .slide5 {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-
   .images-container {
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     width: 100%;
-    height: 400px;
-  }
+    box-sizing: border-box;
+    margin-top: 10%;
 
-  img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    position: absolute;
-    transition: transform 0.3s ease-in-out;
+    .image-wrapper {
+      width: 210px;
+      height: 210px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
 
-    &:hover {
-      transform: scale(1.03);
-      cursor: pointer;
+      &:hover {
+        cursor: pointer;
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+      }
+
+      .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0 auto;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(1.2);
+          transition: transform 0.3s ease;
+        }
+      }
+    }
+
+    .black-square {
+      width: 210px;
+      height: 210px;
+      background-color: black;
     }
   }
 
-  .top-image {
-    top: 0;
-  }
-
-  .bottom-image {
-    bottom: 0;
-  }
-
-  .title {
-    font-size: 250px;
+  h2 {
+    font-size: 16rem;
+    margin-inline: auto;
+    text-align: center;
+    width: 100%;
     font-weight: bold;
-    margin: 30px 0;
+    z-index: 10;
+    transition: transform 0.3s ease-out;
+  }
+
+  @media screen and (max-width: 1440px) {
+    .image-wrapper {
+      width: 200px; // Reduce the size of the image and square on smaller screens
+      height: 200px;
+    }
+
+    .black-square {
+      width: 100px;
+      height: 100px;
+      border: 1px solid white;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .image-wrapper {
+      width: 100px; // Reduce the size of the image and square on smaller screens
+      height: 100px;
+    }
+
+    .black-square {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .images-container {
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    .image-wrapper {
+      width: 120px; // Further reduce the size on very small screens
+      height: 120px;
+    }
+
+    .black-square {
+      width: 120px;
+      height: 120px;
+    }
   }
 }

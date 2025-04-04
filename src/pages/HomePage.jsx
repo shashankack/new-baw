@@ -26,7 +26,6 @@ const HomePage = () => {
       slide4: { start: "top+=5000 top", end: "bottom+=7300 bottom" },
       slide5: { start: "top+=7500 top", end: "bottom+=7700 bottom" },
     },
-
     md: {
       slide1: { start: "top+=100 top", end: "bottom+=400 bottom" },
       slide2: { start: "top+=1000 top", end: "bottom+=1900 bottom" },
@@ -34,7 +33,6 @@ const HomePage = () => {
       slide4: { start: "top+=5000 top", end: "bottom+=7300 bottom" },
       slide5: { start: "top+=7500 top", end: "bottom+=7700 bottom" },
     },
-
     lg: {
       slide1: { start: "top+=100 top", end: "bottom+=400 bottom" },
       slide2: { start: "top+=1000 top", end: "bottom+=1900 bottom" },
@@ -42,7 +40,6 @@ const HomePage = () => {
       slide4: { start: "top+=5000 top", end: "bottom+=7300 bottom" },
       slide5: { start: "top+=7500 top", end: "bottom+=7700 bottom" },
     },
-
     xl: {
       slide1: { start: "top+=100 top", end: "bottom+=400 bottom" },
       slide2: { start: "top+=1000 top", end: "bottom+=1900 bottom" },
@@ -50,17 +47,24 @@ const HomePage = () => {
       slide4: { start: "top+=5000 top", end: "bottom+=7300 bottom" },
       slide5: { start: "top+=7500 top", end: "bottom+=7700 bottom" },
     },
+
+    macbook: {
+      slide1: { start: "top+=100 top", end: "bottom+=400 bottom" },
+      slide2: { start: "top+=1000 top", end: "bottom+=1900 bottom" },
+      slide3: { start: "top+=2000 top", end: "bottom+=2800 bottom" },
+      slide4: { start: "top+=3000 top", end: "bottom+=7300 bottom" },
+      slide5: { start: "top+=5500 top", end: "bottom bottom" },
+    },
   };
 
   const getBreakpoints = () => {
     const width = window.innerWidth;
-
-    if (width < 640) return breakpoints.sm;
-    if (width < 768) return breakpoints.md;
-    if (width < 1024) return breakpoints.lg;
-    if (width < 1280) return breakpoints.xl;
-
-    return breakpoints.xl;
+    if (width <= 640) return "sm";
+    if (width <= 768) return "md";
+    if (width <= 1024) return "lg";
+    if (width <= 1280) return "xl";
+    if (width <= 1440) return "macbook";
+    return "xl";
   };
 
   const setupAnimations = useCallback(() => {
@@ -74,10 +78,7 @@ const HomePage = () => {
 
     gsap.fromTo(
       ".video-section video",
-      {
-        scale: 1,
-        rotation: 0,
-      },
+      { scale: 1, rotation: 0 },
       {
         scale: 0.7,
         rotation: -20,
@@ -128,11 +129,7 @@ const HomePage = () => {
     // Slide 2
     gsap.fromTo(
       gsap.utils.toArray(".slide2 h2"),
-      {
-        opacity: 0,
-        y: 0,
-        x: (index) => index * 200,
-      },
+      { opacity: 0, y: 0, x: (index) => index * 200 },
       {
         opacity: 1,
         x: (index) => index * 200,
@@ -164,6 +161,7 @@ const HomePage = () => {
         zIndex: -10,
       }
     );
+
     const slide2 = document.querySelector(".slide2");
     const image = slide2.querySelector("img");
 
@@ -244,7 +242,7 @@ const HomePage = () => {
           trigger: ".slide4",
           start: breakPointForCurrentSize.slide4.start,
           end: breakPointForCurrentSize.slide4.end,
-          scrub: 4,
+          scrub: 1,
         },
       }
     );
@@ -259,7 +257,7 @@ const HomePage = () => {
           trigger: ".slide4",
           start: breakPointForCurrentSize.slide4.start,
           end: breakPointForCurrentSize.slide4.end,
-          scrub: 3,
+          scrub: 1,
         },
       }
     );
@@ -279,6 +277,7 @@ const HomePage = () => {
           start: breakPointForCurrentSize.slide5.start,
           end: breakPointForCurrentSize.slide5.end,
           scrub: 1,
+          markers: true,
         },
       }
     );
@@ -367,18 +366,20 @@ const HomePage = () => {
           <section className="slide slide5">
             <div className="images-container">
               {productionImages.map((src, i) => (
-                <img
-                  src={src}
-                  alt=""
-                  key={i}
-                  className={i % 2 === 0 ? "top-image" : "bottom-image"}
-                  style={{
-                    left: `calc(${(i / (productionImages.length - 1)) * 100}%)`,
-                  }}
-                />
+                <React.Fragment key={i}>
+                  <div className="image-wrapper">
+                    <img
+                      src={src}
+                      alt={`Production Image ${i + 1}`}
+                      className="image"
+                    />
+                  </div>
+                  <div className="black-square"></div>
+                </React.Fragment>
               ))}
             </div>
-            <h2 className="title">PRODUCTION</h2>
+
+            <h2>PRODUCTION</h2>
           </section>
         </div>
       </section>
@@ -398,12 +399,11 @@ const HomePage = () => {
 };
 
 const VideoSection = ({ src }) => (
-  <section className="video-section ">
+  <section className="video-section">
     <video src={src} autoPlay muted playsInline loop preload="none" />
   </section>
 );
 
-// Helper component: Horizontal scroll video slide
 const VideoSlide = ({ src, className }) => (
   <section className={className}>
     <video src={src} autoPlay loop muted playsInline preload="none" />
