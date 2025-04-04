@@ -25,6 +25,25 @@ const HomePage = () => {
     // Kill previous animations
     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 
+    gsap.fromTo(
+      ".video-section video",
+      {
+        scale: 1,
+        rotation: 0,
+      },
+      {
+        scale: 0.7,
+        rotation: -20,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".video-section",
+          start: "top top",
+          end: "bottom+=400 top",
+          scrub: true,
+        },
+      }
+    );
+
     // Horizontal Scroll
     gsap.to(slidesRef.current, {
       x: -totalWidth,
@@ -95,6 +114,7 @@ const HomePage = () => {
           start: "top+=1900 top",
           end: "bottom+=1900 bottom",
         },
+        zIndex: -10,
       }
     );
     const slide2 = document.querySelector(".slide2");
@@ -317,14 +337,21 @@ const HomePage = () => {
       </section>
 
       {/* Outro Video */}
-      <VideoSection src={clientsVideo} />
+      <video
+        className="outro-video"
+        src={clientsVideo}
+        autoPlay
+        muted
+        playsInline
+        loop
+        preload="none"
+      />
     </>
   );
 };
 
-// Helper component: Lazy-loaded, optimized video section
 const VideoSection = ({ src }) => (
-  <section className="video-section">
+  <section className="video-section ">
     <video src={src} autoPlay muted playsInline loop preload="none" />
   </section>
 );
