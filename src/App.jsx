@@ -8,8 +8,8 @@ import Navbar from "./components/Navbar/Navbar";
 import About from "./pages/About";
 import InteractiveGridGallery from "./components/InteractiveGridGallery/InteractiveGridGallery";
 import { worksData } from "./data";
-import Branding from "./pages/Services/branding";
-import Web from "./pages/Services/web";
+import Branding from "./pages/Services/Branding";
+import Web from "./pages/Services/Web";
 
 const AppRoutes = ({ isMobile }) => {
   const location = useLocation();
