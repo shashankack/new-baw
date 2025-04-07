@@ -1,11 +1,12 @@
 .navbar {
   background: transparent;
+
   .top-navbar {
     position: fixed;
     padding: 20px;
     top: 0;
     right: 10px;
-    z-index: 1;
+    z-index: 999;
 
     .logo-wrapper {
       position: relative;
@@ -27,6 +28,11 @@
         z-index: 2;
       }
 
+      .black-logo {
+        transform: translateY(0%);
+        z-index: 2;
+      }
+
       .blue-logo {
         transform: translateY(115%);
         z-index: 1;
@@ -34,6 +40,10 @@
 
       &:hover {
         .white-logo {
+          transform: translateY(-100%);
+        }
+
+        .black-logo {
           transform: translateY(-100%);
         }
 
@@ -80,6 +90,11 @@
             transition: transform 0.4s ease;
           }
 
+          .black {
+            color: #080808;
+            transform: translateY(0%);
+          }
+
           .white {
             color: white;
             transform: translateY(0%);
@@ -91,6 +106,10 @@
           }
 
           &:hover {
+            .black {
+              transform: translateY(-100%);
+            }
+
             .white {
               transform: translateY(-100%);
             }

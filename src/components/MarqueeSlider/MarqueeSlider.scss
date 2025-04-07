@@ -1,0 +1,20 @@
+.marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.marquee-slider {
+  display: flex;
+  white-space: nowrap;
+}
+
+.marquee-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #1563FF;
+  display: inline-block;
+  letter-spacing: -8px;
+  padding-right: 2rem;
+  font-size: 100px;
+}

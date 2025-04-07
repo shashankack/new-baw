@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import IntroLoader from "./components/IntroLoader/IntroLoader";
 import WorksInternal from "./components/WorksInternal/WorksInternal";
 import HomePage from "./pages/HomePage";
@@ -8,6 +8,38 @@ import Navbar from "./components/Navbar/Navbar";
 import About from "./pages/About";
 import InteractiveGridGallery from "./components/InteractiveGridGallery/InteractiveGridGallery";
 import { worksData } from "./data";
+import Branding from "./pages/Services/branding";
+import Web from "./pages/Services/web";
+
+const AppRoutes = ({ isMobile }) => {
+  const location = useLocation();
+  const RenderedPage = isMobile ? MobileHomePage : HomePage;
+
+  // Define paths that need dark navbar
+  const darkRoutes = ["/branding", "/web"];
+  const isDark = darkRoutes.includes(location.pathname);
+
+  return (
+    <>
+      <Navbar dark={isDark} />
+      <Routes>
+        <Route
+          path="/"
+          element={<IntroLoader nextComponent={RenderedPage} />}
+        />
+        <Route path="/about" element={<About />} />
+        <Route
+          path="/works"
+          element={<InteractiveGridGallery data={worksData} />}
+        />
+        <Route path="/works/:slug" element={<WorksInternal />} />
+        <Route path="/branding" element={<Branding />} />
+        <Route path="/web" element={<Web />} />
+        <Route path="*" element={"NOT FOUND"} />
+      </Routes>
+    </>
+  );
+};
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -19,20 +51,9 @@ function App() {
     return () => window.removeEventListener("resize", checkScreen);
   }, []);
 
-  const RenderedPage = isMobile ? MobileHomePage : HomePage;
-
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route
-          path="/"
-          element={<IntroLoader nextComponent={RenderedPage} />}
-        />
-        <Route path="/about" element={<About />} />
-        <Route path="/works" element={<InteractiveGridGallery  data={worksData}/>} />
-        <Route path="/works/:slug" element={<WorksInternal />} />
-      </Routes>
+      <AppRoutes isMobile={isMobile} />
     </BrowserRouter>
   );
 }

@@ -11,6 +11,7 @@ import stepImage from "../assets/images/slide2.png";
 import webVideo from "../assets/videos/mellow.mp4";
 
 import { productionImages, socialsImages } from "../data";
+import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -304,7 +305,11 @@ const HomePage = () => {
                 ))}
             </div>
             <div className="image-container">
-              <img src={stepImage} alt="Step" loading="lazy" />
+              <img
+                src={stepImage}
+                alt="Step"
+                onClick={() => (window.location.href = "/branding")}
+              />
             </div>
           </section>
 
@@ -322,6 +327,7 @@ const HomePage = () => {
                 playsInline
                 loop
                 preload="none"
+                onClick={() => (window.location.href = "/web")}
               />
             </div>
           </section>
