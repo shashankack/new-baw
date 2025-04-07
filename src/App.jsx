@@ -35,7 +35,6 @@ const AppRoutes = ({ isMobile }) => {
         <Route path="/works/:slug" element={<WorksInternal />} />
         <Route path="/branding" element={<Branding />} />
         <Route path="/web" element={<Web />} />
-        <Route path="/socials" element={"COMING SOON"} />
         <Route path="*" element={"NOT FOUND"} />
       </Routes>
     </>

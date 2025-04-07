@@ -35,7 +35,8 @@ const HomePage = () => {
       slide5: { start: "top+=5500 top", end: "bottom+=5800 bottom" },
     },
 
-    xxl: { //
+    xxl: {
+      //
       slide1: { start: "top+=100 top", end: "bottom+=400 bottom" },
       slide2: { start: "top+=1000 top", end: "bottom+=1900 bottom" },
       slide3: { start: "top+=2500 top", end: "bottom+=2800 bottom" },
@@ -197,7 +198,6 @@ const HomePage = () => {
           start: breakPointForCurrentSize.slide3.start,
           end: breakPointForCurrentSize.slide3.end,
           scrub: 1,
-          markers: true,
         },
       }
     );
@@ -344,7 +344,14 @@ const HomePage = () => {
             </div>
             <div className="cta-content">
               <p>GET YOUR FEED ALIGNED WITH BAW STUDIO</p>
-              <button>KNOW MORE</button>
+              <button
+                onClick={() => {
+                  window.location.href =
+                    "https://www.instagram.com/baw.studios/";
+                }}
+              >
+                KNOW MORE
+              </button>
             </div>
 
             <div className="text-slider" style={{ color: "#1563FF" }}>
