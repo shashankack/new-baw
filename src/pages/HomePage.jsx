@@ -30,15 +30,15 @@ const HomePage = () => {
     xl: {
       slide1: { start: "top+=100 top", end: "bottom+=400 bottom" },
       slide2: { start: "top+=1000 top", end: "bottom+=1900 bottom" },
-      slide3: { start: "top+=3500 top", end: "bottom+=3900 bottom" },
-      slide4: { start: "top+=5000 top", end: "bottom+=7300 bottom" },
-      slide5: { start: "top+=7500 top", end: "bottom+=7700 bottom" },
+      slide3: { start: "top+=2000 top", end: "bottom+=2800 bottom" },
+      slide4: { start: "top+=3000 top", end: "bottom+=7300 bottom" },
+      slide5: { start: "top+=5500 top", end: "bottom+=5800 bottom" },
     },
 
-    macbook: {
+    xxl: { //
       slide1: { start: "top+=100 top", end: "bottom+=400 bottom" },
       slide2: { start: "top+=1000 top", end: "bottom+=1900 bottom" },
-      slide3: { start: "top+=2000 top", end: "bottom+=2800 bottom" },
+      slide3: { start: "top+=2500 top", end: "bottom+=2800 bottom" },
       slide4: { start: "top+=3000 top", end: "bottom+=7300 bottom" },
       slide5: { start: "top+=5500 top", end: "bottom+=5800 bottom" },
     },
@@ -47,8 +47,8 @@ const HomePage = () => {
   const getBreakpoints = () => {
     const width = window.innerWidth;
     if (width <= 1024) return "lg";
-    if (width <= 1280) return "xl";
-    if (width <= 1440) return "macbook";
+    if (width <= 1440) return "xl";
+    if (width <= 1512) return "xxl";
     return "xl";
   };
 
@@ -197,6 +197,7 @@ const HomePage = () => {
           start: breakPointForCurrentSize.slide3.start,
           end: breakPointForCurrentSize.slide3.end,
           scrub: 1,
+          markers: true,
         },
       }
     );

@@ -293,6 +293,21 @@
   }
 
   // Large screen sizes - default behavior
+  @media screen and (max-width: 1512px) {
+    .image-wrapper {
+      width:  160px !important; // Force change to 150px
+      height: 160px !important; // Force change to 150px
+    }
+
+    .black-square {
+      width:  160px !important; // Force change to 150px
+      height: 160px !important; // Force change to 150px
+    }
+  }
+
+  h2 {
+    font-size: 12rem;
+  }
   @media screen and (max-width: 1440px) {
     .image-wrapper {
       width: 150px !important; // Force change to 150px
