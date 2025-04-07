@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 
 import introVideo from "../assets/videos/intro_video.mp4";
-import clientsVideo from "../assets/videos/clients.mp4";
+import clientsVideo from "../assets/videos/clients_vid.mp4";
 import carVid from "../assets/videos/car_timelapse.mp4";
 import stepImage from "../assets/images/slide2.png";
 import webVideo from "../assets/videos/mellow.mp4";
@@ -19,20 +19,6 @@ const HomePage = () => {
   const slidesRef = useRef(null);
 
   const breakpoints = {
-    sm: {
-      slide1: { start: "top+=100 top", end: "bottom+=400 bottom" },
-      slide2: { start: "top+=1000 top", end: "bottom+=1900 bottom" },
-      slide3: { start: "top+=3500 top", end: "bottom+=3900 bottom" },
-      slide4: { start: "top+=5000 top", end: "bottom+=7300 bottom" },
-      slide5: { start: "top+=7500 top", end: "bottom+=7700 bottom" },
-    },
-    md: {
-      slide1: { start: "top+=100 top", end: "bottom+=400 bottom" },
-      slide2: { start: "top+=1000 top", end: "bottom+=1900 bottom" },
-      slide3: { start: "top+=3500 top", end: "bottom+=3900 bottom" },
-      slide4: { start: "top+=5000 top", end: "bottom+=7300 bottom" },
-      slide5: { start: "top+=7500 top", end: "bottom+=7700 bottom" },
-    },
     lg: {
       slide1: { start: "top+=100 top", end: "bottom+=400 bottom" },
       slide2: { start: "top+=1000 top", end: "bottom+=1900 bottom" },
@@ -53,14 +39,12 @@ const HomePage = () => {
       slide2: { start: "top+=1000 top", end: "bottom+=1900 bottom" },
       slide3: { start: "top+=2000 top", end: "bottom+=2800 bottom" },
       slide4: { start: "top+=3000 top", end: "bottom+=7300 bottom" },
-      slide5: { start: "top+=5500 top", end: "bottom bottom" },
+      slide5: { start: "top+=5500 top", end: "bottom+=5800 bottom" },
     },
   };
 
   const getBreakpoints = () => {
     const width = window.innerWidth;
-    if (width <= 640) return "sm";
-    if (width <= 768) return "md";
     if (width <= 1024) return "lg";
     if (width <= 1280) return "xl";
     if (width <= 1440) return "macbook";
@@ -277,7 +261,6 @@ const HomePage = () => {
           start: breakPointForCurrentSize.slide5.start,
           end: breakPointForCurrentSize.slide5.end,
           scrub: 1,
-          markers: true,
         },
       }
     );
