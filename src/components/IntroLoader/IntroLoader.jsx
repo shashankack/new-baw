@@ -48,7 +48,8 @@ const IntroLoader = ({ nextComponent: NextComponent }) => {
           </div>
         </div>
       )}
-      {NextComponent && <NextComponent />}
+
+      {hideLoader && NextComponent && <NextComponent />}
     </>
   );
 };

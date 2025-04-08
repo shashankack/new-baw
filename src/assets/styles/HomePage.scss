@@ -50,7 +50,7 @@
     display: flex;
     flex-wrap: nowrap;
     height: 100vh;
-    width: fit-content; // Automatically expand for the number of slides
+    width: fit-content;
   }
 
   .slide {
@@ -292,16 +292,15 @@
     transition: transform 0.3s ease-out;
   }
 
-  // Large screen sizes - default behavior
   @media screen and (max-width: 1512px) {
     .image-wrapper {
-      width:  160px !important; // Force change to 150px
-      height: 160px !important; // Force change to 150px
+      width: 160px !important;
+      height: 160px !important;
     }
 
     .black-square {
-      width:  160px !important; // Force change to 150px
-      height: 160px !important; // Force change to 150px
+      width: 160px !important;
+      height: 160px !important;
     }
   }
 
@@ -310,13 +309,13 @@
   }
   @media screen and (max-width: 1440px) {
     .image-wrapper {
-      width: 150px !important; // Force change to 150px
-      height: 150px !important; // Force change to 150px
+      width: 150px !important;
+      height: 150px !important;
     }
 
     .black-square {
-      width: 150px !important; // Force change to 150px
-      height: 150px !important; // Force change to 150px
+      width: 150px !important;
+      height: 150px !important;
     }
   }
 

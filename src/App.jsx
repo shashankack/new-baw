@@ -15,7 +15,6 @@ const AppRoutes = ({ isMobile }) => {
   const location = useLocation();
   const RenderedPage = isMobile ? MobileHomePage : HomePage;
 
-  // Define paths that need dark navbar
   const darkRoutes = ["/branding", "/web"];
   const isDark = darkRoutes.includes(location.pathname);
 
@@ -45,7 +44,7 @@ function App() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const checkScreen = () => setIsMobile(window.innerWidth < 500);
+    const checkScreen = () => setIsMobile(window.innerWidth <= 500);
     checkScreen();
     window.addEventListener("resize", checkScreen);
     return () => window.removeEventListener("resize", checkScreen);

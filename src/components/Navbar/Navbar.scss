@@ -122,4 +122,21 @@
       }
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .top-navbar {
+      padding: 10px;
+      right: 5px;
+    }
+
+    .bottom-navbar {
+      ul {
+        padding: 10px;
+
+        li {
+          margin: 5px 0;
+        }
+      }
+    }
+  }
 }
