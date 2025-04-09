@@ -1,12 +1,13 @@
 .navbar {
-  background: transparent;
+  width: 100%;
+  position: fixed;
+  z-index: 30;
 
   .top-navbar {
-    position: fixed;
-    padding: 20px;
-    top: 0;
-    right: 10px;
-    z-index: 999;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 40px;
 
     .logo-wrapper {
       position: relative;
@@ -56,20 +57,20 @@
 
   .bottom-navbar {
     position: fixed;
-    z-index: 30;
+    z-index: 10;
     width: 100%;
     bottom: 0;
+    right: 0;
 
     ul {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-evenly;
       align-items: center;
       padding: 20px;
       width: 100%;
 
       li {
         list-style: none;
-        margin: 0 10px;
 
         a {
           position: relative;
@@ -85,7 +86,7 @@
             top: 0;
             width: 100%;
             text-align: center;
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: bold;
             transition: transform 0.4s ease;
           }
@@ -124,17 +125,31 @@
   }
 
   @media screen and (max-width: 768px) {
-    .top-navbar {
-      padding: 10px;
-      right: 5px;
-    }
-
     .bottom-navbar {
       ul {
         padding: 10px;
 
         li {
           margin: 5px 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .bottom-navbar {
+      ul {
+        padding: 10px;
+
+        li {
+          a {
+            height: 18px;
+            width: 80px;
+
+            span {
+              font-size: 1rem;
+            }
+          }
         }
       }
     }

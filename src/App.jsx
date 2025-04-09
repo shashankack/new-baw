@@ -10,6 +10,7 @@ import InteractiveGridGallery from "./components/InteractiveGridGallery/Interact
 import { worksData } from "./data";
 import Branding from "./pages/Services/Branding";
 import Web from "./pages/Services/Web";
+import Footer from "./components/Footer/Footer";
 
 const AppRoutes = ({ isMobile }) => {
   const location = useLocation();
@@ -36,6 +37,7 @@ const AppRoutes = ({ isMobile }) => {
         <Route path="/web" element={<Web />} />
         <Route path="*" element={"NOT FOUND"} />
       </Routes>
+      <Footer />
     </>
   );
 };

@@ -17,7 +17,7 @@
 
 .outro-video {
   z-index: 20;
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100vh;
 
@@ -120,6 +120,19 @@
     width: 100%;
     height: 600px;
     z-index: 100;
+    position: relative;
+
+    .video-glow {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(circle, #1563ff 0%, transparent 70%);
+      opacity: 0;
+      mix-blend-mode: screen;
+      z-index: 2;
+    }
 
     video {
       width: 100%;
@@ -127,6 +140,8 @@
       object-fit: cover;
       cursor: pointer;
       border-radius: 20px;
+      position: relative;
+      z-index: 1;
     }
   }
   .text-container {
@@ -290,6 +305,14 @@
     font-weight: bold;
     z-index: 10;
     transition: transform 0.3s ease-out;
+  }
+
+  .footer-section {
+    background: #000;
+    padding: 4rem 2rem;
+    color: #fff;
+    text-align: center;
+    height: 300px;
   }
 
   @media screen and (max-width: 1512px) {

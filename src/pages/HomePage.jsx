@@ -5,18 +5,20 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 
 import introVideo from "../assets/videos/intro_video.mp4";
-import clientsVideo from "../assets/videos/clients_vid.mp4";
+import clientsVideo from "../assets/videos/clients.mp4";
 import carVid from "../assets/videos/car_timelapse.mp4";
 import stepImage from "../assets/images/slide2.png";
 import webVideo from "../assets/videos/mellow.mp4";
 
 import { productionImages, socialsImages } from "../data";
+import Footer from "../components/Footer/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const HomePage = () => {
   const horizontalRef = useRef(null);
   const slidesRef = useRef(null);
+  const slide3VideoRef = useRef(null);
 
   const breakpoints = {
     lg: {
@@ -29,7 +31,7 @@ const HomePage = () => {
     xl: {
       slide1: { start: "top+=100 top", end: "bottom+=400 bottom" },
       slide2: { start: "top+=1000 top", end: "bottom+=1900 bottom" },
-      slide3: { start: "top+=2000 top", end: "bottom+=2800 bottom" },
+      slide3: { start: "top+=2600 top", end: "bottom+=2800 bottom" },
       slide4: { start: "top+=3000 top", end: "bottom+=7300 bottom" },
       slide5: { start: "top+=5500 top", end: "bottom+=5800 bottom" },
     },
@@ -42,6 +44,13 @@ const HomePage = () => {
       slide4: { start: "top+=3000 top", end: "bottom+=7300 bottom" },
       slide5: { start: "top+=5500 top", end: "bottom+=5800 bottom" },
     },
+    xxxl: {
+      slide1: { start: "top+=100 top", end: "bottom+=400 bottom" },
+      slide2: { start: "top+=1000 top", end: "bottom+=1900 bottom" },
+      slide3: { start: "top+=3700 top", end: "bottom+=2800 bottom" },
+      slide4: { start: "top+=4000 top", end: "bottom+=7300 bottom" },
+      slide5: { start: "top+=7400 top", end: "bottom+=7800 bottom" },
+    },
   };
 
   const getBreakpoints = () => {
@@ -49,7 +58,8 @@ const HomePage = () => {
     if (width <= 1024) return "lg";
     if (width <= 1440) return "xl";
     if (width <= 1512) return "xxl";
-    return "xl";
+    if (width > 1512) return "xxxl";
+    return "xxxl";
   };
 
   const setupAnimations = useCallback(() => {
@@ -201,6 +211,44 @@ const HomePage = () => {
       }
     );
 
+    if (slide3VideoRef.current) {
+      const video = slide3VideoRef.current;
+
+      video.addEventListener("mousemove", (e) => {
+        const rect = video.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const percentX = (x / rect.width - 0.5) * 2;
+        const percentY = (y / rect.height - 0.5) * 2;
+
+        const glowX = percentX * 5;
+        const glowY = percentY * 5;
+
+        gsap.to(video, {
+          boxShadow: `${glowX}px ${glowY}px 5px #1563FF`,
+          rotateX: -percentY * 5,
+          rotateY: percentX * 5,
+          scale: 1.1,
+          transformPerspective: 800,
+          transformOrigin: "center",
+          duration: 0.3,
+          ease: "power2.out",
+        });
+      });
+
+      video.addEventListener("mouseleave", () => {
+        gsap.to(video, {
+          boxShadow: "0px 0px 0px transparent",
+          rotateX: 0,
+          rotateY: 0,
+          scale: 1,
+          duration: 0.5,
+          ease: "power2.out",
+        });
+      });
+    }
+
     gsap.fromTo(
       ".slide3 video",
       { y: "-100%", opacity: 0 },
@@ -321,6 +369,7 @@ const HomePage = () => {
             </div>
             <div className="video-container">
               <video
+                ref={slide3VideoRef}
                 src={webVideo}
                 muted
                 autoPlay
@@ -381,15 +430,17 @@ const HomePage = () => {
       </section>
 
       {/* Outro Video */}
-      <video
-        className="outro-video"
-        src={clientsVideo}
-        autoPlay
-        muted
-        playsInline
-        loop
-        preload="none"
-      />
+      <div className="outro-video">
+        <video
+          src={clientsVideo}
+          autoPlay
+          muted
+          playsInline
+          loop
+          preload="none"
+        />
+        
+      </div>
     </>
   );
 };
