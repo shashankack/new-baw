@@ -10,7 +10,7 @@ import carVid from "../assets/videos/car_timelapse.mp4";
 import stepImage from "../assets/images/slide2.png";
 import webVideo from "../assets/videos/mellow.mp4";
 
-import { productionImages, socialsImages } from "../data";
+import { productionData, socialsImages } from "../data";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -409,12 +409,15 @@ const HomePage = () => {
           {/* Slide 5 */}
           <section className="slide slide5">
             <div className="images-container">
-              {productionImages.map((src, i) => (
-                <React.Fragment key={i}>
+              {productionData.map((item, i) => (
+                <React.Fragment key={item.id}>
                   <div className="image-wrapper">
                     <img
-                      src={src}
-                      alt={`Production Image ${i + 1}`}
+                      src={item.thumbnail}
+                      alt={item.title}
+                      onClick={() => {
+                        window.location.href = item.redirect;
+                      }}
                       className="image"
                     />
                   </div>

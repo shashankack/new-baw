@@ -1,11 +1,15 @@
 import "./ServicesSection.scss";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, Fragment } from "react";
 
 import carTimelapse from "../../assets/videos/car_timelapse.mp4";
 import poster from "../../assets/images/branding_poster.png";
 import mellowVideo from "../../assets/videos/mellow.mp4";
+
+import { Grid, Typography } from "@mui/material";
+
+import { socialsImages, productionData } from "../../data";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -88,6 +92,36 @@ const ServicesSection = () => {
         }
       );
     });
+
+    gsap.fromTo(
+      ".section-four .image-slider",
+      { y: -100 },
+      {
+        y: -800,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".section-four",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".section-four .text-slider h3",
+      { x: 300 },
+      {
+        x: -1000,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".section-four",
+          start: "top+=300 bottom",
+          end: "bottom top",
+          scrub: 4,
+        },
+      }
+    );
   }, []);
   return (
     <section className="mobile-services-section">
@@ -119,11 +153,88 @@ const ServicesSection = () => {
 
       <section className="section-three">
         <h2>WEB</h2>
-        <video src={mellowVideo} autoPlay playsInline loop muted />
+        <video
+          src={mellowVideo}
+          autoPlay
+          playsInline
+          loop
+          muted
+          onClick={() => (window.location.href = "/web")}
+        />
         <h2>SITE</h2>
       </section>
 
-      <section className="section-four"></section>
+      <section className="section-four">
+        <div className="image-slider-wrapper">
+          <div className="image-slider">
+            {socialsImages.map((src, i) => (
+              <img src={src} alt={`social-${i}`} key={i} />
+            ))}
+          </div>
+        </div>
+        <div className="text-slider">
+          <h3>
+            GET YOUR FEED ALIGNED & GET YOUR FEED ALIGNED & GET YOUR FEED
+            ALIGNED
+          </h3>
+        </div>
+      </section>
+
+      <section className="section-five">
+        <Typography
+          variant="h6"
+          sx={{
+            fontSize: { xs: "3rem", sm: "4rem", md: "5rem" },
+            fontWeight: 700,
+            color: "#fff",
+            textAlign: "center",
+            mb: 4,
+          }}
+        >
+          PRODUCTION
+        </Typography>
+        <Grid container spacing={0} justifyContent="center">
+          {productionData.slice(0, -1).map((item, i) => {
+            const isEvenRow = Math.floor(i / 2) % 2 === 0;
+
+            return (
+              <Fragment key={item.id}>
+                {isEvenRow ? (
+                  <>
+                    <Grid size={{ xs: 3, sm: 4 }}>
+                      <div className="image-wrapper">
+                        <img
+                          src={item.thumbnail}
+                          alt={item.title}
+                          onClick={() => (window.location.href = item.redirect)}
+                        />
+                      </div>
+                    </Grid>
+                    <Grid size={{ xs: 3, sm: 4 }}>
+                      <div className="black-square" />
+                    </Grid>
+                  </>
+                ) : (
+                  <>
+                    <Grid size={{ xs: 3, sm: 4 }}>
+                      <div className="black-square" />
+                    </Grid>
+                    <Grid size={{ xs: 3, sm: 4 }}>
+                      <div className="image-wrapper">
+                        <img
+                          src={item.thumbnail}
+                          alt={item.title}
+                          onClick={() => (window.location.href = item.redirect)}
+                        />
+                      </div>
+                    </Grid>
+                  </>
+                )}
+              </Fragment>
+            );
+          })}
+        </Grid>
+      </section>
     </section>
   );
 };

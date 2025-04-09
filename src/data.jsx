@@ -240,16 +240,61 @@ export const socialsImages = [
   yawnMockup,
 ];
 
-export const productionImages = [
-  productionFastrack,
-  productionAureka,
-  productionLanguage,
-  productionBenz,
-  productionAmpere,
-  productionShakaharry,
-  productionSwitch,
-  productionCocaCola,
-  productionId,
+export const productionData = [
+  {
+    id: 1,
+    thumbnail: productionAmpere,
+    redirect: "/works/ampere",
+    title: "Ampere",
+  },
+  {
+    id: 2,
+    thumbnail: productionAureka,
+    redirect: "/works/aureka",
+    title: "Aureka",
+  },
+  {
+    id: 3,
+    thumbnail: productionBenz,
+    redirect: "/works/bharat-benz",
+    title: "Bharat Benz",
+  },
+  {
+    id: 4,
+    thumbnail: productionFastrack,
+    redirect: "/works/fastrack",
+    title: "Fastrack",
+  },
+  {
+    id: 5,
+    thumbnail: productionCocaCola,
+    redirect: "/works/coca-cola",
+    title: "Coca Cola",
+  },
+  {
+    id: 6,
+    thumbnail: productionId,
+    redirect: "/works/id",
+    title: "ID",
+  },
+  {
+    id: 7,
+    thumbnail: productionLanguage,
+    redirect: "/works/language",
+    title: "Language",
+  },
+  {
+    id: 8,
+    thumbnail: productionShakaharry,
+    redirect: "/works/shakaharry",
+    title: "Shakaharry",
+  },
+  {
+    id: 9,
+    thumbnail: productionSwitch,
+    redirect: "/works/switch",
+    title: "Switch",
+  },
 ];
 
 export const worksData = [

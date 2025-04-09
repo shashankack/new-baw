@@ -205,7 +205,7 @@
 
     p {
       width: 10ch;
-      color: #1563ff;
+      color: #fcf3e3;
     }
 
     button {
@@ -214,9 +214,9 @@
       border: none;
       font-size: 26px;
       cursor: pointer;
-      color: white;
+      color: #fcf3e3;
       position: relative;
-      background-image: linear-gradient(to right, #1563ff 50%, white 50%);
+      background-image: linear-gradient(to right, #1563ff 50%, #fcf3e3 50%);
       background-size: 200% 100%;
       background-position: 100% 0;
       background-clip: text;
