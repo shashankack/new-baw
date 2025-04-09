@@ -11,7 +11,6 @@ import stepImage from "../assets/images/slide2.png";
 import webVideo from "../assets/videos/mellow.mp4";
 
 import { productionImages, socialsImages } from "../data";
-import Footer from "../components/Footer/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -439,7 +438,6 @@ const HomePage = () => {
           loop
           preload="none"
         />
-        
       </div>
     </>
   );

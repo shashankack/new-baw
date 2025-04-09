@@ -1,11 +1,3 @@
-$arrow-size-desktop: 20px;
-$arrow-size-largeTablet: 18px;
-$arrow-size-tablet: 16px;
-$arrow-size-mobile: 10px;
-
-$peakopacity: 0.4;
-$speed: 2.5s;
-
 .stacking-images-container {
   position: relative;
   width: 100%;
@@ -29,8 +21,8 @@ $speed: 2.5s;
       position: absolute;
       top: 90%;
       left: 50%;
-      width: $arrow-size-desktop;
-      height: $arrow-size-desktop;
+      width: 20px;
+      height: 20px;
       transform: translate(-50%, -10%);
 
       &:before,
@@ -39,53 +31,41 @@ $speed: 2.5s;
         position: absolute;
         width: 100%;
         height: 100%;
-        border-left: $arrow-size-desktop / 3 solid rgba(0, 0, 0, $peakopacity);
-        border-bottom: $arrow-size-desktop / 3 solid rgba(0, 0, 0, $peakopacity);
+        border-left: 20px / 3 solid rgba(0, 0, 0, 0.4);
+        border-bottom: 20px / 3 solid rgba(0, 0, 0, 0.4);
       }
 
       &:before {
-        transform: translate(
-            $arrow-size-desktop / 3,
-            $arrow-size-desktop * 4 / 3
-          )
-          rotate(-45deg);
-        animation: arrows $speed linear infinite;
+        transform: translate(20px / 3, 20px * 4 / 3) rotate(-45deg);
+        animation: arrows 2.5s linear infinite;
       }
 
       &:after {
-        transform: translate($arrow-size-desktop * 2 / 3, 0px) rotate(-45deg);
-        animation: arrows $speed linear infinite $speed / -2;
+        transform: translate(20px * 2 / 3, 0px) rotate(-45deg);
+        animation: arrows 2.5s linear infinite 2.5s / -2;
       }
     }
 
     @keyframes arrows {
       0% {
-        border-left: $arrow-size-desktop / 3 solid rgba(0, 0, 0, 0);
-        border-bottom: $arrow-size-desktop / 3 solid rgba(0, 0, 0, 0);
-        transform: translate(
-            $arrow-size-desktop / -6,
-            $arrow-size-desktop * 4 / -6
-          )
-          rotate(-45deg);
+        border-left: 20px / 3 solid rgba(0, 0, 0, 0);
+        border-bottom: 20px / 3 solid rgba(0, 0, 0, 0);
+        transform: translate(20px / -6, 20px * 4 / -6) rotate(-45deg);
       }
       10%,
       90% {
-        border-left: $arrow-size-desktop / 3 solid rgba(0, 0, 0, 0);
-        border-bottom: $arrow-size-desktop / 3 solid rgba(0, 0, 0, 0);
+        border-left: 20px / 3 solid rgba(0, 0, 0, 0);
+        border-bottom: 20px / 3 solid rgba(0, 0, 0, 0);
       }
       50% {
-        border-left: $arrow-size-desktop / 3 solid rgba(0, 0, 0, $peakopacity);
-        border-bottom: $arrow-size-desktop / 3 solid rgba(0, 0, 0, $peakopacity);
-        transform: translate($arrow-size-desktop / -6, 0px) rotate(-45deg);
+        border-left: 20px / 3 solid rgba(0, 0, 0, 0.4);
+        border-bottom: 20px / 3 solid rgba(0, 0, 0, 0.4);
+        transform: translate(20px / -6, 0px) rotate(-45deg);
       }
       100% {
-        border-left: $arrow-size-desktop / 3 solid rgba(0, 0, 0, 0);
-        border-bottom: $arrow-size-desktop / 3 solid rgba(0, 0, 0, 0);
-        transform: translate(
-            $arrow-size-desktop / -6,
-            $arrow-size-desktop * 4 / 6
-          )
-          rotate(-45deg);
+        border-left: 20px / 3 solid rgba(0, 0, 0, 0);
+        border-bottom: 20px / 3 solid rgba(0, 0, 0, 0);
+        transform: translate(20px / -6, 20px * 4 / 6) rotate(-45deg);
       }
     }
   }
@@ -117,61 +97,44 @@ $speed: 2.5s;
       max-width: 900px;
 
       .arrows {
-        width: $arrow-size-largeTablet;
-        height: $arrow-size-largeTablet;
+        width: 18px;
+        height: 18px;
 
         &:before,
         &:after {
-          border-left: $arrow-size-largeTablet / 3 solid
-            rgba(0, 0, 0, $peakopacity);
-          border-bottom: $arrow-size-largeTablet / 3 solid
-            rgba(0, 0, 0, $peakopacity);
+          border-left: 18px / 3 solid rgba(0, 0, 0, 0.4);
+          border-bottom: 18px / 3 solid rgba(0, 0, 0, 0.4);
         }
 
         &:before {
-          transform: translate(
-              $arrow-size-largeTablet / 3,
-              $arrow-size-largeTablet * 4 / 3
-            )
-            rotate(-45deg);
+          transform: translate(18px / 3, 18px * 4 / 3) rotate(-45deg);
         }
 
         &:after {
-          transform: translate($arrow-size-largeTablet * 2 / 3, 0px)
-            rotate(-45deg);
+          transform: translate(18px * 2 / 3, 0px) rotate(-45deg);
         }
       }
 
       @keyframes arrows {
         0% {
-          border-left: $arrow-size-largeTablet / 3 solid rgba(0, 0, 0, 0);
-          border-bottom: $arrow-size-largeTablet / 3 solid rgba(0, 0, 0, 0);
-          transform: translate(
-              $arrow-size-largeTablet / -6,
-              $arrow-size-largeTablet * 4 / -6
-            )
-            rotate(-45deg);
+          border-left: 18px / 3 solid rgba(0, 0, 0, 0);
+          border-bottom: 18px / 3 solid rgba(0, 0, 0, 0);
+          transform: translate(18px / -6, 18px * 4 / -6) rotate(-45deg);
         }
         10%,
         90% {
-          border-left: $arrow-size-largeTablet / 3 solid rgba(0, 0, 0, 0);
-          border-bottom: $arrow-size-largeTablet / 3 solid rgba(0, 0, 0, 0);
+          border-left: 18px / 3 solid rgba(0, 0, 0, 0);
+          border-bottom: 18px / 3 solid rgba(0, 0, 0, 0);
         }
         50% {
-          border-left: $arrow-size-largeTablet / 3 solid
-            rgba(0, 0, 0, $peakopacity);
-          border-bottom: $arrow-size-largeTablet / 3 solid
-            rgba(0, 0, 0, $peakopacity);
-          transform: translate($arrow-size-largeTablet / -6, 0px) rotate(-45deg);
+          border-left: 18px / 3 solid rgba(0, 0, 0, 0.4);
+          border-bottom: 18px / 3 solid rgba(0, 0, 0, 0.4);
+          transform: translate(18px / -6, 0px) rotate(-45deg);
         }
         100% {
-          border-left: $arrow-size-largeTablet / 3 solid rgba(0, 0, 0, 0);
-          border-bottom: $arrow-size-largeTablet / 3 solid rgba(0, 0, 0, 0);
-          transform: translate(
-              $arrow-size-largeTablet / -6,
-              $arrow-size-largeTablet * 4 / 6
-            )
-            rotate(-45deg);
+          border-left: 18px / 3 solid rgba(0, 0, 0, 0);
+          border-bottom: 18px / 3 solid rgba(0, 0, 0, 0);
+          transform: translate(18px / -6, 18px * 4 / 6) rotate(-45deg);
         }
       }
     }
@@ -193,58 +156,44 @@ $speed: 2.5s;
       max-width: 700px;
 
       .arrows {
-        width: $arrow-size-tablet;
-        height: $arrow-size-tablet;
+        width: 16px;
+        height: 16px;
 
         &:before,
         &:after {
-          border-left: $arrow-size-tablet / 3 solid rgba(0, 0, 0, $peakopacity);
-          border-bottom: $arrow-size-tablet / 3 solid
-            rgba(0, 0, 0, $peakopacity);
+          border-left: 16px / 3 solid rgba(0, 0, 0, 0.4);
+          border-bottom: 16px / 3 solid rgba(0, 0, 0, 0.4);
         }
 
         &:before {
-          transform: translate(
-              $arrow-size-tablet / 3,
-              $arrow-size-tablet * 4 / 3
-            )
-            rotate(-45deg);
+          transform: translate(16px / 3, 16px * 4 / 3) rotate(-45deg);
         }
 
         &:after {
-          transform: translate($arrow-size-tablet * 2 / 3, 0px) rotate(-45deg);
+          transform: translate(16px * 2 / 3, 0px) rotate(-45deg);
         }
       }
 
       @keyframes arrows {
         0% {
-          border-left: $arrow-size-tablet / 3 solid rgba(0, 0, 0, 0);
-          border-bottom: $arrow-size-tablet / 3 solid rgba(0, 0, 0, 0);
-          transform: translate(
-              $arrow-size-tablet / -6,
-              $arrow-size-tablet * 4 / -6
-            )
-            rotate(-45deg);
+          border-left: 16px / 3 solid rgba(0, 0, 0, 0);
+          border-bottom: 16px / 3 solid rgba(0, 0, 0, 0);
+          transform: translate(16px / -6, 16px * 4 / -6) rotate(-45deg);
         }
         10%,
         90% {
-          border-left: $arrow-size-tablet / 3 solid rgba(0, 0, 0, 0);
-          border-bottom: $arrow-size-tablet / 3 solid rgba(0, 0, 0, 0);
+          border-left: 16px / 3 solid rgba(0, 0, 0, 0);
+          border-bottom: 16px / 3 solid rgba(0, 0, 0, 0);
         }
         50% {
-          border-left: $arrow-size-tablet / 3 solid rgba(0, 0, 0, $peakopacity);
-          border-bottom: $arrow-size-tablet / 3 solid
-            rgba(0, 0, 0, $peakopacity);
-          transform: translate($arrow-size-tablet / -6, 0px) rotate(-45deg);
+          border-left: 16px / 3 solid rgba(0, 0, 0, 0.4);
+          border-bottom: 16px / 3 solid rgba(0, 0, 0, 0.4);
+          transform: translate(16px / -6, 0px) rotate(-45deg);
         }
         100% {
-          border-left: $arrow-size-tablet / 3 solid rgba(0, 0, 0, 0);
-          border-bottom: $arrow-size-tablet / 3 solid rgba(0, 0, 0, 0);
-          transform: translate(
-              $arrow-size-tablet / -6,
-              $arrow-size-tablet * 4 / 6
-            )
-            rotate(-45deg);
+          border-left: 16px / 3 solid rgba(0, 0, 0, 0);
+          border-bottom: 16px / 3 solid rgba(0, 0, 0, 0);
+          transform: translate(16px / -6, 16px * 4 / 6) rotate(-45deg);
         }
       }
     }
@@ -261,75 +210,61 @@ $speed: 2.5s;
   @media screen and (max-width: 500px) {
     .paragraph-section {
       padding: 1.5rem;
-      font-size: 1.2rem;
-      line-height: 1.4rem;
+      font-size: 1.4rem;
+      line-height: 1.5rem;
       max-width: 400px;
-      top: -10%;
+      top: -20%;
 
       .arrows {
-        top: 100%;
-        width: $arrow-size-mobile;
-        height: $arrow-size-mobile;
+        top: 110%;
+        width: 10px;
+        height: 10px;
 
         &:before,
         &:after {
-          border-left: $arrow-size-mobile / 3 solid rgba(0, 0, 0, $peakopacity);
-          border-bottom: $arrow-size-mobile / 3 solid
-            rgba(0, 0, 0, $peakopacity);
+          border-left: 10px / 3 solid rgba(0, 0, 0, 0.4);
+          border-bottom: 10px / 3 solid rgba(0, 0, 0, 0.4);
         }
 
         &:before {
-          transform: translate(
-              $arrow-size-mobile / 3,
-              $arrow-size-mobile * 4 / 3
-            )
-            rotate(-45deg);
+          transform: translate(10px / 3, 10px * 4 / 3) rotate(-45deg);
         }
 
         &:after {
-          transform: translate($arrow-size-mobile * 2 / 3, 0px) rotate(-45deg);
+          transform: translate(10px * 2 / 3, 0px) rotate(-45deg);
         }
       }
 
       @keyframes arrows {
         0% {
-          border-left: $arrow-size-mobile / 3 solid rgba(0, 0, 0, 0);
-          border-bottom: $arrow-size-mobile / 3 solid rgba(0, 0, 0, 0);
-          transform: translate(
-              $arrow-size-mobile / -6,
-              $arrow-size-mobile * 4 / -6
-            )
-            rotate(-45deg);
+          border-left: 10px / 3 solid rgba(0, 0, 0, 0);
+          border-bottom: 10px / 3 solid rgba(0, 0, 0, 0);
+          transform: translate(10px / -6, 10px * 4 / -6) rotate(-45deg);
         }
         10%,
         90% {
-          border-left: $arrow-size-mobile / 3 solid rgba(0, 0, 0, 0);
-          border-bottom: $arrow-size-mobile / 3 solid rgba(0, 0, 0, 0);
+          border-left: 10px / 3 solid rgba(0, 0, 0, 0);
+          border-bottom: 10px / 3 solid rgba(0, 0, 0, 0);
         }
         50% {
-          border-left: $arrow-size-mobile / 3 solid rgba(0, 0, 0, $peakopacity);
-          border-bottom: $arrow-size-mobile / 3 solid
-            rgba(0, 0, 0, $peakopacity);
-          transform: translate($arrow-size-mobile / -6, 0px) rotate(-45deg);
+          border-left: 10px / 3 solid rgba(0, 0, 0, 0.4);
+          border-bottom: 10px / 3 solid rgba(0, 0, 0, 0.4);
+          transform: translate(10px / -6, 0px) rotate(-45deg);
         }
         100% {
-          border-left: $arrow-size-mobile / 3 solid rgba(0, 0, 0, 0);
-          border-bottom: $arrow-size-mobile / 3 solid rgba(0, 0, 0, 0);
-          transform: translate(
-              $arrow-size-mobile / -6,
-              $arrow-size-mobile * 4 / 6
-            )
-            rotate(-45deg);
+          border-left: 10px / 3 solid rgba(0, 0, 0, 0);
+          border-bottom: 10px / 3 solid rgba(0, 0, 0, 0);
+          transform: translate(10px / -6, 10px * 4 / 6) rotate(-45deg);
         }
       }
     }
 
     .images-section {
-      top: 25%;
-      width: 350px;
+      top: 30%;
+      width: 400px;
 
       .stacked-image {
-        width: 350px;
+        width: 400px;
       }
     }
   }

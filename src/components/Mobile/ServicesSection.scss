@@ -3,16 +3,13 @@
 
   .mobile-title-wrapper {
     position: sticky;
-    top: 20px;
+    top: 30px;
     height: 0;
     z-index: 99;
     pointer-events: none;
 
     .mobile-title {
-      font-size: 5rem;
-      margin: 20px;
-      transform-origin: bottom left;
-      display: inline-block;
+      margin-left: 10px;
     }
   }
 
@@ -39,11 +36,22 @@
     flex-direction: column;
     position: relative;
     background-color: #080808;
+    overflow: hidden;
 
-    p {
-      font-size: 5rem;
-      font-weight: 600;
-      line-height: 70px;
+    .text-wrapper {
+      width: 90%;
+      margin: 0 auto;
+      overflow: hidden;
+
+      p {
+        margin-left: -25%;
+        font-size: 5rem;
+        font-weight: 600;
+        line-height: 70px;
+        text-wrap: nowrap;
+        will-change: transform;
+        transform: translateX(0);
+      }
     }
 
     .image-container {
@@ -61,5 +69,24 @@
         transform: rotate(15deg);
       }
     }
+  }
+
+  .section-three {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+      font-size: 9rem;
+    }
+  }
+
+  .section-four {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
   }
 }

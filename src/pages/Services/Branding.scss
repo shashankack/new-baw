@@ -8,12 +8,6 @@
   padding: 5% 0;
   z-index: inherit;
 
-  .back {
-    position: fixed;
-    right: 60px;
-    top: 110px;
-  }
-
   h2 {
     font-family: "Helvetica";
     font-size: 2.5rem;
@@ -167,9 +161,13 @@
     }
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 500px) {
+    justify-content: start;
+    padding: 6rem 0 0;
+
     h2 {
-      font-size: 1.8rem;
+      font-size: 2rem;
+      margin-top: 2rem;
     }
 
     .stack-container {
@@ -177,11 +175,12 @@
     }
 
     .content {
-      margin: 5%;
+      margin-top: -30%;
       width: 90%;
 
       h3 {
         font-size: 1.5rem;
+        text-align: justify;
       }
     }
 
@@ -200,7 +199,7 @@
       .left {
         .element {
           height: 50px;
-          font-size: 1.1rem;
+          font-size: 1rem;
         }
       }
 
@@ -208,7 +207,7 @@
         height: 200px;
         p {
           text-align: justify;
-          font-size: 1rem;
+          font-size: 1.5rem;
           padding: 0;
         }
       }
