@@ -11,13 +11,17 @@ import { worksData } from "./data";
 import Branding from "./pages/Services/Branding";
 import Web from "./pages/Services/Web";
 import Footer from "./components/Footer/Footer";
+import ProductionInternal from "./components/ProductionInternal/ProductionInternal";
+import Contact from "./pages/Contact/Contact";
 
 const AppRoutes = ({ isMobile }) => {
   const location = useLocation();
   const RenderedPage = isMobile ? MobileHomePage : HomePage;
 
-  const darkRoutes = ["/branding", "/web"];
-  const isDark = darkRoutes.includes(location.pathname);
+  const isDark =
+    location.pathname.startsWith("/branding") ||
+    location.pathname.startsWith("/web") ||
+    location.pathname.startsWith("/production/");
 
   return (
     <>
@@ -33,8 +37,10 @@ const AppRoutes = ({ isMobile }) => {
           element={<InteractiveGridGallery data={worksData} />}
         />
         <Route path="/works/:slug" element={<WorksInternal />} />
+        <Route path="/production/:slug" element={<ProductionInternal />} />
         <Route path="/branding" element={<Branding />} />
         <Route path="/web" element={<Web />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={"NOT FOUND"} />
       </Routes>
       <Footer />

@@ -17,12 +17,13 @@ const ImageSlider = ({
   clickable = false,
   redirect = "",
 }) => {
-  const sliderRef = useRef(null); // references the .slider-container
-  const currentIndexRef = useRef(0); // tracks the current image index
-  const imageRefs = useRef([]); // references to each <img>
-  const timeoutRef = useRef(null); // for clearing/changing animation timing
+  const sliderRef = useRef(null);
+  const currentIndexRef = useRef(0);
+  const imageRefs = useRef([]);
+  const timeoutRef = useRef(null);
 
   const navigate = useNavigate();
+  const objectFitValue = direction === "vetical" ? "contain" : "contain";
 
   // Handle the internal redirect via React Router
   const handleRedirect = useCallback(() => {
@@ -185,7 +186,7 @@ const ImageSlider = ({
               width: "100%",
               height: "100%",
               objectFit: "cover",
-              opacity: 0, // will be animated in
+              opacity: 0,
             }}
           />
         ))}

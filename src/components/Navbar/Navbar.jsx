@@ -35,7 +35,7 @@ const Navbar = ({ dark = false }) => {
             </a>
           </li>
           <li>
-            <a href="#contact">
+            <a href="/contact">
               <span className={dark ? "black" : "white"}>CONTACT</span>
               <span className="blue"> CONTACT</span>
             </a>

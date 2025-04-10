@@ -36,7 +36,6 @@
         font-size: 18px;
         text-decoration: none;
         transition: all 0.3s ease;
-        
 
         &:hover {
           color: #1563ff;
@@ -92,8 +91,9 @@
 
     .footer-left {
       flex-direction: column;
+      align-items: start;
       width: 100%;
-      gap: 1rem;
+      gap: 3rem;
 
       img {
         width: 80%;
@@ -104,21 +104,23 @@
         border-left: none;
         padding-left: 0;
         height: auto;
-        align-items: center;
-        text-align: center;
+        align-items: start;
+        text-align: start;
+        width: 100%;
       }
     }
 
     .footer-right {
       align-items: center;
       .socials a {
-        font-size: 28px;
+        font-size: 30px;
       }
     }
   }
 
   // ===================== MOBILE PORTRAIT =====================
   @media screen and (max-width: 500px) and (orientation: portrait) {
+    margin-top: 40px;
     .footer-left img {
       width: 70%;
     }
@@ -128,11 +130,11 @@
     }
 
     .footer-right .socials a {
-      font-size: 24px;
+      font-size: 34px;
     }
 
     .footer-right .copyright {
-      font-size: 10px;
+      font-size: 12px;
     }
   }
 

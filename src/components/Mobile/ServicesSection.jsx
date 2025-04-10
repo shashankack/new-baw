@@ -178,15 +178,20 @@ const ServicesSection = () => {
             ALIGNED
           </h3>
         </div>
+        <div className="cta">
+          <p>GET YOUR FEED ALIGNED WITH BAW STUDIOS</p>
+          <button>LEARN MORE</button>
+        </div>
       </section>
 
       <section className="section-five">
         <Typography
           variant="h6"
           sx={{
-            fontSize: { xs: "3rem", sm: "4rem", md: "5rem" },
-            fontWeight: 700,
-            color: "#fff",
+            fontSize: { xs: "3.3rem", sm: "4rem", md: "5rem" },
+            fontWeight: 500,
+            fontFamily: "Helvetica",
+            color: "#fcf3e3",
             textAlign: "center",
             mb: 4,
           }}

@@ -14,9 +14,9 @@ const Footer = () => {
       <div className="footer-left">
         <img src={whiteLogo} alt="BAW Logo" />
         <div className="footer-middle">
-          <a href="#">WEB</a>
-          <a href="#">SOCIAL</a>
-          <a href="#">BRANDING</a>
+          <a href="/#web">WEB</a>
+          <a href="/#social">SOCIAL</a>
+          <a href="/#branding">BRANDING</a>
 
           <a className="email" href="mailto: bawstudios@gmail.com">
             www.bawstudios@gmail.com
