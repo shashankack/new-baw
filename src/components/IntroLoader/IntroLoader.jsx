@@ -7,10 +7,12 @@ import monogram2 from "../../assets/images/monogram/monogram_m2.png";
 const IntroLoader = ({ nextComponent: NextComponent }) => {
   const loaderRef = useRef(null);
   const [hideLoader, setHideLoader] = useState(false);
+  const [isComponentReady, setIsComponentReady] = useState(false);
 
   useEffect(() => {
     if (sessionStorage.getItem("introSeen")) {
       setHideLoader(true);
+      setIsComponentReady(true); // Skip animation if already seen
       return;
     }
 
@@ -18,6 +20,7 @@ const IntroLoader = ({ nextComponent: NextComponent }) => {
       onComplete: () => {
         sessionStorage.setItem("introSeen", "true");
         setHideLoader(true);
+        setIsComponentReady(true); // Set component as ready after animation
       },
     });
 
@@ -37,6 +40,7 @@ const IntroLoader = ({ nextComponent: NextComponent }) => {
 
   return (
     <>
+      {/* Intro Loader UI */}
       {!hideLoader && (
         <div className="intro-loader" ref={loaderRef}>
           <div className="monogram1">
@@ -49,7 +53,8 @@ const IntroLoader = ({ nextComponent: NextComponent }) => {
         </div>
       )}
 
-      {hideLoader && NextComponent && <NextComponent />}
+      {/* Show the next component after loader finishes */}
+      {hideLoader && isComponentReady && NextComponent && <NextComponent />}
     </>
   );
 };

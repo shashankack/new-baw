@@ -1,9 +1,6 @@
-import { useEffect, useState } from "react";
+import React, { useState, useEffect, Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import IntroLoader from "./components/IntroLoader/IntroLoader";
-import WorksInternal from "./components/WorksInternal/WorksInternal";
-import HomePage from "./pages/HomePage";
-import MobileHomePage from "./pages/MobileHomePage";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./pages/About";
 import InteractiveGridGallery from "./components/InteractiveGridGallery/InteractiveGridGallery";
@@ -12,7 +9,12 @@ import Branding from "./pages/Services/Branding";
 import Web from "./pages/Services/Web";
 import Footer from "./components/Footer/Footer";
 import ProductionInternal from "./components/ProductionInternal/ProductionInternal";
+import WorksInternal from "./components/WorksInternal/WorksInternal";
 import Contact from "./pages/Contact/Contact";
+
+// Lazy load the pages
+const HomePage = lazy(() => import("./pages/HomePage"));
+const MobileHomePage = lazy(() => import("./pages/MobileHomePage"));
 
 const AppRoutes = ({ isMobile }) => {
   const location = useLocation();
@@ -26,23 +28,25 @@ const AppRoutes = ({ isMobile }) => {
   return (
     <>
       <Navbar dark={isDark} />
-      <Routes>
-        <Route
-          path="/"
-          element={<IntroLoader nextComponent={RenderedPage} />}
-        />
-        <Route path="/about" element={<About />} />
-        <Route
-          path="/works"
-          element={<InteractiveGridGallery data={worksData} />}
-        />
-        <Route path="/works/:slug" element={<WorksInternal />} />
-        <Route path="/production/:slug" element={<ProductionInternal />} />
-        <Route path="/branding" element={<Branding />} />
-        <Route path="/web" element={<Web />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={"NOT FOUND"} />
-      </Routes>
+      <Suspense fallback={<IntroLoader nextComponent={RenderedPage} />}>
+        <Routes>
+          <Route
+            path="/"
+            element={<IntroLoader nextComponent={RenderedPage} />}
+          />
+          <Route path="/about" element={<About />} />
+          <Route
+            path="/works"
+            element={<InteractiveGridGallery data={worksData} />}
+          />
+          <Route path="/works/:slug" element={<WorksInternal />} />
+          <Route path="/production/:slug" element={<ProductionInternal />} />
+          <Route path="/branding" element={<Branding />} />
+          <Route path="/web" element={<Web />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={"NOT FOUND"} />
+        </Routes>
+      </Suspense>
       <Footer />
     </>
   );

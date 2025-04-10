@@ -143,24 +143,19 @@ const ServicesSection = () => {
           <p>BRANDING BRANDING BRANDING BRANDING</p>
         </div>
         <div className="image-container">
-          <img
-            src={poster}
-            ref={posterRef}
-            onClick={() => (window.location.href = "/branding")}
-          />
+          <img src={poster} ref={posterRef} />
         </div>
+        <button onClick={() => (window.location.href = "/branding")}>
+          Learn More
+        </button>
       </section>
 
       <section className="section-three">
         <h2>WEB</h2>
-        <video
-          src={mellowVideo}
-          autoPlay
-          playsInline
-          loop
-          muted
-          onClick={() => (window.location.href = "/web")}
-        />
+        <video src={mellowVideo} autoPlay playsInline loop muted />
+        <button onClick={() => (window.location.href = "/web")}>
+          Learn More
+        </button>
         <h2>SITE</h2>
       </section>
 
