@@ -11,6 +11,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 const MobileHomePage = () => {
   const introSectionRef = useRef(null);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.play();
+    }
+  }, []);
 
   useEffect(() => {
     gsap.fromTo(
@@ -28,12 +36,19 @@ const MobileHomePage = () => {
         },
       }
     );
-  });
+  }, [introSectionRef]);
 
   return (
     <section className="mobile-section">
       <section className="intro-section" ref={introSectionRef}>
-        <video src={introVideo} autoPlay playsInline loop muted />
+        <video
+          ref={videoRef}
+          src={introVideo}
+          autoPlay
+          playsInline
+          loop
+          muted
+        />
       </section>
       <ServicesSection />
     </section>
