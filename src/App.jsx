@@ -11,10 +11,8 @@ import Footer from "./components/Footer/Footer";
 import ProductionInternal from "./components/ProductionInternal/ProductionInternal";
 import WorksInternal from "./components/WorksInternal/WorksInternal";
 import Contact from "./pages/Contact/Contact";
-
-// Lazy load the pages
-const HomePage = lazy(() => import("./pages/HomePage"));
-const MobileHomePage = lazy(() => import("./pages/MobileHomePage"));
+import HomePage from "./pages/HomePage";
+import MobileHomePage from "./pages/MobileHomePage";
 
 const AppRoutes = ({ isMobile }) => {
   const location = useLocation();

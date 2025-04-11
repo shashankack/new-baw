@@ -343,7 +343,7 @@ const HomePage = () => {
           <VideoSlide src={carVid} className="slide slide1" />
 
           {/* Slide 2 */}
-          <section className="slide slide2" id="#branding">
+          <section className="slide slide2">
             <div className="text-container">
               {Array(7)
                 .fill("BRANDING")
@@ -361,7 +361,7 @@ const HomePage = () => {
           </section>
 
           {/* Slide 3 */}
-          <section className="slide slide3" id="#web">
+          <section className="slide slide3">
             <div className="text-container">
               <h2 className="title">WEB</h2>
               <h2 className="title">SITE</h2>
