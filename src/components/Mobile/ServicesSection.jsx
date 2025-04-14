@@ -11,6 +11,8 @@ import { Grid, Typography } from "@mui/material";
 
 import { socialsImages, productionData } from "../../data";
 
+import logoAnim from "../../assets/videos/logo_anim.mp4";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const ServicesSection = () => {
@@ -143,7 +145,15 @@ const ServicesSection = () => {
           <p>BRANDING BRANDING BRANDING BRANDING</p>
         </div>
         <div className="image-container">
-          <img src={poster} ref={posterRef} />
+          <video
+            src={logoAnim}
+            loop
+            autoPlay
+            playsInline
+            muted
+            ref={posterRef}
+            onClick={() => (window.location.href = "/branding")}
+          />
         </div>
         <button onClick={() => (window.location.href = "/branding")}>
           Learn More
@@ -152,7 +162,14 @@ const ServicesSection = () => {
 
       <section className="section-three">
         <h2>WEB</h2>
-        <video src={mellowVideo} autoPlay playsInline loop muted />
+        <video
+          src={mellowVideo}
+          autoPlay
+          playsInline
+          loop
+          muted
+          onClick={() => (window.location.href = "/web")}
+        />
         <button onClick={() => (window.location.href = "/web")}>
           Learn More
         </button>

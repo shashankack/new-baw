@@ -14,6 +14,7 @@ import Contact from "./pages/Contact/Contact";
 import HomePage from "./pages/HomePage";
 import MobileHomePage from "./pages/MobileHomePage";
 import SocialsInternal from "./pages/Services/SocialsInternal/SocialsInternal";
+import MobileNavbar from "./components/Navbar/MobileNavbar";
 
 const AppRoutes = ({ isMobile }) => {
   const location = useLocation();
@@ -26,7 +27,7 @@ const AppRoutes = ({ isMobile }) => {
 
   return (
     <>
-      <Navbar dark={isDark} />
+      {isMobile ? <MobileNavbar dark={isDark} /> : <Navbar dark={isDark} />}
       <Routes>
         <Route path="/" element={<RenderedPage />} />
         <Route path="/about" element={<About />} />
@@ -52,7 +53,7 @@ function App() {
   const [showMainApp, setShowMainApp] = useState(false);
 
   useEffect(() => {
-    const checkScreen = () => setIsMobile(window.innerWidth <= 500);
+    const checkScreen = () => setIsMobile(window.innerWidth <= 768);
     checkScreen();
     window.addEventListener("resize", checkScreen);
     return () => window.removeEventListener("resize", checkScreen);

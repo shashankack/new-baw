@@ -1,0 +1,344 @@
+.main-menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: clamp(0.5rem, 2%, 2rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 100;
+
+  .logo {
+    width: clamp(50px, 12vw, 150px);
+    cursor: pointer;
+  }
+
+  .menu-icon {
+    z-index: 20;
+    width: clamp(20px, 3vw, 50px);
+    cursor: pointer;
+    position: relative;
+
+    img {
+      display: block;
+      width: 100%;
+      transition: opacity 0.3s ease;
+    }
+  }
+
+  .main-menu {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #080808;
+    color: #fcf3e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: top 0.5s ease, opacity 0.3s ease;
+    overflow: hidden;
+
+    &.open {
+      top: 0;
+    }
+
+    &.slide-up {
+      top: -100vh;
+    }
+
+    .monogram {
+      width: clamp(600px, 110vw, 1200px);
+      position: absolute;
+      opacity: 0.4;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+      z-index: 30;
+
+      li {
+        margin: 0;
+
+        button {
+          background: none;
+          border: none;
+          font-family: "Helvetica";
+          cursor: pointer;
+          color: #fcf3e3;
+          font-size: clamp(2rem, 6vw, 6rem);
+          font-weight: 700;
+          transition: color 0.5s ease, font-style 0.1s ease;
+
+          &:hover {
+            font-style: italic;
+            color: #1563ff;
+          }
+        }
+      }
+    }
+  }
+
+  .services-menu {
+    position: fixed;
+    bottom: -100vh;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #080808;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: bottom 0.5s ease;
+
+    &.open {
+      bottom: 0;
+    }
+
+    .services-menu-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .close-services {
+      position: absolute;
+      top: 20%;
+      right: clamp(20px, 5vw, 60px);
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 1rem;
+      font-size: clamp(1rem, 1.5vw, 1.5rem);
+      color: #fcf3e3;
+      z-index: 20;
+
+      &:hover {
+        color: #1563ff;
+      }
+    }
+
+    h2 {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      font-size: clamp(2rem, 4vw, 4rem);
+      text-transform: uppercase;
+      color: #1563ff;
+    }
+
+    @keyframes glow {
+      0% {
+        -webkit-text-stroke-color: #fcf3e3;
+        text-shadow: 0 0 3px #fcf3e3, 0 0 1px #fcf3e3;
+      }
+      25% {
+        -webkit-text-stroke-color: #1563ff;
+        text-shadow: 0 0 3px #1563ff, 0 0 1px #1563ff;
+      }
+      50% {
+        -webkit-text-stroke-color: #fcf3e3;
+        text-shadow: 0 0 3px #fcf3e3, 0 0 1px #fcf3e3;
+      }
+      75% {
+        -webkit-text-stroke-color: #1563ff;
+        text-shadow: 0 0 3px #1563ff, 0 0 1px #1563ff;
+      }
+      100% {
+        -webkit-text-stroke-color: #fcf3e3;
+        text-shadow: 0 0 3px #fcf3e3, 0 0 1px #fcf3e3;
+      }
+    }
+
+    .glow-text {
+      text-transform: uppercase;
+      width: 100%;
+      text-align: center;
+      margin: 0 0 2rem 0;
+      color: #080808;
+      -webkit-text-stroke: 1px #1563ff;
+      opacity: 0.3;
+      text-shadow: 0 0 3px #1563ff, 0 0 6px #1563ff;
+      animation: glow 15s infinite ease-in-out;
+
+      p {
+        margin: 0 auto;
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: clamp(2rem, 11vw, 16rem);
+      }
+    }
+
+    ul {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 0;
+
+        button {
+          background: none;
+          border: none;
+          cursor: pointer;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: clamp(2rem, 6vw, 6rem);
+          font-weight: 700;
+          color: #fcf3e3;
+          transition: color 0.5s ease, font-style 0.1s ease;
+
+          &:hover {
+            font-style: italic;
+            color: #1563ff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main-menu-container {
+    padding: clamp(0.5rem, 3%, 2rem);
+
+    .logo {
+      width: clamp(40px, 14vw, 130px);
+    }
+
+    .menu-icon {
+      width: clamp(25px, 4vw, 60px);
+    }
+
+    .main-menu {
+      ul li button {
+        font-size: clamp(2rem, 8vw, 5rem);
+      }
+    }
+
+    .services-menu {
+      h2 {
+        font-size: clamp(1.8rem, 4vw, 3.5rem);
+      }
+
+      .close-services {
+        font-size: clamp(0.9rem, 2vw, 1.3rem);
+      }
+
+      ul li button {
+        font-size: clamp(2rem, 8vw, 5rem);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-menu-container {
+    padding: clamp(0.5rem, 4%, 1.5rem);
+
+    .logo {
+      width: clamp(30px, 20vw, 100px);
+    }
+
+    .menu-icon {
+      width: clamp(20px, 6vw, 40px);
+    }
+
+    .main-menu {
+      ul li button {
+        font-size: clamp(1.5rem, 10vw, 4rem);
+      }
+    }
+
+    .services-menu {
+      h2 {
+        font-size: clamp(1.5rem, 6vw, 3rem);
+      }
+
+      .close-services {
+        font-size: clamp(0.8rem, 3vw, 1.2rem);
+      }
+
+      ul li button {
+        font-size: clamp(1.5rem, 10vw, 4rem);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main-menu-container {
+    padding: clamp(0.5rem, 5%, 1rem);
+
+    .logo {
+      width: clamp(25px, 25vw, 80px);
+    }
+
+    .menu-icon {
+      width: 25px;
+    }
+
+    .main-menu {
+      ul li button {
+        font-size: clamp(1.2rem, 12vw, 3rem);
+      }
+    }
+
+    .services-menu {
+      h2 {
+        font-size: clamp(1.2rem, 8vw, 2.5rem);
+      }
+
+      .close-services {
+        font-size: clamp(0.8rem, 3vw, 1rem);
+      }
+
+      ul li button {
+        font-size: clamp(1.2rem, 12vw, 3rem);
+      }
+    }
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .main-menu-container {
+    padding: clamp(0.3rem, 2%, 1rem);
+
+    .logo {
+      width: clamp(20px, 10vw, 80px);
+    }
+
+    .menu-icon {
+      width: clamp(15px, 5vw, 40px);
+    }
+
+    .main-menu,
+    .services-menu {
+      h2 {
+        font-size: clamp(1rem, 4vw, 3rem);
+      }
+      ul li button {
+        font-size: clamp(1rem, 6vw, 4rem);
+      }
+    }
+  }
+}
