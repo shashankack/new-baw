@@ -175,7 +175,9 @@ const ServicesSection = () => {
         </div>
         <div className="cta">
           <p>GET YOUR FEED ALIGNED WITH BAW STUDIOS</p>
-          <button>LEARN MORE</button>
+          <button onClick={() => (window.location.href = "/socials")}>
+            LEARN MORE
+          </button>
         </div>
       </section>
 

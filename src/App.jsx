@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense, lazy } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import IntroLoader from "./components/IntroLoader/IntroLoader";
 import Navbar from "./components/Navbar/Navbar";
@@ -13,6 +13,7 @@ import WorksInternal from "./components/WorksInternal/WorksInternal";
 import Contact from "./pages/Contact/Contact";
 import HomePage from "./pages/HomePage";
 import MobileHomePage from "./pages/MobileHomePage";
+import SocialsInternal from "./pages/Services/SocialsInternal/SocialsInternal";
 
 const AppRoutes = ({ isMobile }) => {
   const location = useLocation();
@@ -26,25 +27,21 @@ const AppRoutes = ({ isMobile }) => {
   return (
     <>
       <Navbar dark={isDark} />
-      <Suspense fallback={<IntroLoader nextComponent={RenderedPage} />}>
-        <Routes>
-          <Route
-            path="/"
-            element={<IntroLoader nextComponent={RenderedPage} />}
-          />
-          <Route path="/about" element={<About />} />
-          <Route
-            path="/works"
-            element={<InteractiveGridGallery data={worksData} />}
-          />
-          <Route path="/works/:slug" element={<WorksInternal />} />
-          <Route path="/production/:slug" element={<ProductionInternal />} />
-          <Route path="/branding" element={<Branding />} />
-          <Route path="/web" element={<Web />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={"NOT FOUND"} />
-        </Routes>
-      </Suspense>
+      <Routes>
+        <Route path="/" element={<RenderedPage />} />
+        <Route path="/about" element={<About />} />
+        <Route
+          path="/works"
+          element={<InteractiveGridGallery data={worksData} />}
+        />
+        <Route path="/works/:slug" element={<WorksInternal />} />
+        <Route path="/production/:slug" element={<ProductionInternal />} />
+        <Route path="/branding" element={<Branding />} />
+        <Route path="/web" element={<Web />} />
+        <Route path="/socials" element={<SocialsInternal />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={"NOT FOUND"} />
+      </Routes>
       <Footer />
     </>
   );
@@ -52,6 +49,7 @@ const AppRoutes = ({ isMobile }) => {
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
+  const [showMainApp, setShowMainApp] = useState(false);
 
   useEffect(() => {
     const checkScreen = () => setIsMobile(window.innerWidth <= 500);
@@ -62,7 +60,13 @@ function App() {
 
   return (
     <BrowserRouter>
-      <AppRoutes isMobile={isMobile} />
+      {!showMainApp ? (
+        <IntroLoader onComplete={() => setShowMainApp(true)} />
+      ) : (
+        <Suspense fallback={null}>
+          <AppRoutes isMobile={isMobile} />
+        </Suspense>
+      )}
     </BrowserRouter>
   );
 }

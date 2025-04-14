@@ -31,14 +31,7 @@ video {
 
 @font-face {
   font-family: "Helvetica";
-  font-weight: 500;
   src: url("./assets/fonts/Helvetica.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Helvetica";
-  font-weight: 800;
-  src: url("./assets/fonts/Helvetica-Bold.woff") format("woff");
 }
 
 .light-text {

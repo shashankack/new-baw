@@ -393,8 +393,7 @@ const HomePage = () => {
               <p>GET YOUR FEED ALIGNED WITH BAW STUDIO</p>
               <button
                 onClick={() => {
-                  window.location.href =
-                    "https://www.instagram.com/baw.studios/";
+                  window.location.href = "/socials";
                 }}
               >
                 KNOW MORE

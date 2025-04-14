@@ -4,7 +4,7 @@ import "./IntroLoader.scss";
 import monogram1 from "../../assets/images/monogram/monogram_m1.png";
 import monogram2 from "../../assets/images/monogram/monogram_m2.png";
 
-const IntroLoader = ({ nextComponent: NextComponent }) => {
+const IntroLoader = ({ nextComponent: NextComponent, onComplete }) => {
   const loaderRef = useRef(null);
   const [hideLoader, setHideLoader] = useState(false);
   const [isComponentReady, setIsComponentReady] = useState(false);
@@ -12,7 +12,8 @@ const IntroLoader = ({ nextComponent: NextComponent }) => {
   useEffect(() => {
     if (sessionStorage.getItem("introSeen")) {
       setHideLoader(true);
-      setIsComponentReady(true); // Skip animation if already seen
+      setIsComponentReady(true);
+      if (onComplete) onComplete(); // Skip animation path
       return;
     }
 
@@ -20,7 +21,8 @@ const IntroLoader = ({ nextComponent: NextComponent }) => {
       onComplete: () => {
         sessionStorage.setItem("introSeen", "true");
         setHideLoader(true);
-        setIsComponentReady(true); // Set component as ready after animation
+        setIsComponentReady(true);
+        if (onComplete) onComplete(); // Notify parent
       },
     });
 
@@ -40,20 +42,18 @@ const IntroLoader = ({ nextComponent: NextComponent }) => {
 
   return (
     <>
-      {/* Intro Loader UI */}
       {!hideLoader && (
         <div className="intro-loader" ref={loaderRef}>
           <div className="monogram1">
             <img src={monogram1} alt="Monogram 1" />
           </div>
-
           <div className="monogram2">
             <img src={monogram2} alt="Monogram 2" />
           </div>
         </div>
       )}
 
-      {/* Show the next component after loader finishes */}
+      {/* Optional direct rendering if used standalone */}
       {hideLoader && isComponentReady && NextComponent && <NextComponent />}
     </>
   );

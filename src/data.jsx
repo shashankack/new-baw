@@ -229,6 +229,39 @@ import desiDhartiWeb from "./assets/images/pages/services/web/desi_dharti.png";
 import studioMasonWeb from "./assets/images/pages/services/web/studio_mason.png";
 import umiWeb from "./assets/images/pages/services/web/umi.png";
 
+// Social Grids
+import grid1 from "./assets/images/pages/services/socials/grids/grid_1.png";
+import grid2 from "./assets/images/pages/services/socials/grids/grid_2.png";
+import grid3 from "./assets/images/pages/services/socials/grids/grid_3.png";
+import grid4 from "./assets/images/pages/services/socials/grids/grid_4.png";
+import grid5 from "./assets/images/pages/services/socials/grids/grid_5.png";
+import grid6 from "./assets/images/pages/services/socials/grids/grid_6.png";
+import grid7 from "./assets/images/pages/services/socials/grids/grid_7.png";
+import grid8 from "./assets/images/pages/services/socials/grids/grid_8.png";
+import grid9 from "./assets/images/pages/services/socials/grids/grid_9.png";
+import grid10 from "./assets/images/pages/services/socials/grids/grid_10.png";
+import grid11 from "./assets/images/pages/services/socials/grids/grid_11.png";
+import grid12 from "./assets/images/pages/services/socials/grids/grid_12.png";
+import grid13 from "./assets/images/pages/services/socials/grids/grid_13.png";
+import grid14 from "./assets/images/pages/services/socials/grids/grid_14.png";
+
+export const socialsGrids = [
+  grid1,
+  grid2,
+  grid3,
+  grid4,
+  grid5,
+  grid6,
+  grid7,
+  grid8,
+  grid9,
+  grid10,
+  grid11,
+  grid12,
+  grid13,
+  grid14,
+];
+
 // Works Internals
 
 export const socialsImages = [
