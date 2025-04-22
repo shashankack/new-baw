@@ -16,6 +16,8 @@ import MobileHomePage from "./pages/MobileHomePage";
 import SocialsInternal from "./pages/Services/SocialsInternal/SocialsInternal";
 import MobileNavbar from "./components/Navbar/MobileNavbar";
 
+import { createTheme, ThemeProvider } from "@mui/material";
+
 const AppRoutes = ({ isMobile }) => {
   const location = useLocation();
   const RenderedPage = isMobile ? MobileHomePage : HomePage;
@@ -25,9 +27,21 @@ const AppRoutes = ({ isMobile }) => {
     location.pathname.startsWith("/web") ||
     location.pathname.startsWith("/production/");
 
+  const theme = createTheme({
+    palette: {
+      white: "#FCF3E3",
+      black: "#121212",
+      blue: "#1563FF",
+    },
+
+    fonts: {
+      akira: "Akira",
+      helvetica: "Arial, Helvetica, sans-serif",
+    },
+  });
   return (
-    <>
-      {isMobile ? <MobileNavbar dark={isDark} /> : <Navbar dark={isDark} />}
+    <ThemeProvider theme={theme}>
+      {isMobile ? <MobileNavbar /> : <Navbar dark={isDark} />}
       <Routes>
         <Route path="/" element={<RenderedPage />} />
         <Route path="/about" element={<About />} />
@@ -36,15 +50,18 @@ const AppRoutes = ({ isMobile }) => {
           element={<InteractiveGridGallery data={worksData} />}
         />
         <Route path="/works/:slug" element={<WorksInternal />} />
-        <Route path="/production/:slug" element={<ProductionInternal />} />
-        <Route path="/branding" element={<Branding />} />
-        <Route path="/web" element={<Web />} />
-        <Route path="/socials" element={<SocialsInternal />} />
+        <Route
+          path="/services/production/:slug"
+          element={<ProductionInternal />}
+        />
+        <Route path="/services/branding" element={<Branding />} />
+        <Route path="/services/web" element={<Web />} />
+        <Route path="/services/socials" element={<SocialsInternal />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={"NOT FOUND"} />
       </Routes>
       <Footer />
-    </>
+    </ThemeProvider>
   );
 };
 
