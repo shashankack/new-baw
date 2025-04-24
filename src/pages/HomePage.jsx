@@ -355,7 +355,7 @@ const HomePage = () => {
               <img
                 src={stepImage}
                 alt="Step"
-                onClick={() => (window.location.href = "/branding")}
+                onClick={() => (window.location.href = "/services/branding")}
               />
             </div>
           </section>
@@ -375,7 +375,7 @@ const HomePage = () => {
                 playsInline
                 loop
                 preload="none"
-                onClick={() => (window.location.href = "/web")}
+                onClick={() => (window.location.href = "/services/web")}
               />
             </div>
           </section>
@@ -393,7 +393,7 @@ const HomePage = () => {
               <p>GET YOUR FEED ALIGNED WITH BAW STUDIO</p>
               <button
                 onClick={() => {
-                  window.location.href = "/socials";
+                  window.location.href = "/services/socials";
                 }}
               >
                 KNOW MORE
@@ -415,7 +415,7 @@ const HomePage = () => {
                       src={item.thumbnail}
                       alt={item.title}
                       onClick={() => {
-                        window.location.href = item.redirect;
+                        window.location.href = `/services${item.redirect}`;
                       }}
                       className="image"
                     />

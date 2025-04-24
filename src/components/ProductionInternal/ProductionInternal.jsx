@@ -3,7 +3,7 @@ import "./ProductionInternal.scss";
 import ImageSlider from "../ImageSlider/ImageSlider";
 import { productionData } from "../../data";
 import { useParams } from "react-router-dom";
-import arrow from "../../assets/images/arrow.png";
+import arrow from "../../assets/images/black_arrow.png";
 
 const ProductionInternal = () => {
   const [isMobile, setIsMobile] = React.useState(false);
