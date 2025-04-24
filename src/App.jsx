@@ -12,7 +12,7 @@ import ProductionInternal from "./components/ProductionInternal/ProductionIntern
 import WorksInternal from "./components/WorksInternal/WorksInternal";
 import Contact from "./pages/Contact/Contact";
 import HomePage from "./pages/HomePage";
-import MobileHomePage from "./pages/mobile/MobileHomePage";
+import MobileHomePage from "./pages/Mobile/MobileHomePage";
 import SocialsInternal from "./pages/Services/SocialsInternal/SocialsInternal";
 import MobileNavbar from "./components/Navbar/MobileNavbar";
 
