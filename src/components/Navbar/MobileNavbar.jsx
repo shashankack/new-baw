@@ -12,9 +12,12 @@ import {
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 const MobileNavbar = ({ navbarTheme = "light" }) => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropDownOpen, setIsDropdownOpen] = useState(false);
 
@@ -31,7 +34,7 @@ const MobileNavbar = ({ navbarTheme = "light" }) => {
   };
 
   return (
-    <Box position={"sticky"} top={0} zIndex={20} bgcolor={"transparent"}>
+    <Box position={"sticky"} top={0} zIndex={2000} bgcolor={"transparent"}>
       <Stack
         direction="row"
         justifyContent="space-between"
@@ -142,7 +145,7 @@ const MobileNavbar = ({ navbarTheme = "light" }) => {
         open={isMenuOpen}
         onClose={() => setIsMenuOpen(false)}
         sx={{
-          zIndex: 10,
+          zIndex: 1000,
           "& .MuiDrawer-paper": {
             backgroundColor: theme.palette.white,
             py: 15,

@@ -245,6 +245,20 @@ import grid12 from "./assets/images/pages/services/socials/grids/grid_12.png";
 import grid13 from "./assets/images/pages/services/socials/grids/grid_13.png";
 import grid14 from "./assets/images/pages/services/socials/grids/grid_14.png";
 
+import ampereCard from "./assets//images/pages/mobile/brands/ampere_card.png";
+import fastrackCard from "./assets//images/pages/mobile/brands/fastrack_card.png";
+import needleCard from "./assets//images/pages/mobile/brands/needle_card.png";
+import umiCard from "./assets//images/pages/mobile/brands/umi_card.png";
+import switchCard from "./assets//images/pages/mobile/brands/switch_card.png";
+
+export const mobileBrands = [
+  ampereCard,
+  fastrackCard,
+  needleCard,
+  umiCard,
+  switchCard,
+];
+
 export const socialsGrids = [
   grid1,
   grid2,
