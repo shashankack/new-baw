@@ -136,6 +136,7 @@ const MobileHomePage = () => {
         <Button
           variant="contained"
           disableRipple
+          onClick={() => (window.location.href = "/know-more")}
           endIcon={
             <img
               src={whiteArrow}

@@ -251,6 +251,64 @@ import needleCard from "./assets//images/pages/mobile/brands/needle_card.png";
 import umiCard from "./assets//images/pages/mobile/brands/umi_card.png";
 import switchCard from "./assets//images/pages/mobile/brands/switch_card.png";
 
+import videoOne from "./assets/videos/about_one.mp4";
+import videoTwo from "./assets/videos/about_two.mp4";
+
+export const mobileServicesData = {
+  branding: {
+    title: "Branding",
+    description:
+      "At BAW Studios, we believe branding goes beyond visuals; it’s about crafting a unique identity that resonates with your audience. Our team offers comprehensive solutions including strategic branding, logo design, and digital branding to ensure your business stands out. Let us transform your brand into a powerful asset that drives growth and enhances your market presence.",
+    keyTags: ["Logo Design", "Visual Identity", "Packaging"],
+    sliderImages: [
+      brandDesiDharti,
+      brandHolyKicks,
+      brandTicklePickle,
+      brandUmi,
+    ],
+    gridImages: [brandDesiDharti, brandHolyKicks, brandTicklePickle, brandUmi],
+  },
+
+  web: {
+    title: "Web",
+    description:
+      "At BAW Studios, we believe that a website is more than just a digital presence; it’s your brand’s online identity. Our team specializes in creating stunning, user-friendly websites that not only look great but also drive results. From e-commerce platforms to portfolio sites, we tailor our web solutions to meet your unique needs and goals.",
+    keyTags: ["E-commerce", "Portfolio", "Landing Page"],
+    sliderImages: [umiWeb, unnecessaryWeb, holyKicksWeb, studioMasonWeb],
+    gridImages: [umiWeb, unnecessaryWeb, holyKicksWeb, studioMasonWeb],
+  },
+
+  socials: {
+    title: "Socials",
+    description:
+      "At BAW Studios, we understand that social media is more than just a platform; it’s a powerful tool for connection and engagement. Our team specializes in creating captivating content that resonates with your audience and drives interaction. From eye-catching graphics to compelling copy, we tailor our social media strategies to elevate your brand’s online presence.",
+    keyTags: ["Content Creation", "Social Media Management", "Brand Strategy"],
+    sliderImages: [grid1, grid2, grid3, grid4],
+    gridImages: [grid1, grid2, grid3, grid4],
+  },
+
+  production: {
+    title: "Production",
+    description:
+      "At BAW Studios, we believe that every frame tells a story. Our production team specializes in creating visually stunning content that captures the essence of your brand. From concept development to post-production, we handle every aspect of the filmmaking process to ensure your vision comes to life.",
+    keyTags: ["Photography", "Videography", "Post-Production"],
+    sliderImages: [
+      productionAmpere,
+      productionAureka,
+      productionCocaCola,
+      productionBenz,
+    ],
+    gridImages: [
+      productionAmpere,
+      productionAureka,
+      productionCocaCola,
+      productionBenz,
+    ],
+  },
+};
+
+export const aboutUsVideos = [videoOne, videoTwo, videoOne, videoTwo];
+
 export const mobileBrands = [
   ampereCard,
   fastrackCard,

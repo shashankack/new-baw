@@ -4,7 +4,7 @@ import IntroLoader from "./components/IntroLoader/IntroLoader";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./pages/About";
 import InteractiveGridGallery from "./components/InteractiveGridGallery/InteractiveGridGallery";
-import { worksData } from "./data";
+import { worksData, mobileServicesData } from "./data";
 import Branding from "./pages/Services/Branding";
 import Web from "./pages/Services/Web";
 import Footer from "./components/Footer/Footer";
@@ -17,10 +17,13 @@ import SocialsInternal from "./pages/Services/SocialsInternal/SocialsInternal";
 import MobileNavbar from "./components/Navbar/MobileNavbar";
 
 import { createTheme, ThemeProvider } from "@mui/material";
+import KnowMore from "./pages/Mobile/KnowMore";
+import ServicesLayout from "./pages/Services/ServicesLayout";
 
 const AppRoutes = ({ isMobile }) => {
   const location = useLocation();
-  const RenderedPage = isMobile ? MobileHomePage : HomePage;
+  const HomeRenderedPage = isMobile ? MobileHomePage : HomePage;
+  const BrandingRenderedPage = isMobile ? ServicesLayout : Branding;
 
   const isDark =
     location.pathname.startsWith("/branding") ||
@@ -33,18 +36,19 @@ const AppRoutes = ({ isMobile }) => {
       black: "#121212",
       blue: "#1563FF",
     },
-
     fonts: {
       akira: "Akira",
       helvetica: "Arial, Helvetica, sans-serif",
     },
   });
+
   return (
     <ThemeProvider theme={theme}>
       {isMobile ? <MobileNavbar /> : <Navbar dark={isDark} />}
       <Routes>
-        <Route path="/" element={<RenderedPage />} />
+        <Route path="/" element={<HomeRenderedPage />} />
         <Route path="/about" element={<About />} />
+        <Route path="/know-more" element={<KnowMore />} />
         <Route
           path="/works"
           element={<InteractiveGridGallery data={worksData} />}
@@ -54,7 +58,11 @@ const AppRoutes = ({ isMobile }) => {
           path="/services/production/:slug"
           element={<ProductionInternal />}
         />
-        <Route path="/services/branding" element={<Branding />} />
+        <Route
+          path="/services"
+          element={<ServicesLayout data={mobileServicesData} />}
+        />
+        <Route path="/services/branding" element={<BrandingRenderedPage />} />
         <Route path="/services/web" element={<Web />} />
         <Route path="/services/socials" element={<SocialsInternal />} />
         <Route path="/contact" element={<Contact />} />
