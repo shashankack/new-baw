@@ -310,11 +310,12 @@ export const mobileServicesData = {
 export const aboutUsVideos = [videoOne, videoTwo, videoOne, videoTwo];
 
 export const mobileBrands = [
-  ampereCard,
-  fastrackCard,
-  needleCard,
-  umiCard,
-  switchCard,
+  switchLogo,
+  idLogo,
+  fastrackLogo,
+  ampereLogo,
+  benzLogo,
+  umiLogo,
 ];
 
 export const socialsGrids = [

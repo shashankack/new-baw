@@ -1,4 +1,4 @@
-import { Box, Stack, useTheme, Typography, Button } from "@mui/material";
+import { Box, Stack, useTheme, Typography, Button, Grid } from "@mui/material";
 import { useEffect, useRef } from "react";
 import SplitType from "split-type";
 import gsap from "gsap";
@@ -7,7 +7,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import introVideo from "../../assets/videos/intro_video.mp4";
 import whiteArrow from "../../assets/images/white_arrow.png";
 
-import { brandingData, mobileBrands } from "../../data";
+import { mobileBrands } from "../../data";
+import KnowMore from "./KnowMore";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,8 +79,8 @@ const MobileHomePage = () => {
         duration: 1,
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 40%",
-          end: "top 10%",
+          start: "top 20%",
+          end: "top top",
           scrub: true,
         },
       }
@@ -91,13 +92,14 @@ const MobileHomePage = () => {
   }, []);
 
   return (
-    <Box p={1}>
+    <Box p={1} bgcolor={theme.palette.black}>
       <Stack
         padding={1}
-        bgcolor={theme.palette.white}
+        bgcolor={theme.palette.black}
         gap={1}
         borderRadius={3}
         spacing={3}
+        mb={5}
       >
         <Box height={250}>
           <Box
@@ -118,8 +120,8 @@ const MobileHomePage = () => {
         <Typography
           ref={textRef}
           variant="body2"
-          color={theme.palette.black}
-          fontSize={14}
+          color={theme.palette.white}
+          fontSize={12}
           textAlign={"center"}
           fontWeight={700}
           textTransform={"uppercase"}
@@ -131,12 +133,12 @@ const MobileHomePage = () => {
           }}
         >
           We are a <span>creative studio</span> based in Bengaluru specializing
-          in <span>design, motion, web</span> and <span>social</span>.
+          in <span>design, motion, web</span> and <span>social</span>
         </Typography>
         <Button
           variant="contained"
           disableRipple
-          onClick={() => (window.location.href = "/know-more")}
+          onClick={() => (window.location.href = "/about")}
           endIcon={
             <img
               src={whiteArrow}
@@ -163,11 +165,59 @@ const MobileHomePage = () => {
             },
           }}
         >
-          know more
+          about us
         </Button>
       </Stack>
 
-      <Box
+      <KnowMore />
+
+      <Box mt={5} px={2}>
+        <Typography
+          textAlign={"center"}
+          fontSize={24}
+          fontWeight={700}
+          textTransform={"uppercase"}
+          color={theme.palette.white}
+          fontFamily={theme.fonts.helvetica}
+        >
+          brands we
+        </Typography>
+        <Typography
+          textAlign={"center"}
+          mt={-1.5}
+          fontSize={24}
+          fontWeight={700}
+          textTransform={"uppercase"}
+          color={theme.palette.white}
+          fontFamily={theme.fonts.helvetica}
+        >
+          have worked with
+        </Typography>
+
+        <Grid
+          mt={2}
+          container
+          spacing={2}
+          p={2}
+          bgcolor={theme.palette.white}
+          borderRadius={3}
+        >
+          {mobileBrands.map((item, index) => (
+            <Grid size={4} key={index}>
+              <Box
+                component="img"
+                src={item}
+                sx={{
+                  height: "100%",
+                  objectFit: "contain",
+                }}
+              />
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+
+      {/* <Box
         ref={containerRef}
         height={"60vh"}
         justifyContent={"center"}
@@ -222,7 +272,7 @@ const MobileHomePage = () => {
             />
           </Box>
         ))}
-      </Box>
+      </Box> */}
     </Box>
   );
 };

@@ -36,7 +36,7 @@ const MobileNavbar = ({ navbarTheme = "light" }) => {
   return (
     <Box position={"sticky"} top={0} zIndex={2000} bgcolor={"transparent"}>
       <Stack
-        direction="row"
+        direction="row-reverse"
         justifyContent="space-between"
         alignItems="center"
         px={2}

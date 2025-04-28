@@ -192,7 +192,7 @@ const ServicesLayout = ({ data }) => {
           fontFamily={theme.fonts.helvetica}
           color={theme.palette.black}
           textAlign={"justify"}
-          fontWeight={600}
+          fontWeight={400}
           textTransform={"uppercase"}
         >
           {current.description}

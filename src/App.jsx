@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import IntroLoader from "./components/IntroLoader/IntroLoader";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./pages/About";
+import AboutMobile from "./pages/Mobile/AboutMobile.jsx";
 import InteractiveGridGallery from "./components/InteractiveGridGallery/InteractiveGridGallery";
 import { worksData, mobileServicesData } from "./data";
 import Branding from "./pages/Services/Branding";
@@ -19,16 +20,18 @@ import MobileNavbar from "./components/Navbar/MobileNavbar";
 import { createTheme, ThemeProvider } from "@mui/material";
 import KnowMore from "./pages/Mobile/KnowMore";
 import ServicesLayout from "./pages/Services/ServicesLayout";
+import Works from "./pages/Works/works.jsx";
 
 const AppRoutes = ({ isMobile }) => {
   const location = useLocation();
   const HomeRenderedPage = isMobile ? MobileHomePage : HomePage;
   const BrandingRenderedPage = isMobile ? ServicesLayout : Branding;
+  const AboutRenderedPage = isMobile ? AboutMobile : About;
 
   const isDark =
-    location.pathname.startsWith("/branding") ||
-    location.pathname.startsWith("/web") ||
-    location.pathname.startsWith("/production/");
+    location.pathname.startsWith("/services/branding") ||
+    location.pathname.startsWith("/services/web") ||
+    location.pathname.startsWith("/services/production/");
 
   const theme = createTheme({
     palette: {
@@ -47,12 +50,9 @@ const AppRoutes = ({ isMobile }) => {
       {isMobile ? <MobileNavbar /> : <Navbar dark={isDark} />}
       <Routes>
         <Route path="/" element={<HomeRenderedPage />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<AboutRenderedPage />} />
         <Route path="/know-more" element={<KnowMore />} />
-        <Route
-          path="/works"
-          element={<InteractiveGridGallery data={worksData} />}
-        />
+        <Route path="/works" element={<Works />} />
         <Route path="/works/:slug" element={<WorksInternal />} />
         <Route
           path="/services/production/:slug"

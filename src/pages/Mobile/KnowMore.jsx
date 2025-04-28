@@ -45,8 +45,7 @@ const KnowMore = () => {
   }, []);
 
   const buttonStyles = {
-    px: 2,
-    fontSize: 30,
+    fontSize: 26,
     justifyContent: "space-between",
     color: theme.palette.white,
   };
@@ -59,55 +58,15 @@ const KnowMore = () => {
   ];
 
   return (
-    <Box p={1} gap={5} display="flex" flexDirection="column">
-      <Box bgcolor={theme.palette.white} padding={1} borderRadius={3} my={3}>
-        <Typography
-          variant="h1"
-          fontSize={65}
-          textAlign="start"
-          fontFamily={theme.fonts.akira}
-          color={theme.palette.black}
-          sx={{
-            "& span": {
-              fontFamily: theme.fonts.akira,
-              color: theme.palette.blue,
-              fontWeight: 700,
-            },
-          }}
-        >
-          <span>BAW</span> <br /> STUDIO.
-        </Typography>
-        <Typography
-          variant="body2"
-          color={theme.palette.black}
-          fontFamily={theme.fonts.helvetica}
-          textTransform="uppercase"
-          fontWeight={600}
-          textAlign={"justify"}
-          sx={{
-            textAlignLast: "start",
-            "& span": {
-              color: theme.palette.blue,
-            },
-          }}
-        >
-          At <span>BAW Studios</span>, we believe branding goes beyond visuals;
-          it’s about <span>crafting a unique identity</span> that resonates with
-          your audience. Our team offers comprehensive solutions including
-          strategic <span>branding, logo design</span>, and
-          <span>digital branding</span> to ensure your business stands out. Let
-          us transform your brand into a powerful asset that drives growth and
-          enhances your market presence.
-        </Typography>
-      </Box>
+    <Box p={1} gap={2} display="flex" flexDirection="column">
       <Typography
         variant="h4"
         textTransform={"uppercase"}
         fontWeight={700}
+        fontSize={26}
         textAlign={"start"}
         fontFamily={theme.fonts.helvetica}
         color={theme.palette.white}
-        gutterBottom
       >
         What are you <br /> looking for?
       </Typography>
@@ -154,6 +113,7 @@ const KnowMore = () => {
       </Stack>
 
       <Box
+      mt={5}
         sx={{
           overflow: "hidden",
           width: "100%",
