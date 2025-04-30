@@ -191,7 +191,7 @@ const MobileNavbar = ({ navbarTheme = "light" }) => {
               >
                 <Link
                   style={{ ...linkStyles, color: theme.palette.blue }}
-                  to={"/services/branding"}
+                  to={"/services?type=branding"}
                   onClick={() => {
                     setIsMenuOpen(false), setIsDropdownOpen(false);
                   }}
@@ -200,7 +200,7 @@ const MobileNavbar = ({ navbarTheme = "light" }) => {
                 </Link>
                 <Link
                   style={{ ...linkStyles, color: theme.palette.blue }}
-                  to={"/services/web"}
+                  to={"/services?type=web"}
                   sx={{ fontSize: 14 }}
                   onClick={() => {
                     setIsMenuOpen(false), setIsDropdownOpen(false);
@@ -210,7 +210,7 @@ const MobileNavbar = ({ navbarTheme = "light" }) => {
                 </Link>
                 <Link
                   style={{ ...linkStyles, color: theme.palette.blue }}
-                  to={"/services/social"}
+                  to={"/services?type=social"}
                   sx={{ fontSize: 14 }}
                   onClick={() => {
                     setIsMenuOpen(false), setIsDropdownOpen(false);
@@ -220,7 +220,7 @@ const MobileNavbar = ({ navbarTheme = "light" }) => {
                 </Link>
                 <Link
                   style={{ ...linkStyles, color: theme.palette.blue }}
-                  to={"/services/production"}
+                  to={"/services?type=production"}
                   sx={{ fontSize: 14 }}
                   onClick={() => {
                     setIsMenuOpen(false), setIsDropdownOpen(false);

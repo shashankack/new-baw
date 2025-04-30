@@ -113,7 +113,7 @@ const KnowMore = () => {
       </Stack>
 
       <Box
-      mt={5}
+        mt={5}
         sx={{
           overflow: "hidden",
           width: "100%",

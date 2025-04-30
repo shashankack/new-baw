@@ -22,22 +22,41 @@ import productionSwitch from "./assets/images/pages/services/production/SWITCH/t
 import ampereThumbnail from "./assets/images/pages/works/AMPERE/thumbnail.png";
 import ampereLogo from "./assets/images/pages/works/AMPERE/logo.png";
 import ampereHorizontal1 from "./assets/images/pages/works/AMPERE/horizontal_1.webp";
-import ampereHorizontal2 from "./assets/images/pages/works/AMPERE/horizontal_2.webp";
+import ampereHorizontal2 from "./assets/images/pages/works/AMPERE/horizontal_2.png";
 import ampereHorizontal3 from "./assets/images/pages/works/AMPERE/horizontal_3.webp";
+import ampereHorizontal4 from "./assets/images/pages/works/AMPERE/horizontal_4.png";
 import ampereVertical1 from "./assets/images/pages/works/AMPERE/vertical_1.webp";
 import ampereVertical2 from "./assets/images/pages/works/AMPERE/vertical_2.webp";
+import ampereMisc1 from "./assets/images/pages/works/AMPERE/misc_1.png";
+import ampereMisc2 from "./assets/images/pages/works/AMPERE/misc_2.png";
+import ampereMisc3 from "./assets/images/pages/works/AMPERE/misc_3.png";
 
 // Astro
 import astroThumbnail from "./assets/images/pages/works/ASTRO/thumbnail.png";
+import astroLogo from "./assets/images/pages/works/ASTRO/logo.png";
+import astroHorizontal1 from "./assets/images/pages/works/ASTRO/horizontal_1.png";
+import astroHorizontal2 from "./assets/images/pages/works/ASTRO/horizontal_2.png";
+import astroHorizontal3 from "./assets/images/pages/works/ASTRO/horizontal_3.png";
+import astroHorizontal4 from "./assets/images/pages/works/ASTRO/horizontal_4.png";
+import astroVertical1 from "./assets/images/pages/works/ASTRO/vertical_1.png";
+import astroVertical2 from "./assets/images/pages/works/ASTRO/vertical_2.png";
+import astroMisc1 from "./assets/images/pages/works/ASTRO/misc_1.png";
+import astroMisc2 from "./assets/images/pages/works/ASTRO/misc_2.png";
+import astroMisc3 from "./assets/images/pages/works/ASTRO/misc_3.png";
 
 // Aureka
-import aurekaThumbnail from "./assets/images/pages/works/AUREKA/thumbnail.png";
+
+import aukeraLogo from "./assets/images/pages/works/AUREKA/logo.png";
+import aukeraThumbnail from "./assets/images/pages/works/AUREKA/thumbnail.png";
 import aurekaHorizontal1 from "./assets/images/pages/works/AUREKA/horizontal_1.webp";
 import aurekaHorizontal2 from "./assets/images/pages/works/AUREKA/horizontal_2.webp";
 import aurekaHorizontal3 from "./assets/images/pages/works/AUREKA/horizontal_3.webp";
 import aurekaHorizontal4 from "./assets/images/pages/works/AUREKA/horizontal_4.webp";
 import aurekaVertical1 from "./assets/images/pages/works/AUREKA/vertical_1.webp";
 import aurekaVertical2 from "./assets/images/pages/works/AUREKA/vertical_2.webp";
+import aurekaMisc1 from "./assets/images/pages/works/AUREKA/misc_1.png";
+import aurekaMisc2 from "./assets/images/pages/works/AUREKA/misc_2.png";
+import aurekaMisc3 from "./assets/images/pages/works/AUREKA/misc_3.png";
 
 // Bharat Benz
 import benzThumbnail from "./assets/images/pages/works/BENZ/thumbnail.png";
@@ -48,6 +67,9 @@ import benzHorizontal3 from "./assets/images/pages/works/BENZ/horizontal_3.webp"
 import benzHorizontal4 from "./assets/images/pages/works/BENZ/horizontal_4.webp";
 import benzVertical1 from "./assets/images/pages/works/BENZ/vertical_1.webp";
 import benzVertical2 from "./assets/images/pages/works/BENZ/vertical_2.webp";
+import benzMisc1 from "./assets/images/pages/works/BENZ/misc_1.png";
+import benzMisc2 from "./assets/images/pages/works/BENZ/misc_2.png";
+import benzMisc3 from "./assets/images/pages/works/BENZ/misc_3.png";
 
 // Brahma Brews
 import brahmaThumbnail from "./assets/images/pages/works/BRAHMA/thumbnail.png";
@@ -58,6 +80,9 @@ import brahmaHorizontal3 from "./assets/images/pages/works/BRAHMA/horizontal_3.w
 import brahmaHorizontal4 from "./assets/images/pages/works/BRAHMA/horizontal_4.webp";
 import brahmaVertical1 from "./assets/images/pages/works/BRAHMA/vertical_1.webp";
 import brahmaVertical2 from "./assets/images/pages/works/BRAHMA/vertical_2.webp";
+import brahmaMisc1 from "./assets/images/pages/works/BRAHMA/misc_1.png";
+import brahmaMisc2 from "./assets/images/pages/works/BRAHMA/misc_2.png";
+import brahmaMisc3 from "./assets/images/pages/works/BRAHMA/misc_3.png";
 
 // Coca Cola
 import cocacolaThumbnail from "./assets/images/pages/works/COCACOLA/thumbnail.png";
@@ -70,6 +95,10 @@ import desiDhartiHorizontal2 from "./assets/images/pages/works/DESI/horizontal_2
 import desiDhartiHorizontal3 from "./assets/images/pages/works/DESI/horizontal_3.webp";
 import desiDhartiHorizontal4 from "./assets/images/pages/works/DESI/horizontal_4.webp";
 import desiDhartiVertical1 from "./assets/images/pages/works/DESI/vertical_1.webp";
+import desiDhartiVertical2 from "./assets/images/pages/works/DESI/vertical_2.png";
+import desiDhartiMisc1 from "./assets/images/pages/works/DESI/misc_1.png";
+import desiDhartiMisc2 from "./assets/images/pages/works/DESI/misc_2.png";
+import desiDhartiMisc3 from "./assets/images/pages/works/DESI/misc_3.png";
 
 // Fastrack
 import fastrackThumbnail from "./assets/images/pages/works/FASTRACK/thumbnail.png";
@@ -80,6 +109,9 @@ import fastrackHorizontal3 from "./assets/images/pages/works/FASTRACK/horizontal
 import fastrackHorizontal4 from "./assets/images/pages/works/FASTRACK/horizontal_4.png";
 import fastrackVertical1 from "./assets/images/pages/works/FASTRACK/vertical_1.png";
 import fastrackVertical2 from "./assets/images/pages/works/FASTRACK/vertical_2.png";
+import fastrackMisc1 from "./assets/images/pages/works/FASTRACK/misc_1.png";
+import fastrackMisc2 from "./assets/images/pages/works/FASTRACK/misc_2.png";
+import fastrackMisc3 from "./assets/images/pages/works/FASTRACK/misc_3.png";
 
 // GAMDIAS
 import gamdiasThumbnail from "./assets/images/pages/works/GAMDIAS/thumbnail.png";
@@ -90,6 +122,9 @@ import gamdiasHorizontal3 from "./assets/images/pages/works/GAMDIAS/horizontal_3
 import gamdiasHorizontal4 from "./assets/images/pages/works/GAMDIAS/horizontal_4.webp";
 import gamdiasVertical1 from "./assets/images/pages/works/GAMDIAS/vertical_1.webp";
 import gamdiasVertical2 from "./assets/images/pages/works/GAMDIAS/vertical_2.webp";
+import gamdiasMisc1 from "./assets/images/pages/works/GAMDIAS/misc_1.png";
+import gamdiasMisc2 from "./assets/images/pages/works/GAMDIAS/misc_2.png";
+import gamdiasMisc3 from "./assets/images/pages/works/GAMDIAS/misc_3.png";
 
 // Holy Kicks
 import holykicksThumbnail from "./assets/images/pages/works/HOLYKICKS/thumbnail.png";
@@ -477,12 +512,15 @@ export const worksData = [
     thumbnail: ampereThumbnail,
     redirect: "/works/ampere",
     title: "Ampere",
+    description:
+      "A series of television commercials, campaign still images, and catalogue images done for Ampere Electric Scooters with inputs from their design & communication agency, Why Axis. Shot across 6 locations in Bangalore in just 3 days during the CoVid-19 lockdown with a minimal crew, this project is a great source of pride for our five-member team.",
     logo: ampereLogo,
-    images: [
-      { one: [ampereHorizontal1] },
-      { two: [ampereHorizontal2, ampereHorizontal3] },
-      { three: [ampereVertical1, ampereVertical2] },
-    ],
+    images: {
+      one: [ampereHorizontal1, ampereHorizontal2],
+      two: [ampereHorizontal3, ampereHorizontal4],
+      three: [ampereVertical1, ampereVertical2],
+      misc: [ampereMisc1, ampereMisc2, ampereMisc3],
+    },
   },
   {
     id: 2,
@@ -490,42 +528,60 @@ export const worksData = [
     redirect: "/works/astro",
     title: "Astro",
     logo: productionAmpere,
+    description:
+      "For World of Astro, we focused on banner and tent designs. Our work emphasized visually striking and engaging layouts that captured the brand's essence, ensuring they stood out at events and promotional setups.",
+    logo: astroLogo,
+    images: {
+      one: [astroHorizontal1, astroHorizontal2],
+      two: [astroHorizontal3, astroHorizontal4],
+      three: [astroVertical1, astroVertical2],
+      misc: [astroMisc1, astroMisc2, astroMisc3],
+    },
   },
   {
     id: 3,
-    thumbnail: aurekaThumbnail,
-    redirect: "/works/aureka",
-    title: "Aureka",
-    logo: productionAmpere,
-    images: [
-      { one: [aurekaHorizontal1, aurekaHorizontal2] },
-      { two: [aurekaHorizontal3, aurekaHorizontal4] },
-      { three: [aurekaVertical1, aurekaVertical2] },
-    ],
+    thumbnail: aukeraThumbnail,
+    redirect: "/works/aukera",
+    title: "Aukera Jewels",
+    logo: aukeraLogo,
+    description:
+      "We handled full-scale production for Aukera Jewelers, from creative concept and art direction to styling and set design. Our focus was on capturing the intricate details and craftsmanship of each piece through high-quality photo and video content tailored for digital and print use.",
+    images: {
+      one: [aurekaHorizontal1, aurekaHorizontal2],
+      two: [aurekaHorizontal3, aurekaHorizontal4],
+      three: [aurekaVertical1, aurekaVertical2],
+      misc: [aurekaMisc1, aurekaMisc2, aurekaMisc3],
+    },
   },
   {
     id: 4,
     thumbnail: benzThumbnail,
     redirect: "/works/bharat-benz",
     title: "Bharat Benz",
+    description:
+      "Produced promotional content showcasing BharatBenz’s buses, with a strong focus on their performance, durability, and reliability in the commercial vehicle segment. The visuals were crafted to reflect the brand’s commitment to engineering excellence and operational efficiency.",
     logo: benzLogo,
-    images: [
-      { one: [benzHorizontal1, benzHorizontal2] },
-      { two: [benzHorizontal3, benzHorizontal4] },
-      { three: [benzVertical1, benzVertical2] },
-    ],
+    images: {
+      one: [benzHorizontal1, benzHorizontal2],
+      two: [benzHorizontal3, benzHorizontal4],
+      three: [benzVertical1, benzVertical2],
+      misc: [benzMisc1, benzMisc2, benzMisc3],
+    },
   },
   {
     id: 5,
     thumbnail: brahmaThumbnail,
     redirect: "/works/brahma-brews",
     title: "Brahma Brews",
+    description:
+      "For Brahma Brews, we created visuals to highlight their vibrant microbrewery atmosphere. Our work showcased their craft beers, diverse menu, and lively ambiance, helping enhance their brand presence and appeal to a wide audience.",
     logo: brahmaLogo,
-    images: [
-      { one: [brahmaHorizontal1, brahmaHorizontal2] },
-      { two: [brahmaHorizontal3, brahmaHorizontal4] },
-      { three: [brahmaVertical1, brahmaVertical2] },
-    ],
+    images: {
+      one: [brahmaHorizontal1, brahmaHorizontal2],
+      two: [brahmaHorizontal3, brahmaHorizontal4],
+      three: [brahmaVertical1, brahmaVertical2],
+      misc: [brahmaMisc1, brahmaMisc2, brahmaMisc3],
+    },
   },
   {
     id: 6,
@@ -539,48 +595,61 @@ export const worksData = [
     thumbnail: desiThumbnail,
     redirect: "/works/desi-dharti",
     title: "Desi Dharti",
+    description:
+      "For Desi Dharti, we developed branding materials that captured the essence of traditional Indian culture. Our designs aimed to resonate with the brand's ethos, emphasizing authenticity and cultural richness.",
     logo: desiDhartiLogo,
-    images: [
-      { one: [desiDhartiHorizontal1, desiDhartiHorizontal2] },
-      { two: [desiDhartiHorizontal3, desiDhartiHorizontal4] },
-      { three: [desiDhartiVertical1] },
-    ],
+    images: {
+      one: [desiDhartiHorizontal1, desiDhartiHorizontal2],
+      two: [desiDhartiHorizontal3, desiDhartiHorizontal4],
+      three: [desiDhartiVertical1, desiDhartiVertical2],
+      misc: [desiDhartiMisc1, desiDhartiMisc2, desiDhartiMisc3],
+    },
   },
   {
     id: 8,
     thumbnail: fastrackThumbnail,
     redirect: "/works/fastrack",
     title: "Fastrack",
+    description:
+      "Tripster by Fastback is a series of watches made specifically for the modern traveller. The challenge, however, was to launch this new collection when travel restrictions were in place to combat the spread of CoVid-19 and travelling seemed like a far away possibility. This project then became an expression of the collective longing for the familiar joy of seeing new places, and meeting new people.",
     logo: fastrackLogo,
-    images: [
-      { one: [fastrackHorizontal1, fastrackHorizontal2] },
-      { two: [fastrackHorizontal3, fastrackHorizontal4] },
-      { three: [fastrackVertical1, fastrackVertical2] },
-    ],
+    images: {
+      one: [fastrackHorizontal1, fastrackHorizontal2],
+      two: [fastrackHorizontal3, fastrackHorizontal4],
+      three: [fastrackVertical1, fastrackVertical2],
+      misc: [fastrackMisc1, fastrackMisc2, fastrackMisc3],
+    },
   },
   {
     id: 9,
     thumbnail: gamdiasThumbnail,
     redirect: "/works/gamdias",
     title: "Gamdias",
+    description:
+      "Produced engaging social media content for GAMDIAS, spotlighting their high-performance gaming gear. Our visuals and copy focused on cutting-edge design, immersive tech, and brand appeal—crafted to connect with the gaming community across digital platforms.",
     logo: gamdiasLogo,
-    images: [
-      { one: [gamdiasHorizontal1, gamdiasHorizontal2] },
-      { two: [gamdiasHorizontal3, gamdiasHorizontal4] },
-      { three: [gamdiasVertical1, gamdiasVertical2] },
-    ],
+    images: {
+      one: [gamdiasHorizontal1, gamdiasHorizontal2],
+      two: [gamdiasHorizontal3, gamdiasHorizontal4],
+      three: [gamdiasVertical1, gamdiasVertical2],
+      misc: [gamdiasMisc1, gamdiasMisc2, gamdiasMisc3],
+    },
   },
   {
     id: 10,
     thumbnail: holykicksThumbnail,
-    redirect: "/works/holy-kicks",
-    title: "Holy Kicks",
+    redirect: "/works/holykicks",
+    title: "Holykicks",
+    description:
+      "Developed bold and trend-driven social media content for HolyKicks, showcasing exclusive sneaker drops and streetwear culture. Our visuals were designed to reflect the brand’s edgy aesthetic and connect with a style-conscious, urban audience.",
+
     logo: holyKicksLogo,
-    images: [
-      { one: [holyKicksHorizontal1] },
-      { two: [holyKicksHorizontal3] },
-      { three: [holyKicksVertical1] },
-    ],
+    images: {
+      one: [holyKicksHorizontal1],
+      two: [holyKicksHorizontal3],
+      three: [holyKicksVertical1],
+      misc: [],
+    },
   },
   {
     id: 11,
