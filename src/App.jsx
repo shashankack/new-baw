@@ -4,8 +4,7 @@ import IntroLoader from "./components/IntroLoader/IntroLoader";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./pages/About";
 import AboutMobile from "./pages/Mobile/AboutMobile.jsx";
-import InteractiveGridGallery from "./components/InteractiveGridGallery/InteractiveGridGallery";
-import { worksData, mobileServicesData } from "./data";
+import { mobileServicesData } from "./data";
 import Branding from "./pages/Services/Branding";
 import Web from "./pages/Services/Web";
 import Footer from "./components/Footer/Footer";
@@ -21,6 +20,8 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import KnowMore from "./pages/Mobile/KnowMore";
 import ServicesLayout from "./pages/Services/ServicesLayout";
 import Works from "./pages/Works/works.jsx";
+
+import Test from "./components/Test/Test.jsx";
 
 const AppRoutes = ({ isMobile }) => {
   const location = useLocation();
@@ -67,6 +68,7 @@ const AppRoutes = ({ isMobile }) => {
         <Route path="/services/socials" element={<SocialsInternal />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={"NOT FOUND"} />
+        <Route path="/test" element={<Test />} />
       </Routes>
       <Footer />
     </ThemeProvider>

@@ -26,7 +26,7 @@ const MobileNavbar = ({ navbarTheme = "light" }) => {
     color: theme.palette.black,
     fontFamily: "Akira",
     fontStyle: "normal",
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: 600,
     "&:hover": {
       color: theme.palette.blue,

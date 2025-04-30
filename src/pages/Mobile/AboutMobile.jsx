@@ -1,6 +1,8 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import React from "react";
 
+import monogram3D from "../../assets/videos/3d_monogram.mp4";
+
 const AboutMobile = () => {
   const theme = useTheme();
 
@@ -15,7 +17,21 @@ const AboutMobile = () => {
 
   return (
     <Box p={2} height="100vh">
-      <Box height={300}></Box>
+      <Box height={250}>
+        <Box
+          component="video"
+          src={monogram3D}
+          loop
+          muted
+          playsInline
+          autoPlay
+          sx={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+          }}
+        />
+      </Box>
       <Typography
         textTransform="uppercase"
         textAlign="center"

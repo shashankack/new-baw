@@ -245,14 +245,10 @@ import grid12 from "./assets/images/pages/services/socials/grids/grid_12.png";
 import grid13 from "./assets/images/pages/services/socials/grids/grid_13.png";
 import grid14 from "./assets/images/pages/services/socials/grids/grid_14.png";
 
-import ampereCard from "./assets//images/pages/mobile/brands/ampere_card.png";
-import fastrackCard from "./assets//images/pages/mobile/brands/fastrack_card.png";
-import needleCard from "./assets//images/pages/mobile/brands/needle_card.png";
-import umiCard from "./assets//images/pages/mobile/brands/umi_card.png";
-import switchCard from "./assets//images/pages/mobile/brands/switch_card.png";
-
 import videoOne from "./assets/videos/about_one.mp4";
 import videoTwo from "./assets/videos/about_two.mp4";
+import videoThree from "./assets/videos/about_three.mp4";
+import videoFour from "./assets/videos/about_four.mp4";
 
 export const mobileServicesData = {
   branding: {
@@ -307,7 +303,7 @@ export const mobileServicesData = {
   },
 };
 
-export const aboutUsVideos = [videoOne, videoTwo, videoOne, videoTwo];
+export const aboutUsVideos = [videoOne, videoTwo, videoThree, videoFour];
 
 export const mobileBrands = [
   switchLogo,

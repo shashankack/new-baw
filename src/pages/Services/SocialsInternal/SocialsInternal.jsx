@@ -1,4 +1,4 @@
-import { Grid, Box } from "@mui/material";
+import { Grid, Box, Typography, useTheme } from "@mui/material";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
@@ -8,6 +8,7 @@ import { socialsGrids } from "../../../data";
 gsap.registerPlugin(ScrollTrigger);
 
 const SocialsInternal = () => {
+  const theme = useTheme();
   const imageRefs = useRef([]);
 
   useEffect(() => {
@@ -32,6 +33,16 @@ const SocialsInternal = () => {
         backgroundColor: "#080808",
       }}
     >
+      <Typography
+        textAlign={"center"}
+        textTransform="uppercase"
+        fontFamily={theme.fonts.helvetica}
+        fontWeight={800}
+        color={theme.palette.blue}
+        fontSize={64}
+      >
+        9 post Social Media Grids
+      </Typography>
       <Grid
         container
         spacing={5}
