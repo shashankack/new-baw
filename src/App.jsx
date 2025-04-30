@@ -19,7 +19,7 @@ import MobileNavbar from "./components/Navbar/MobileNavbar";
 import { createTheme, ThemeProvider } from "@mui/material";
 import KnowMore from "./pages/Mobile/KnowMore";
 import ServicesLayout from "./pages/Services/ServicesLayout";
-import Works from "./pages/Works/works.jsx";
+import Works from "./pages/Works/Works.jsx";
 
 import Test from "./components/Test/Test.jsx";
 
