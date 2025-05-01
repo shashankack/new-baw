@@ -57,35 +57,87 @@ const Works = () => {
       >
         Works
       </Typography>
-      <Grid container size={12} spacing={1} p={1}>
+      <Grid container size={12} spacing={isMobile ? 2 : 2} p={1}>
         {worksData.map((item, index) => (
           <Grid size={{ xs: 6, md: 3 }} key={index}>
-            <Box ref={addToRefs}>
+            <Box
+              ref={addToRefs}
+              onClick={() => {
+                nav(item.redirect);
+                window.scrollTo(0, 0);
+              }}
+              sx={{
+                position: "relative",
+                overflow: "hidden",
+                cursor: "pointer",
+
+                "&:hover img": {
+                  transform: "scale(1.05)",
+                  transition: "all 0.3s ease",
+                },
+
+                "&:hover .overlay": {
+                  opacity: 1,
+                  backdropFilter: "blur(3px)",
+                },
+                "&:hover .title": {
+                  transform: "translateY(0)",
+                  opacity: 1,
+                },
+              }}
+            >
               <Box
                 component="img"
                 src={item.thumbnail}
-                onClick={() => {
-                  nav(item.redirect);
-                  window.scrollTo(0, 0);
-                }}
                 sx={{
                   height: "100%",
+                  width: "100%",
                   objectFit: "cover",
-                  transition: "all 0.3s ease",
-                  cursor: "pointer",
-
-                  "&:hover": {
-                    transform: "scale(1.01)",
-                  },
+                  transition: "all 0.5s ease",
                 }}
               />
+
+              <Box
+                className={isMobile ? "" : "overlay"}
+                sx={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  backgroundColor: "rgba(18, 18, 18, 0.35)",
+                  opacity: 0,
+                  transition: "all 0.5s ease",
+                  display: "flex",
+                  alignItems: "flex-end",
+                  justifyContent: "center",
+                  p: 2,
+                }}
+              >
+                <Typography
+                  className="title"
+                  fontSize={isMobile ? 20 : 25}
+                  textTransform="uppercase"
+                  color="#fff"
+                  sx={{
+                    transform: "translateY(100%)",
+                    opacity: 0,
+                    transition: "all 0.4s ease",
+                  }}
+                >
+                  {item.title}
+                </Typography>
+              </Box>
             </Box>
-            <Typography
-              fontSize={isMobile ? 20 : 40}
-              color={theme.palette.blue}
-            >
-              {item.title}
-            </Typography>
+            {isMobile && (
+              <Typography
+                fontSize={isMobile ? 20 : 25}
+                textTransform="uppercase"
+                color={theme.palette.blue}
+              >
+                {item.title}
+              </Typography>
+            )}
           </Grid>
         ))}
       </Grid>

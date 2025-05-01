@@ -130,8 +130,15 @@ import gamdiasMisc3 from "./assets/images/pages/works/GAMDIAS/misc_3.png";
 import holykicksThumbnail from "./assets/images/pages/works/HOLYKICKS/thumbnail.png";
 import holyKicksLogo from "./assets/images/pages/works/HOLYKICKS/logo.webp";
 import holyKicksHorizontal1 from "./assets/images/pages/works/HOLYKICKS/horizontal_1.webp";
+import holyKicksHorizontal2 from "./assets/images/pages/works/HOLYKICKS/horizontal_2.png";
 import holyKicksHorizontal3 from "./assets/images/pages/works/HOLYKICKS/horizontal_3.webp";
+import holyKicksHorizontal4 from "./assets/images/pages/works/HOLYKICKS/horizontal_4.png";
 import holyKicksVertical1 from "./assets/images/pages/works/HOLYKICKS/vertical_1.webp";
+import holyKicksVertical2 from "./assets/images/pages/works/HOLYKICKS/vertical_2.png";
+
+import holyKicksMisc1 from "./assets/images/pages/works/HOLYKICKS/misc_1.png";
+import holyKicksMisc2 from "./assets/images/pages/works/HOLYKICKS/misc_2.png";
+import holyKicksMisc3 from "./assets/images/pages/works/HOLYKICKS/misc_3.png";
 
 // IBH
 import ibhThumbnail from "./assets/images/pages/works/IBH/thumbnail.png";
@@ -142,6 +149,9 @@ import ibhHorizontal3 from "./assets/images/pages/works/IBH/horizontal_3.webp";
 import ibhHorizontal4 from "./assets/images/pages/works/IBH/horizontal_4.webp";
 import ibhVertical1 from "./assets/images/pages/works/IBH/vertical_1.webp";
 import ibhVertical2 from "./assets/images/pages/works/IBH/vertical_2.webp";
+import ibhMisc1 from "./assets/images/pages/works/IBH/misc_1.png";
+import ibhMisc2 from "./assets/images/pages/works/IBH/misc_2.png";
+import ibhMisc3 from "./assets/images/pages/works/IBH/misc_3.png";
 
 // ID
 import idThumbnail from "./assets/images/pages/works/ID/thumbnail.png";
@@ -152,6 +162,9 @@ import idHorizontal3 from "./assets/images/pages/works/ID/horizontal_3.webp";
 import idHorizontal4 from "./assets/images/pages/works/ID/horizontal_4.webp";
 import idVertical1 from "./assets/images/pages/works/ID/vertical_1.webp";
 import idVertical2 from "./assets/images/pages/works/ID/vertical_2.webp";
+import idMisc1 from "./assets/images/pages/works/ID/misc_1.png";
+import idMisc2 from "./assets/images/pages/works/ID/misc_2.png";
+import idMisc3 from "./assets/images/pages/works/ID/misc_3.png";
 
 // ITC
 import itcThumbnail from "./assets/images/pages/works/ITC/thumbnail.png";
@@ -162,9 +175,9 @@ import itcHorizontal3 from "./assets/images/pages/works/ITC/horizontal_3.webp";
 import itcHorizontal4 from "./assets/images/pages/works/ITC/horizontal_4.webp";
 import itcVertical1 from "./assets/images/pages/works/ITC/vertical_1.webp";
 import itcVertical2 from "./assets/images/pages/works/ITC/vertical_2.webp";
-
-// Kafka
-import kafkaThumbnail from "./assets/images/pages/works/KAFKA/thumbnail.png";
+import itcMisc1 from "./assets/images/pages/works/ITC/misc_1.png";
+import itcMisc2 from "./assets/images/pages/works/ITC/misc_2.png";
+import itcMisc3 from "./assets/images/pages/works/ITC/misc_3.png";
 
 // Jewel One
 import jewelOneThumbnail from "./assets/images/pages/works/JEWELONE/thumbnail.png";
@@ -175,6 +188,9 @@ import jewelOneHorizontal3 from "./assets/images/pages/works/JEWELONE/horizontal
 import jewelOneHorizontal4 from "./assets/images/pages/works/JEWELONE/horizontal_4.webp";
 import jewelOneVertical1 from "./assets/images/pages/works/JEWELONE/vertical_1.webp";
 import jewelOneVertical2 from "./assets/images/pages/works/JEWELONE/vertical_2.webp";
+import jewelOneMisc1 from "./assets/images/pages/works/JEWELONE/misc_1.png";
+import jewelOneMisc2 from "./assets/images/pages/works/JEWELONE/misc_2.png";
+import jewelOneMisc3 from "./assets/images/pages/works/JEWELONE/misc_3.png";
 
 // Language
 import languageThumbnail from "./assets/images/pages/works/LANGUAGE/thumbnail.png";
@@ -185,9 +201,22 @@ import languageHorizontal3 from "./assets/images/pages/works/LANGUAGE/horizontal
 import languageHorizontal4 from "./assets/images/pages/works/LANGUAGE/horizontal_4.webp";
 import languageVertical1 from "./assets/images/pages/works/LANGUAGE/vertical_1.webp";
 import languageVertical2 from "./assets/images/pages/works/LANGUAGE/vertical_2.webp";
+import languageMisc1 from "./assets/images/pages/works/LANGUAGE/misc_1.png";
+import languageMisc2 from "./assets/images/pages/works/LANGUAGE/misc_2.png";
+import languageMisc3 from "./assets/images/pages/works/LANGUAGE/misc_3.png";
 
 // Manipal
 import manipalThumbnail from "./assets/images/pages/works/MANIPAL/thumbnail.png";
+import manipalLogo from "./assets/images/pages/works/MANIPAL/logo.png";
+import manipalHorizontal1 from "./assets/images/pages/works/MANIPAL/horizontal_1.png";
+import manipalHorizontal2 from "./assets/images/pages/works/MANIPAL/horizontal_2.png";
+import manipalHorizontal3 from "./assets/images/pages/works/MANIPAL/horizontal_3.png";
+import manipalHorizontal4 from "./assets/images/pages/works/MANIPAL/horizontal_4.png";
+import manipalVertical1 from "./assets/images/pages/works/MANIPAL/vertical_1.png";
+import manipalVertical2 from "./assets/images/pages/works/MANIPAL/vertical_2.png";
+import manipalMisc1 from "./assets/images/pages/works/MANIPAL/misc_1.png";
+import manipalMisc2 from "./assets/images/pages/works/MANIPAL/misc_2.png";
+import manipalMisc3 from "./assets/images/pages/works/MANIPAL/misc_3.png";
 
 // Morale Code
 import moraleCodeThumbnail from "./assets/images/pages/works/MORALE_CODE/thumbnail.png";
@@ -198,9 +227,9 @@ import moraleCodeHorizontal3 from "./assets/images/pages/works/MORALE_CODE/horiz
 import moraleCodeHorizontal4 from "./assets/images/pages/works/MORALE_CODE/horizontal_4.webp";
 import moraleCodeVertical1 from "./assets/images/pages/works/MORALE_CODE/vertical_1.webp";
 import moraleCodeVertical2 from "./assets/images/pages/works/MORALE_CODE/vertical_2.webp";
-
-// MRN
-import mrnThumbnail from "./assets/images/pages/works/MRN/thumbnail.png";
+import moraleCodeMisc1 from "./assets/images/pages/works/MORALE_CODE/misc_1.png";
+import moraleCodeMisc2 from "./assets/images/pages/works/MORALE_CODE/misc_2.png";
+import moraleCodeMisc3 from "./assets/images/pages/works/MORALE_CODE/misc_3.png";
 
 // Palms
 import palmsThumbnail from "./assets/images/pages/works/PALMS/thumbnail.png";
@@ -211,6 +240,9 @@ import palmsHorizontal3 from "./assets/images/pages/works/PALMS/horizontal_3.web
 import palmsHorizontal4 from "./assets/images/pages/works/PALMS/horizontal_4.webp";
 import palmsVertical1 from "./assets/images/pages/works/PALMS/vertical_1.webp";
 import palmsVertical2 from "./assets/images/pages/works/PALMS/vertical_2.webp";
+import palmsMisc1 from "./assets/images/pages/works/PALMS/misc_1.png";
+import palmsMisc2 from "./assets/images/pages/works/PALMS/misc_2.png";
+import palmsMisc3 from "./assets/images/pages/works/PALMS/misc_3.png";
 
 // Shakaharry
 import shakaharryThumbnail from "./assets/images/pages/works/SHAKAHARRY/thumbnail.png";
@@ -221,9 +253,22 @@ import shakaharryHorizontal3 from "./assets/images/pages/works/SHAKAHARRY/horizo
 import shakaharryHorizontal4 from "./assets/images/pages/works/SHAKAHARRY/horizontal_4.webp";
 import shakaharryVertical1 from "./assets/images/pages/works/SHAKAHARRY/vertical_1.webp";
 import shakaharryVertical2 from "./assets/images/pages/works/SHAKAHARRY/vertical_2.webp";
+import shakaharryMisc1 from "./assets/images/pages/works/SHAKAHARRY/misc_1.png";
+import shakaharryMisc2 from "./assets/images/pages/works/SHAKAHARRY/misc_2.png";
+import shakaharryMisc3 from "./assets/images/pages/works/SHAKAHARRY/misc_3.png";
 
 // Social Dining
 import socialDiningThumbnail from "./assets/images/pages/works/SOCIAL_DINING/thumbnail.png";
+import socialDiningLogo from "./assets/images/pages/works/SOCIAL_DINING/logo.png";
+import socialDiningHorizontal1 from "./assets/images/pages/works/SOCIAL_DINING/horizontal_1.png";
+import socialDiningHorizontal2 from "./assets/images/pages/works/SOCIAL_DINING/horizontal_2.png";
+import socialDiningHorizontal3 from "./assets/images/pages/works/SOCIAL_DINING/horizontal_3.png";
+import socialDiningHorizontal4 from "./assets/images/pages/works/SOCIAL_DINING/horizontal_4.png";
+import socialDiningVertical1 from "./assets/images/pages/works/SOCIAL_DINING/vertical_1.png";
+import socialDiningVertical2 from "./assets/images/pages/works/SOCIAL_DINING/vertical_2.png";
+import socialDiningMisc1 from "./assets/images/pages/works/SOCIAL_DINING/misc_1.png";
+import socialDiningMisc2 from "./assets/images/pages/works/SOCIAL_DINING/misc_2.png";
+import socialDiningMisc3 from "./assets/images/pages/works/SOCIAL_DINING/misc_3.png";
 
 // Switch
 import switchThumbnail from "./assets/images/pages/works/SWITCH/thumbnail.png";
@@ -234,9 +279,22 @@ import switchHorizontal3 from "./assets/images/pages/works/SWITCH/horizontal_3.w
 import switchHorizontal4 from "./assets/images/pages/works/SWITCH/horizontal_4.webp";
 import switchVertical1 from "./assets/images/pages/works/SWITCH/vertical_1.webp";
 import switchVertical2 from "./assets/images/pages/works/SWITCH/vertical_2.webp";
+import switchMisc1 from "./assets/images/pages/works/SWITCH/misc_1.png";
+import switchMisc2 from "./assets/images/pages/works/SWITCH/misc_2.png";
+import switchMisc3 from "./assets/images/pages/works/SWITCH/misc_3.png";
 
 // Titan
 import titanThumbnail from "./assets/images/pages/works/TITAN/thumbnail.png";
+import titanLogo from "./assets/images/pages/works/TITAN/logo.png";
+import titanHorizontal1 from "./assets/images/pages/works/TITAN/horizontal_1.png";
+import titanHorizontal2 from "./assets/images/pages/works/TITAN/horizontal_2.png";
+import titanHorizontal3 from "./assets/images/pages/works/TITAN/horizontal_3.png";
+import titanHorizontal4 from "./assets/images/pages/works/TITAN/horizontal_4.png";
+import titanVertical1 from "./assets/images/pages/works/TITAN/vertical_1.png";
+import titanVertical2 from "./assets/images/pages/works/TITAN/vertical_2.png";
+import titanMisc1 from "./assets/images/pages/works/TITAN/misc_1.png";
+import titanMisc2 from "./assets/images/pages/works/TITAN/misc_2.png";
+import titanMisc3 from "./assets/images/pages/works/TITAN/misc_3.png";
 
 // UMI
 import umiThumbnail from "./assets/images/pages/works/UMI/thumbnail.png";
@@ -247,9 +305,22 @@ import umiHorizontal3 from "./assets/images/pages/works/UMI/horizontal_3.webp";
 import umiHorizontal4 from "./assets/images/pages/works/UMI/horizontal_4.webp";
 import umiVertical1 from "./assets/images/pages/works/UMI/vertical_1.webp";
 import umiVertical2 from "./assets/images/pages/works/UMI/vertical_2.webp";
+import umiMisc1 from "./assets/images/pages/works/UMI/misc_1.png";
+import umiMisc2 from "./assets/images/pages/works/UMI/misc_2.png";
+import umiMisc3 from "./assets/images/pages/works/UMI/misc_3.png";
 
 // Unnssry
 import unnssryThumbnail from "./assets/images/pages/works/UNNSSRY/thumbnail.png";
+import unnssryLogo from "./assets/images/pages/works/UNNSSRY/logo.png";
+import unnssryHorizontal1 from "./assets/images/pages/works/UNNSSRY/horizontal_1.png";
+import unnssryHorizontal2 from "./assets/images/pages/works/UNNSSRY/horizontal_2.png";
+import unnssryHorizontal3 from "./assets/images/pages/works/UNNSSRY/horizontal_3.png";
+import unnssryHorizontal4 from "./assets/images/pages/works/UNNSSRY/horizontal_4.png";
+import unnssryVertical1 from "./assets/images/pages/works/UNNSSRY/vertical_1.png";
+import unnssryVertical2 from "./assets/images/pages/works/UNNSSRY/vertical_2.png";
+import unnssryMisc1 from "./assets/images/pages/works/UNNSSRY/misc_1.png";
+import unnssryMisc2 from "./assets/images/pages/works/UNNSSRY/misc_2.png";
+import unnssryMisc3 from "./assets/images/pages/works/UNNSSRY/misc_3.png";
 
 // Branding Images
 import brandDesiDharti from "./assets/images/pages/services/branding/desi_dharti.png";
@@ -508,7 +579,6 @@ export const productionData = [
 
 export const worksData = [
   {
-    id: 1,
     thumbnail: ampereThumbnail,
     redirect: "/works/ampere",
     title: "Ampere",
@@ -523,11 +593,10 @@ export const worksData = [
     },
   },
   {
-    id: 2,
     thumbnail: astroThumbnail,
     redirect: "/works/astro",
     title: "Astro",
-    logo: productionAmpere,
+    logo: astroLogo,
     description:
       "For World of Astro, we focused on banner and tent designs. Our work emphasized visually striking and engaging layouts that captured the brand's essence, ensuring they stood out at events and promotional setups.",
     logo: astroLogo,
@@ -539,7 +608,6 @@ export const worksData = [
     },
   },
   {
-    id: 3,
     thumbnail: aukeraThumbnail,
     redirect: "/works/aukera",
     title: "Aukera Jewels",
@@ -554,7 +622,6 @@ export const worksData = [
     },
   },
   {
-    id: 4,
     thumbnail: benzThumbnail,
     redirect: "/works/bharat-benz",
     title: "Bharat Benz",
@@ -569,7 +636,6 @@ export const worksData = [
     },
   },
   {
-    id: 5,
     thumbnail: brahmaThumbnail,
     redirect: "/works/brahma-brews",
     title: "Brahma Brews",
@@ -584,14 +650,12 @@ export const worksData = [
     },
   },
   {
-    id: 6,
     thumbnail: cocacolaThumbnail,
     redirect: "/works/brahma-brews",
     title: "Coca Cola",
     logo: productionAmpere,
   },
   {
-    id: 7,
     thumbnail: desiThumbnail,
     redirect: "/works/desi-dharti",
     title: "Desi Dharti",
@@ -606,7 +670,6 @@ export const worksData = [
     },
   },
   {
-    id: 8,
     thumbnail: fastrackThumbnail,
     redirect: "/works/fastrack",
     title: "Fastrack",
@@ -621,7 +684,6 @@ export const worksData = [
     },
   },
   {
-    id: 9,
     thumbnail: gamdiasThumbnail,
     redirect: "/works/gamdias",
     title: "Gamdias",
@@ -636,7 +698,6 @@ export const worksData = [
     },
   },
   {
-    id: 10,
     thumbnail: holykicksThumbnail,
     redirect: "/works/holykicks",
     title: "Holykicks",
@@ -645,167 +706,207 @@ export const worksData = [
 
     logo: holyKicksLogo,
     images: {
-      one: [holyKicksHorizontal1],
-      two: [holyKicksHorizontal3],
-      three: [holyKicksVertical1],
-      misc: [],
+      one: [holyKicksHorizontal1, holyKicksHorizontal2],
+      two: [holyKicksHorizontal3, holyKicksHorizontal4],
+      three: [holyKicksVertical1, holyKicksVertical2],
+      misc: [holyKicksMisc1, holyKicksMisc2, holyKicksMisc3],
     },
   },
   {
-    id: 11,
     thumbnail: ibhThumbnail,
     redirect: "/works/ibh",
-    title: "IBH",
+    title: "Indian Biere House",
+    description:
+      "Crafted vibrant and lifestyle-focused social media content for Indian Biere House, capturing the energy of its ambience, signature brews, and food experiences. Our visuals highlighted the brand’s lively spirit and positioned it as a go-to hangout spot.",
     logo: ibhLogo,
-    images: [
-      { one: [ibhHorizontal1, ibhHorizontal2] },
-      { two: [ibhHorizontal3, ibhHorizontal4] },
-      { three: [ibhVertical1, ibhVertical2] },
-    ],
+    images: {
+      one: [ibhHorizontal1, ibhHorizontal2],
+      two: [ibhHorizontal3, ibhHorizontal4],
+      three: [ibhVertical1, ibhVertical2],
+      misc: [ibhMisc1, ibhMisc2, ibhMisc3],
+    },
   },
   {
-    id: 12,
     thumbnail: idThumbnail,
     redirect: "/works/id",
-    title: "ID",
+    title: "ID Foods",
     logo: idLogo,
-    images: [
-      { one: [idHorizontal1, idHorizontal2] },
-      { two: [idHorizontal3, idHorizontal4] },
-      { three: [idVertical1, idVertical2] },
-    ],
+    description:
+      "BAW Studios contributed to the production of iD Fresh Food's campaigns by crafting impactful visual storytelling and designing creative brand activations. The studio's work involved developing key visuals, promotional assets, and TVCs for various products like Superr Batter, iD Smart Sip Tender Coconut, and iD Filter Coffee.",
+    images: {
+      one: [idHorizontal1, idHorizontal2],
+      two: [idHorizontal3, idHorizontal4],
+      three: [idVertical1, idVertical2],
+      misc: [idMisc1, idMisc2, idMisc3],
+    },
   },
   {
-    id: 13,
     thumbnail: itcThumbnail,
     redirect: "/works/itc",
-    title: "ITC",
+    title: "Indian Tiffin Club",
+    description:
+      "Created appetizing and culturally rich social media content for Indian Tiffin Club, emphasizing homestyle meals, authentic flavors, and the convenience of their tiffin service. The visuals were tailored to evoke comfort, tradition, and everyday freshness.",
     logo: itcLogo,
-    images: [
-      { one: [itcHorizontal1, itcHorizontal2] },
-      { two: [itcHorizontal3, itcHorizontal4] },
-      { three: [itcVertical1, itcVertical2] },
-    ],
+    images: {
+      one: [itcHorizontal1, itcHorizontal2],
+      two: [itcHorizontal3, itcHorizontal4],
+      three: [itcVertical1, itcVertical2],
+      misc: [itcMisc1, itcMisc2, itcMisc3],
+    },
   },
   {
-    id: 14,
-    thumbnail: kafkaThumbnail,
-    redirect: "/works/kafka",
-    title: "Kafka",
-  },
-  {
-    id: 15,
     thumbnail: languageThumbnail,
     redirect: "/works/language",
     title: "Language",
     logo: languageLogo,
-    images: [
-      { one: [languageHorizontal1, languageHorizontal2] },
-      { two: [languageHorizontal3, languageHorizontal4] },
-      { three: [languageVertical1, languageVertical2] },
-    ],
+    description:
+      "For Language Shoes, we developed a comprehensive branding strategy encompassing logo design, packaging, and visual content. Our approach highlighted their commitment to craftsmanship and timeless style, aiming to position the brand as a leader in premium footwear. ",
+    images: {
+      one: [languageHorizontal1, languageHorizontal2],
+      two: [languageHorizontal3, languageHorizontal4],
+      three: [languageVertical1, languageVertical2],
+      misc: [languageMisc1, languageMisc2, languageMisc3],
+    },
   },
   {
-    id: 16,
     thumbnail: manipalThumbnail,
     redirect: "/works/manipal",
     title: "Manipal",
+    description:
+      "Developed visual content for MedAce by Manipal University, focusing on their medical training programs and services, aiming to enhance their brand presence in the healthcare education sector.",
+    logo: manipalLogo,
+    images: {
+      one: [manipalHorizontal1, manipalHorizontal2],
+      two: [manipalHorizontal3, manipalHorizontal4],
+      three: [manipalVertical1, manipalVertical2],
+      misc: [manipalMisc1, manipalMisc2, manipalMisc3],
+    },
   },
   {
-    id: 17,
     thumbnail: moraleCodeThumbnail,
     redirect: "/works/morale-code",
     title: "Morale Code",
+    description:
+      "Crafted fashion films and product unboxing videos that highlighted the brand's commitment to ethical living and sustainable fashion. The visuals underscored the brand's core values of responsible manufacturing and quality craftsmanship.",
     logo: moraleCodeLogo,
-    images: [
-      { one: [moraleCodeHorizontal1, moraleCodeHorizontal2] },
-      { two: [moraleCodeHorizontal3, moraleCodeHorizontal4] },
-      { three: [moraleCodeVertical1, moraleCodeVertical2] },
-    ],
+    images: {
+      one: [moraleCodeHorizontal1, moraleCodeHorizontal2],
+      two: [moraleCodeHorizontal3, moraleCodeHorizontal4],
+      three: [moraleCodeVertical1, moraleCodeVertical2],
+      misc: [moraleCodeMisc1, moraleCodeMisc2, moraleCodeMisc3],
+    },
   },
   {
-    id: 18,
-    thumbnail: mrnThumbnail,
-    redirect: "/works/mrn",
-    title: "MRN",
-  },
-  {
-    id: 19,
     thumbnail: palmsThumbnail,
     redirect: "/works/palms",
     title: "Palms",
+    description:
+      "Produced warm and inviting social media content for The Palms Kitchen, showcasing their diverse global cuisine, ambient dining experience, and chef-curated dishes. The visuals reflected the brand’s blend of elegance and comfort in every plate.",
     logo: palmsLogo,
-    images: [
-      { one: [palmsHorizontal1, palmsHorizontal2] },
-      { two: [palmsHorizontal3, palmsHorizontal4] },
-      { three: [palmsVertical1, palmsVertical2] },
-    ],
+    images: {
+      one: [palmsHorizontal1, palmsHorizontal2],
+      two: [palmsHorizontal3, palmsHorizontal4],
+      three: [palmsVertical1, palmsVertical2],
+      misc: [palmsMisc1, palmsMisc2, palmsMisc3],
+    },
   },
   {
-    id: 20,
     thumbnail: shakaharryThumbnail,
     redirect: "/works/shakaharry",
     title: "Shakaharry",
+    description:
+      "For Shaka Harry, we focused on food photography to beautifully capture their plant-based offerings. Our visuals highlighted the freshness, quality, and vibrant appeal of their products, helping elevate their brand presence.",
     logo: shakaharryLogo,
-    images: [
-      { one: [shakaharryHorizontal1, shakaharryHorizontal2] },
-      { two: [shakaharryHorizontal3, shakaharryHorizontal4] },
-      { three: [shakaharryVertical1, shakaharryVertical2] },
-    ],
+    images: {
+      one: [shakaharryHorizontal1, shakaharryHorizontal2],
+      two: [shakaharryHorizontal3, shakaharryHorizontal4],
+      three: [shakaharryVertical1, shakaharryVertical2],
+      misc: [shakaharryMisc1, shakaharryMisc2, shakaharryMisc3],
+    },
   },
   {
-    id: 21,
     thumbnail: jewelOneThumbnail,
     redirect: "/works/jewel-one",
     title: "Jewel One",
+    description:
+      "For JewelOne, we created visual content to highlight their elegant jewelry collections. Our work focused on showcasing the brand’s blend of traditional craftsmanship and modern design, helping elevate their presence across various platforms.",
     logo: jewelOneLogo,
-    images: [
-      { one: [jewelOneHorizontal1, jewelOneHorizontal2] },
-      { two: [jewelOneHorizontal3, jewelOneHorizontal4] },
-      { three: [jewelOneVertical1, jewelOneVertical2] },
-    ],
+    images: {
+      one: [jewelOneHorizontal1, jewelOneHorizontal2],
+      two: [jewelOneHorizontal3, jewelOneHorizontal4],
+      three: [jewelOneVertical1, jewelOneVertical2],
+      misc: [jewelOneMisc1, jewelOneMisc2, jewelOneMisc3],
+    },
   },
   {
-    id: 22,
     thumbnail: socialDiningThumbnail,
     redirect: "/works/social-dining",
     title: "Social Dining",
+    description:
+      "For Desi Dharti, we developed branding materials that captured the essence of traditional Indian culture. Our designs aimed to resonate with the brand's ethos, emphasizing authenticity and cultural richness.",
+    logo: socialDiningLogo,
+    images: {
+      one: [socialDiningHorizontal1, socialDiningHorizontal2],
+      two: [socialDiningHorizontal3, socialDiningHorizontal4],
+      three: [socialDiningVertical1, socialDiningVertical2],
+      misc: [socialDiningMisc1, socialDiningMisc2, socialDiningMisc3],
+    },
   },
   {
-    id: 23,
     thumbnail: switchThumbnail,
     redirect: "/works/switch",
     title: "Switch",
+    description:
+      "For Switch Mobility, we created visual content to highlight their innovative electric vehicles. Our work focused on showcasing their commitment to sustainable transportation, emphasizing their cutting-edge technology and eco-friendly solutions for urban mobility.",
     logo: switchLogo,
-    images: [
-      { one: [switchHorizontal1, switchHorizontal2] },
-      { two: [switchHorizontal3, switchHorizontal4] },
-      { three: [switchVertical1, switchVertical2] },
-    ],
+    images: {
+      one: [switchHorizontal1, switchHorizontal2],
+      two: [switchHorizontal3, switchHorizontal4],
+      three: [switchVertical1, switchVertical2],
+      misc: [switchMisc1, switchMisc2, switchMisc3],
+    },
   },
   {
-    id: 24,
     thumbnail: titanThumbnail,
     redirect: "/works/titan",
-    title: "Titan",
+    title: "Titan SF Rush",
+    description:
+      "Executed a dedicated product photography campaign for Titan SF Rush, capturing the bold aesthetics, rugged details, and vibrant energy of their sporty timepieces. The imagery was designed to align with the brand’s active, youthful persona—delivering clean, high-contrast visuals suitable for both digital and print platforms.",
+    logo: titanLogo,
+    images: {
+      one: [titanHorizontal1, titanHorizontal2],
+      two: [titanHorizontal3, titanHorizontal4],
+      three: [titanVertical1, titanVertical2],
+      misc: [titanMisc1, titanMisc2, titanMisc3],
+    },
   },
   {
-    id: 25,
     thumbnail: umiThumbnail,
     redirect: "/works/umi",
     title: "UMI",
+    description:
+      "For Umi Matcha, we created complete branding, including logo design, packaging, and visual content. Our work emphasized their premium, ceremonial-grade matcha, focusing on authenticity and quality. The branding was crafted to resonate with matcha enthusiasts and elevate the brand's presence in the market.",
     logo: umiLogo,
-    images: [
-      { one: [umiHorizontal1, umiHorizontal2] },
-      { two: [umiHorizontal3, umiHorizontal4] },
-      { three: [umiVertical1, umiVertical2] },
-    ],
+    images: {
+      one: [umiHorizontal1, umiHorizontal2],
+      two: [umiHorizontal3, umiHorizontal4],
+      three: [umiVertical1, umiVertical2],
+      misc: [umiMisc1, umiMisc2, umiMisc3],
+    },
   },
   {
-    id: 26,
     thumbnail: unnssryThumbnail,
     redirect: "/works/unnssry",
     title: "Unnssry",
+    description:
+      "Produced stylized product photography for Unnecessary Clothing, capturing the brand’s edgy, streetwear-forward aesthetic. The visuals emphasized bold silhouettes, unique textures, and attitude-driven styling—created to resonate with a fashion-conscious, trend-savvy audience across digital platforms.",
+    logo: unnssryLogo,
+    images: {
+      one: [unnssryHorizontal1, unnssryHorizontal2],
+      two: [unnssryHorizontal3, unnssryHorizontal4],
+      three: [unnssryVertical1, unnssryVertical2],
+      misc: [unnssryMisc1, unnssryMisc2, unnssryMisc3],
+    },
   },
 ];
 
