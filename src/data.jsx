@@ -84,9 +84,6 @@ import brahmaMisc1 from "./assets/images/pages/works/BRAHMA/misc_1.png";
 import brahmaMisc2 from "./assets/images/pages/works/BRAHMA/misc_2.png";
 import brahmaMisc3 from "./assets/images/pages/works/BRAHMA/misc_3.png";
 
-// Coca Cola
-import cocacolaThumbnail from "./assets/images/pages/works/COCACOLA/thumbnail.png";
-
 // Desi Dharti
 import desiThumbnail from "./assets/images/pages/works/DESI/thumbnail.png";
 import desiDhartiLogo from "./assets/images/pages/works/DESI/logo.webp";
@@ -506,20 +503,6 @@ export const productionData = [
     images: [fastrackVertical1, fastrackVertical2],
   },
   {
-    id: 5,
-    thumbnail: productionCocaCola,
-    redirect: "/production/coca-cola",
-    title: "Coca Cola",
-    title_one: "Coca",
-    title_two: "Cola",
-    client: "Coca Cola",
-    deliverables: "Photography, Product, Editorial",
-    involvement: "Photography, Product, Editorial",
-    description:
-      "Coca-Cola is the taste of joy, refreshment, and timeless moments.With every fizz and sip, it brings people together worldwide.Iconic, uplifting, and always classic — it never goes out of style.Open happiness, open a Coca-Cola.",
-    images: [cocacolaThumbnail],
-  },
-  {
     id: 6,
     thumbnail: productionId,
     redirect: "/production/id",
@@ -648,12 +631,6 @@ export const worksData = [
       three: [brahmaVertical1, brahmaVertical2],
       misc: [brahmaMisc1, brahmaMisc2, brahmaMisc3],
     },
-  },
-  {
-    thumbnail: cocacolaThumbnail,
-    redirect: "/works/brahma-brews",
-    title: "Coca Cola",
-    logo: productionAmpere,
   },
   {
     thumbnail: desiThumbnail,
