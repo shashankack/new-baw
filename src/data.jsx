@@ -11,6 +11,7 @@ import productionAureka from "./assets/images/pages/services/production/AUREKA/t
 import productionCocaCola from "./assets/images/pages/services/production/COCACOLA/thumbnail.png";
 import productionBenz from "./assets/images/pages/services/production/BENZ/thumbnail.png";
 import productionFastrack from "./assets/images/pages/services/production/FASTRACK/thumbnail.png";
+import productionJewelOne from "./assets/images/pages/services/production/FASTRACK/thumbnail.png";
 import productionId from "./assets/images/pages/services/production/ID/thumbnail.png";
 import productionLanguage from "./assets/images/pages/services/production/LANGUAGE/thumbnail.png";
 import productionShakaharry from "./assets/images/pages/services/production/SHAKAHARRY/thumbnail.png";
@@ -406,7 +407,12 @@ export const mobileServicesData = {
   },
 };
 
-export const aboutUsVideos = [videoOne, videoTwo, videoThree, videoFour];
+export const aboutUsVideos = [
+  { video: videoOne, redirect: "/services/branding" },
+  { video: videoTwo, redirect: "/services/web" },
+  { video: videoThree, redirect: "/services/socials" },
+  { video: videoFour, redirect: "/works" },
+];
 
 export const mobileBrands = [
   switchLogo,
@@ -501,6 +507,20 @@ export const productionData = [
     description:
       "Tripster by Fastback is for the modern traveller.Launched mid-lockdown, it captured our travel cravings.Built from memories, journals, and souvenirs.The result? A dreamy film and an unforgettable tune.",
     images: [fastrackVertical1, fastrackVertical2],
+  },
+  {
+    id: 5,
+    thumbnail: productionJewelOne,
+    redirect: "/production/jewel-one",
+    title: "Jewel One",
+    title_one: "Jewel",
+    title_two: "One",
+    client: "Jewel One",
+    deliverables: "Photography, Product, Editorial",
+    involvement: "Photography, Product, Editorial",
+    description:
+      "Jewel One is where timeless elegance meets modern design. Crafted with precision, every piece tells a story of beauty and grace.From everyday sparkle to statement luxury, we’ve got you covered.Because you deserve jewelry that shines as bright as you.",
+    images: [jewelOneVertical1, jewelOneVertical2],
   },
   {
     id: 6,

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useTheme, Grid, Box } from "@mui/material";
+import { useTheme, Grid, Box, useMediaQuery } from "@mui/material";
 import { worksData } from "../../data";
 import gsap from "gsap";
 
@@ -9,6 +9,7 @@ const shuffleArray = (array) => array.sort(() => Math.random() - 0.5);
 
 const LogoShowcase = () => {
   const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const totalLogos = worksData.length;
   const containerRefs = useRef([]);
 
@@ -117,8 +118,8 @@ const LogoShowcase = () => {
             src={worksData[logoIndex].logo}
             alt={`logo-${logoIndex}`}
             sx={{
-              width: "200px",
-              height: "200px",
+              width: isMobile ? "100px" : "200px",
+              height: isMobile ? "100px" : "200px",
               objectFit: "contain",
               opacity: 1,
               transform: "scale(1)",

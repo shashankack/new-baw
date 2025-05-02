@@ -8,6 +8,7 @@ import whiteArrow from "../../assets/images/white_arrow.png";
 
 import { mobileBrands } from "../../data";
 import KnowMore from "./KnowMore";
+import LogoShowcase from "../../components/LogoShowcase/LogoShowcase";
 
 const MobileHomePage = () => {
   const theme = useTheme();
@@ -114,48 +115,29 @@ const MobileHomePage = () => {
 
       <Box mt={5} px={2}>
         <Typography
-          textAlign={"center"}
-          fontSize={24}
-          fontWeight={700}
-          textTransform={"uppercase"}
-          color={theme.palette.white}
+          my={10}
           fontFamily={theme.fonts.helvetica}
-        >
-          brands we
-        </Typography>
-        <Typography
           textAlign={"center"}
-          mt={-1.5}
-          fontSize={24}
+          fontSize={40}
+          lineHeight={1}
           fontWeight={700}
-          textTransform={"uppercase"}
+          textTransform="uppercase"
           color={theme.palette.white}
-          fontFamily={theme.fonts.helvetica}
+          sx={{
+            "& span": {
+              backgroundColor: theme.palette.blue,
+            },
+          }}
         >
-          have worked with
+          Brands we <br />
+          <span>have worked</span>
+          <br />
+          with
         </Typography>
 
-        <Grid
-          mt={2}
-          container
-          spacing={2}
-          p={2}
-          bgcolor={theme.palette.white}
-          borderRadius={3}
-        >
-          {mobileBrands.map((item, index) => (
-            <Grid size={4} key={index}>
-              <Box
-                component="img"
-                src={item}
-                sx={{
-                  height: "100%",
-                  objectFit: "contain",
-                }}
-              />
-            </Grid>
-          ))}
-        </Grid>
+        <Box borderRadius={5} bgcolor={theme.palette.white} p={2}>
+          <LogoShowcase />
+        </Box>
       </Box>
     </Box>
   );

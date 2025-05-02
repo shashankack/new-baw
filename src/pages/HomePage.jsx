@@ -5,12 +5,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 
 import introVideo from "../assets/videos/intro_video.mp4";
-import clientsVideo from "../assets/videos/clients.mp4";
 import carVid from "../assets/videos/car_timelapse.mp4";
 import stepImage from "../assets/images/slide2.png";
 import webVideo from "../assets/videos/mellow.mp4";
 
 import { productionData, socialsImages } from "../data";
+import BrandsComponent from "../components/BrandsComponent";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -432,14 +432,7 @@ const HomePage = () => {
 
       {/* Outro Video */}
       <div className="outro-video">
-        <video
-          src={clientsVideo}
-          autoPlay
-          muted
-          playsInline
-          loop
-          preload="none"
-        />
+        <BrandsComponent />
       </div>
     </>
   );

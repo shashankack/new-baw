@@ -21,8 +21,6 @@ import KnowMore from "./pages/Mobile/KnowMore";
 import ServicesLayout from "./pages/Services/ServicesLayout";
 import Works from "./pages/Works/Works.jsx";
 
-import Test from "./components/Test/Test.jsx";
-
 const AppRoutes = ({ isMobile }) => {
   const location = useLocation();
   const HomeRenderedPage = isMobile ? MobileHomePage : HomePage;
@@ -68,7 +66,6 @@ const AppRoutes = ({ isMobile }) => {
         <Route path="/services/socials" element={<SocialsInternal />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={"NOT FOUND"} />
-        <Route path="/test" element={<Test />} />
       </Routes>
       <Footer />
     </ThemeProvider>
