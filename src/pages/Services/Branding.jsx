@@ -1,4 +1,3 @@
-import StackingImages from "../../components/StackingImages/StackingImages"; // adjust path as needed
 import { brandingData } from "../../data";
 import { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
@@ -33,12 +32,7 @@ const Branding = () => {
   return (
     <section className="branding-section" ref={sectionRef}>
       <h2>BRANDING</h2>
-      <div className="stack-container">
-        <StackingImages
-          images={brandingData.images}
-          paragraph={brandingData.paragraph}
-        />
-      </div>
+      
       <div className="content">
         <h3>
           Explore the fundamental components that shape and define a brand's

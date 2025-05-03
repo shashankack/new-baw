@@ -20,6 +20,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import KnowMore from "./pages/Mobile/KnowMore";
 import ServicesLayout from "./pages/Services/ServicesLayout";
 import Works from "./pages/Works/Works.jsx";
+import InteractiveLaptop from "./components/Test/InteractiveLaptop.jsx";
 
 const AppRoutes = ({ isMobile }) => {
   const location = useLocation();
@@ -29,7 +30,6 @@ const AppRoutes = ({ isMobile }) => {
 
   const isDark =
     location.pathname.startsWith("/services/branding") ||
-    location.pathname.startsWith("/services/web") ||
     location.pathname.startsWith("/services/production/");
 
   const theme = createTheme({
@@ -65,6 +65,7 @@ const AppRoutes = ({ isMobile }) => {
         <Route path="/services/web" element={<Web />} />
         <Route path="/services/socials" element={<SocialsInternal />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/test" element={<InteractiveLaptop />} />
         <Route path="*" element={"NOT FOUND"} />
       </Routes>
       <Footer />

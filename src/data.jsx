@@ -327,11 +327,22 @@ import brandTicklePickle from "./assets/images/pages/services/branding/tickle_pi
 import brandUmi from "./assets/images/pages/services/branding/umi.png";
 
 // Web Images
-import holyKicksWeb from "./assets/images/pages/services/web/holy_kicks.png";
-import unnecessaryWeb from "./assets/images/pages/services/web/unnecessary.png";
-import desiDhartiWeb from "./assets/images/pages/services/web/desi_dharti.png";
-import studioMasonWeb from "./assets/images/pages/services/web/studio_mason.png";
-import umiWeb from "./assets/images/pages/services/web/umi.png";
+import holykicksWebThumbnail from "./assets/web/holykicks.png";
+import studioMasonWebThumbnail from "./assets/web/studio_mason.png";
+import unnssryWebThumbnail from "./assets/web/unnssry.png";
+import desiDhartiWebThumbnail from "./assets/web/desi_dharti.png";
+import umiWebThumbnail from "./assets/web/umi.png";
+import theWorksWebThumbnail from "./assets/web/the_works.png";
+import melloYellowWebThumbnail from "./assets/web/mello_yellow.png";
+
+// Web Videos
+import umiWebVideo from "./assets/web/umi.mp4";
+import desiDhartiWebVideo from "./assets/web/desi_dharti.mp4";
+import theWorksWebVideo from "./assets/web/the_works.mp4";
+import melloYellowWebVideo from "./assets/web/mello_yellow.mp4";
+import studioMasonWebVideo from "./assets/web/studio_mason.mp4";
+import holykicksWebVideo from "./assets/web/holykicks.mp4";
+import unnssryWebVideo from "./assets/web/unnssry.mp4";
 
 // Social Grids
 import grid1 from "./assets/images/pages/services/socials/grids/grid_1.png";
@@ -374,8 +385,8 @@ export const mobileServicesData = {
     description:
       "At BAW Studios, we believe that a website is more than just a digital presence; it’s your brand’s online identity. Our team specializes in creating stunning, user-friendly websites that not only look great but also drive results. From e-commerce platforms to portfolio sites, we tailor our web solutions to meet your unique needs and goals.",
     keyTags: ["E-commerce", "Portfolio", "Landing Page"],
-    sliderImages: [umiWeb, unnecessaryWeb, holyKicksWeb, studioMasonWeb],
-    gridImages: [umiWeb, unnecessaryWeb, holyKicksWeb, studioMasonWeb],
+    sliderImages: [],
+    gridImages: [],
   },
 
   socials: {
@@ -950,33 +961,45 @@ export const brandingData = {
 
 export const websiteData = [
   {
-    id: 1,
     title: "UMI",
-    thumbnail: umiWeb,
-    redirect: "http://umimatchashop.com",
+    thumbnail: umiWebThumbnail,
+    video: umiWebVideo,
+    redirect: "http://umimatchashop.com/",
   },
   {
-    id: 2,
     title: "Holy Kicks",
-    thumbnail: holyKicksWeb,
-    redirect: "https://holykicks1.onrender.com",
+    thumbnail: holykicksWebThumbnail,
+    video: holykicksWebVideo,
+    redirect: "https://holykicks1.onrender.com/",
   },
   {
-    id: 3,
-    title: "Unecessary",
-    thumbnail: unnecessaryWeb,
-    redirect: "https://unnssry.shop",
+    title: "Unnssry",
+    thumbnail: unnssryWebThumbnail,
+    video: unnssryWebVideo,
+    redirect: "https://unnssry.shop/",
   },
   {
-    id: 4,
     title: "Desi Dharti",
-    thumbnail: desiDhartiWeb,
-    redirect: "https://desi-dharti.vercel.app",
+    thumbnail: desiDhartiWebThumbnail,
+    video: desiDhartiWebVideo,
+    redirect: "https://desi-dharti.vercel.app/",
   },
   {
-    id: 5,
     title: "Studio Mason",
-    thumbnail: studioMasonWeb,
-    redirect: "https://studiomason.in",
+    thumbnail: studioMasonWebThumbnail,
+    video: studioMasonWebVideo,
+    redirect: "https://studiomason.in/",
+  },
+  {
+    title: "The Works",
+    thumbnail: theWorksWebThumbnail,
+    video: theWorksWebVideo,
+    redirect: "https://the-works-wheat.vercel.app/",
+  },
+  {
+    title: "Mello Yellow",
+    thumbnail: melloYellowWebThumbnail,
+    video: melloYellowWebVideo,
+    redirect: "https://www.mellowyellowstudio.xyz/",
   },
 ];
