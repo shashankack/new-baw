@@ -69,7 +69,7 @@ const ServicesLayout = ({ data }) => {
       ease: "power2.out",
       onComplete: () => {
         setActiveTab(tab);
-        tagsRef.current = []; // reset for next render
+        tagsRef.current = [];
       },
     });
 
@@ -83,7 +83,7 @@ const ServicesLayout = ({ data }) => {
 
   const buttonStyles = (tab) => ({
     px: 2,
-    fontSize: 20,
+    fontSize: 16,
     color: activeTab === tab ? theme.palette.white : theme.palette.blue,
     backgroundColor:
       activeTab === tab ? theme.palette.blue : theme.palette.white,
@@ -98,11 +98,17 @@ const ServicesLayout = ({ data }) => {
   const current = data[activeTab];
 
   return (
-    <Box p={1} width="100%" display="flex" flexDirection="column">
+    <Box
+      p={1}
+      width="100%"
+      display="flex"
+      flexDirection="column"
+      overflow="hidden"
+    >
       <Typography
         color={theme.palette.blue}
         fontFamily={theme.fonts.akira}
-        fontSize={55}
+        fontSize={40}
         textAlign="center"
         textTransform="uppercase"
         fontWeight={800}
@@ -124,7 +130,7 @@ const ServicesLayout = ({ data }) => {
         gap={1}
         mb={2}
         sx={{
-          overflowX: "auto",
+          overflowY: "scroll",
         }}
       >
         {current.keyTags.map((tag, i) => (

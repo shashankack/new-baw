@@ -43,7 +43,7 @@ const MobileNavbar = ({ navbarTheme = "light" }) => {
         py={2}
       >
         <Typography
-          fontSize={30}
+          fontSize={25}
           fontFamily={"Akira"}
           textTransform="uppercase"
           fontWeight={800}

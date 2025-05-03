@@ -147,7 +147,7 @@ const KnowMore = () => {
                   loop
                   playsInline
                   onLoadedData={() => handleVideoLoad(realIndex)}
-                  onClick={() => window.open(video.redirect, "_blank")}
+                  onClick={() => (window.location.href = video.redirect)}
                   sx={{
                     width: 150,
                     height: 300,

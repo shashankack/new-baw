@@ -133,12 +133,32 @@ const Footer = () => {
         }}
       />
       <Stack direction="row" ref={leftLinksRef}>
-        <Link sx={{ ...linkStyles, fontSize: 15, mr: 0.8 }}> Design - </Link>
-        <Link sx={{ ...linkStyles, fontSize: 15, mr: 0.8 }}>
+        <Link
+          sx={{ ...linkStyles, fontSize: 14, mr: 0.8 }}
+          href="/services?type=branding"
+        >
+          Design -
+        </Link>
+        <Link
+          sx={{ ...linkStyles, fontSize: 14, mr: 0.8 }}
+          href="/services?type=socials"
+        >
           Social Media -
         </Link>
-        <Link sx={{ ...linkStyles, fontSize: 15, mr: 0.8 }}> Websites - </Link>
-        <Link sx={{ ...linkStyles, fontSize: 15, mr: 0.8 }}> Production </Link>
+        <Link
+          sx={{ ...linkStyles, fontSize: 14, mr: 0.8 }}
+          href="/services?type=web"
+        >
+          {" "}
+          Websites -{" "}
+        </Link>
+        <Link
+          sx={{ ...linkStyles, fontSize: 14, mr: 0.8 }}
+          href="/services?type=production"
+        >
+          {" "}
+          Production{" "}
+        </Link>
       </Stack>
       <Box
         display="flex"

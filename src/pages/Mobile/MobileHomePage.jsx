@@ -6,7 +6,6 @@ import gsap from "gsap";
 import introVideo from "../../assets/videos/intro_video.mp4";
 import whiteArrow from "../../assets/images/white_arrow.png";
 
-import { mobileBrands } from "../../data";
 import KnowMore from "./KnowMore";
 import LogoShowcase from "../../components/LogoShowcase/LogoShowcase";
 
@@ -34,7 +33,7 @@ const MobileHomePage = () => {
   }, []);
 
   return (
-    <Box p={1} bgcolor={theme.palette.black}>
+    <Box bgcolor={theme.palette.black} overflow="hidden">
       <Stack
         padding={1}
         bgcolor={theme.palette.black}
@@ -118,7 +117,7 @@ const MobileHomePage = () => {
           my={10}
           fontFamily={theme.fonts.helvetica}
           textAlign={"center"}
-          fontSize={40}
+          fontSize={34}
           lineHeight={1}
           fontWeight={700}
           textTransform="uppercase"

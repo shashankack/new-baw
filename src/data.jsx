@@ -467,9 +467,9 @@ export const mobileServicesData = {
 };
 
 export const aboutUsVideos = [
-  { video: videoOne, redirect: "/services/branding" },
-  { video: videoTwo, redirect: "/services/web" },
-  { video: videoThree, redirect: "/services/socials" },
+  { video: videoOne, redirect: "/services?type=branding" },
+  { video: videoTwo, redirect: "/services?type=web" },
+  { video: videoThree, redirect: "/services?type=socials" },
   { video: videoFour, redirect: "/works" },
 ];
 
