@@ -1,62 +1,139 @@
+import { Box, Stack, Typography, useTheme } from "@mui/material";
+import React, { useState, useEffect } from "react";
 import { brandingData } from "../../data";
-import { useState, useRef, useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-import "./Branding.scss";
-gsap.registerPlugin(ScrollTrigger);
 
 const Branding = () => {
-  const [active, setActive] = useState(brandingData.brandingElements[0]);
-  const sectionRef = useRef(null);
+  const theme = useTheme();
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "+=1000",
-          pin: true,
-          scrub: 1,
-        },
-      });
-    }, sectionRef);
+  const points = [
+    "Logo Design",
+    "Typography",
+    "Brand Guidelines",
+    "Color Palette",
+    "Brand Voice",
+    "Brand Strategy",
+  ];
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-      ctx.revert();
-    };
-  }, []);
+  // Set the default selected brand to be the first one
+  const [selectedBrand, setSelectedBrand] = useState(brandingData[0]);
+
+  const handleThumbnailClick = (brand) => {
+    setSelectedBrand(brand);
+  };
 
   return (
-    <section className="branding-section" ref={sectionRef}>
-      <h2>BRANDING</h2>
-      
-      <div className="content">
-        <h3>
-          Explore the fundamental components that shape and define a brand's
-          identity, ensuring consistency and distinction in the market.
-        </h3>
-      </div>
+    <Box py={10} px={10} width="100%" display="flex">
+      <Stack
+        direction="column"
+        width="100%"
+        maxWidth={200}
+        gap={1}
+        height="100%"
+        mr={5}
+      >
+        {brandingData.map((item, index) => (
+          <Box
+            key={index}
+            component="img"
+            src={item.thumbnail}
+            alt={item.title}
+            sx={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              cursor: "pointer", // Add cursor pointer to indicate it's clickable
+              border:
+                selectedBrand.title === item.title ? "3px solid #000" : "none", // Highlight the selected thumbnail
+            }}
+            onClick={() => handleThumbnailClick(item)}
+          />
+        ))}
+      </Stack>
 
-      <div className="elements-container">
-        <div className="left">
-          {brandingData.brandingElements.map((element, index) => (
-            <h3
-              key={`element-${index}`}
-              className={`element ${active === element ? "active" : ""}`}
-              onMouseOver={() => setActive(element)}
+      <Box display="flex" flexDirection="column" width="100%">
+        <Box width="100%">
+          <Typography
+            textTransform="uppercase"
+            variant="h2"
+            fontFamily={theme.fonts.helvetica}
+            fontWeight={700}
+          >
+            Branding
+          </Typography>
+          <Stack direction="row">
+            {points.map((item, index) => (
+              <Typography
+                key={index}
+                color={theme.palette.blue}
+                mr={3}
+                variant="h5"
+              >
+                {item}
+              </Typography>
+            ))}
+          </Stack>
+        </Box>
+
+        {/* Right Box */}
+        <Box
+          height="100%"
+          width="100%"
+          display="flex"
+          justifyContent="space-between"
+          alignItems="start"
+          p={2}
+          gap={5}
+        >
+          <Box
+            width="30%"
+            height="100%"
+            display="flex"
+            justifyContent="start"
+            alignItems="start"
+            flexDirection="column"
+          >
+            <Typography
+              variant="h2"
+              textTransform="uppercase"
+              fontFamily={theme.fonts.helvetica}
+              fontWeight={700}
+              textAlign="start"
+              width={"100%"}
+              color={theme.palette.blue}
             >
-              {element.title}
-            </h3>
-          ))}
-        </div>
-        <div className="right">
-          <p>{active.description}</p>
-        </div>
-      </div>
-    </section>
+              {selectedBrand.title}
+            </Typography>
+            <Typography
+              mt={5}
+              variant="body1"
+              fontSize={24}
+              lineHeight={1.3}
+              fontFamily={theme.fonts.helvetica}
+              fontWeight={300}
+              color={theme.palette.white}
+            >
+              {selectedBrand.description}
+            </Typography>
+          </Box>
+          <Box
+            width="60%"
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Box
+              component="img"
+              src={selectedBrand.image}
+              sx={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 

@@ -165,7 +165,11 @@ const Footer = () => {
         </Box>
         <Box>
           <Stack direction="row" mt={2}>
-            <IconButton>
+            <IconButton
+              onClick={() =>
+                window.open("https://www.instagram.com/baw.studios/", "_blank")
+              }
+            >
               <InstagramIcon sx={{ ...iconStyles, fontSize: 30 }} />
             </IconButton>
             <IconButton>

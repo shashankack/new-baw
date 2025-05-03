@@ -28,9 +28,7 @@ const AppRoutes = ({ isMobile }) => {
   const BrandingRenderedPage = isMobile ? ServicesLayout : Branding;
   const AboutRenderedPage = isMobile ? AboutMobile : About;
 
-  const isDark =
-    location.pathname.startsWith("/services/branding") ||
-    location.pathname.startsWith("/services/production/");
+  const isDark = location.pathname.startsWith("/services/production/");
 
   const theme = createTheme({
     palette: {

@@ -119,7 +119,14 @@ const ServicesLayout = ({ data }) => {
           </Grid>
         ))}
       </Grid>
-      <Box display="flex" gap={1} mb={2} overflow={"scroll"}>
+      <Box
+        display="flex"
+        gap={1}
+        mb={2}
+        sx={{
+          overflowX: "auto",
+        }}
+      >
         {current.keyTags.map((tag, i) => (
           <Box
             key={i}
@@ -200,12 +207,12 @@ const ServicesLayout = ({ data }) => {
       </Box>
       <Grid container spacing={1} mt={4}>
         {current.gridImages.map((img, i) => (
-          <Grid size={6} key={i}>
+          <Grid size={activeTab === "web" ? 12 : 6} key={i}>
             <Box
               component="img"
               src={img}
               sx={{
-                width: "200px",
+                width: "100%",
                 height: "200px",
                 borderRadius: 2,
                 objectFit: "cover",

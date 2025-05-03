@@ -321,10 +321,21 @@ import unnssryMisc2 from "./assets/images/pages/works/UNNSSRY/misc_2.png";
 import unnssryMisc3 from "./assets/images/pages/works/UNNSSRY/misc_3.png";
 
 // Branding Images
-import brandDesiDharti from "./assets/images/pages/services/branding/desi_dharti.png";
-import brandHolyKicks from "./assets/images/pages/services/branding/holy_kicks.png";
-import brandTicklePickle from "./assets/images/pages/services/branding/tickle_pickle.png";
-import brandUmi from "./assets/images/pages/services/branding/umi.png";
+import brandDesiDhartiThumbnail from "./assets/images/pages/services/branding/thumbnails/desi_dharti.png";
+import brandHolyKicksThumbnail from "./assets/images/pages/services/branding/thumbnails/holykicks.png";
+import brandTicklePickleThumbnail from "./assets/images/pages/services/branding/thumbnails/tickle_pickle.png";
+import brandUmiThumbnail from "./assets/images/pages/services/branding/thumbnails/umi.png";
+import brandNeedleThumbnail from "./assets/images/pages/services/branding/thumbnails/needle.png";
+import brandTruVaultThumbnail from "./assets/images/pages/services/branding/thumbnails/truvault.png";
+import brandUnnssryThumbnail from "./assets/images/pages/services/branding/thumbnails/unnssry.png";
+
+import brandDesiDharti from "./assets/images/pages/services/branding/images/desi_dharti.png";
+import brandHolyKicks from "./assets/images/pages/services/branding/images/holykicks.png";
+import brandTicklePickle from "./assets/images/pages/services/branding/images/tickle_pickle.png";
+import brandUmi from "./assets/images/pages/services/branding/images/umi.png";
+import brandNeedle from "./assets/images/pages/services/branding/images/needle.png";
+import brandTruVault from "./assets/images/pages/services/branding/images/truvault.png";
+import brandUnnssry from "./assets/images/pages/services/branding/images/unnssry.png";
 
 // Web Images
 import holykicksWebThumbnail from "./assets/web/holykicks.png";
@@ -365,6 +376,24 @@ import videoTwo from "./assets/videos/about_two.mp4";
 import videoThree from "./assets/videos/about_three.mp4";
 import videoFour from "./assets/videos/about_four.mp4";
 
+import gridDesi from "./assets/images/pages/mobile/services/branding/grids/desi.png";
+import gridHoly from "./assets/images/pages/mobile/services/branding/grids/holy.png";
+
+import socialSlide1 from "./assets/images/pages/mobile/services/socials/slides/brahma.png";
+import socialSlide2 from "./assets/images/pages/mobile/services/socials/slides/palms.png";
+import socialSlide3 from "./assets/images/pages/mobile/services/socials/slides/tickle_pickle.png";
+import socialSlide4 from "./assets/images/pages/mobile/services/socials/slides/tickle_pickle2.png";
+
+import productionSlide1 from "./assets/images/pages/mobile/services/production/slides/one.png";
+import productionSlide2 from "./assets/images/pages/mobile/services/production/slides/two.png";
+import productionSlide3 from "./assets/images/pages/mobile/services/production/slides/three.png";
+import productionSlide4 from "./assets/images/pages/mobile/services/production/slides/four.png";
+
+import productionGrid1 from "./assets/images/pages/mobile/services/production/grids/one.png";
+import productionGrid2 from "./assets/images/pages/mobile/services/production/grids/two.png";
+import productionGrid3 from "./assets/images/pages/mobile/services/production/grids/three.png";
+import productionGrid4 from "./assets/images/pages/mobile/services/production/grids/four.png";
+
 export const mobileServicesData = {
   branding: {
     title: "Branding",
@@ -372,12 +401,15 @@ export const mobileServicesData = {
       "At BAW Studios, we believe branding goes beyond visuals; it’s about crafting a unique identity that resonates with your audience. Our team offers comprehensive solutions including strategic branding, logo design, and digital branding to ensure your business stands out. Let us transform your brand into a powerful asset that drives growth and enhances your market presence.",
     keyTags: ["Logo Design", "Visual Identity", "Packaging"],
     sliderImages: [
-      brandDesiDharti,
-      brandHolyKicks,
-      brandTicklePickle,
-      brandUmi,
+      brandDesiDhartiThumbnail,
+      brandHolyKicksThumbnail,
+      brandTicklePickleThumbnail,
+      brandUmiThumbnail,
+      brandNeedleThumbnail,
+      brandTruVaultThumbnail,
+      brandUnnssryThumbnail,
     ],
-    gridImages: [brandDesiDharti, brandHolyKicks, brandTicklePickle, brandUmi],
+    gridImages: [brandUmi, brandNeedle, gridDesi, gridHoly],
   },
 
   web: {
@@ -385,8 +417,24 @@ export const mobileServicesData = {
     description:
       "At BAW Studios, we believe that a website is more than just a digital presence; it’s your brand’s online identity. Our team specializes in creating stunning, user-friendly websites that not only look great but also drive results. From e-commerce platforms to portfolio sites, we tailor our web solutions to meet your unique needs and goals.",
     keyTags: ["E-commerce", "Portfolio", "Landing Page"],
-    sliderImages: [],
-    gridImages: [],
+    sliderImages: [
+      umiWebThumbnail,
+      studioMasonWebThumbnail,
+      unnssryWebThumbnail,
+      holykicksWebThumbnail,
+      desiDhartiWebThumbnail,
+      theWorksWebThumbnail,
+      melloYellowWebThumbnail,
+    ],
+    gridImages: [
+      umiWebThumbnail,
+      studioMasonWebThumbnail,
+      unnssryWebThumbnail,
+      holykicksWebThumbnail,
+      desiDhartiWebThumbnail,
+      theWorksWebThumbnail,
+      melloYellowWebThumbnail,
+    ],
   },
 
   socials: {
@@ -394,8 +442,8 @@ export const mobileServicesData = {
     description:
       "At BAW Studios, we understand that social media is more than just a platform; it’s a powerful tool for connection and engagement. Our team specializes in creating captivating content that resonates with your audience and drives interaction. From eye-catching graphics to compelling copy, we tailor our social media strategies to elevate your brand’s online presence.",
     keyTags: ["Content Creation", "Social Media Management", "Brand Strategy"],
-    sliderImages: [grid1, grid2, grid3, grid4],
-    gridImages: [grid1, grid2, grid3, grid4],
+    sliderImages: [socialSlide1, socialSlide2, socialSlide3, socialSlide4],
+    gridImages: [grid1, grid2, grid3, grid4, grid5, grid6],
   },
 
   production: {
@@ -404,16 +452,16 @@ export const mobileServicesData = {
       "At BAW Studios, we believe that every frame tells a story. Our production team specializes in creating visually stunning content that captures the essence of your brand. From concept development to post-production, we handle every aspect of the filmmaking process to ensure your vision comes to life.",
     keyTags: ["Photography", "Videography", "Post-Production"],
     sliderImages: [
-      productionAmpere,
-      productionAureka,
-      productionCocaCola,
-      productionBenz,
+      productionSlide1,
+      productionSlide2,
+      productionSlide3,
+      productionSlide4,
     ],
     gridImages: [
-      productionAmpere,
-      productionAureka,
-      productionCocaCola,
-      productionBenz,
+      productionGrid1,
+      productionGrid2,
+      productionGrid3,
+      productionGrid4,
     ],
   },
 };
@@ -918,46 +966,57 @@ export const worksData = [
   },
 ];
 
-export const brandingData = {
-  images: [brandDesiDharti, brandHolyKicks, brandTicklePickle, brandUmi],
-
-  paragraph:
-    "At BAW Studios, we believe branding goes beyond visuals it’s about crafting a unique identity that resonates with your audience. Our team offers comprehensive solutions including strategic branding, logo design, and digital branding to ensure your business stands out. Let us transform your brand into a powerful asset that drives growth and enhances your market presence.",
-
-  brandingElements: [
-    {
-      title: "Logo Design",
-      description:
-        "The visual cornerstone of a brand, a logo is a symbol or design that represents the organization in a simple but impactful way.",
-    },
-
-    {
-      title: "Color Palette",
-      description:
-        "Specific colors associated with the brand that evoke certain emotions and convey the brand’s personality across all mediums.",
-    },
-    {
-      title: "Typography",
-      description:
-        "The selection of typefaces used consistently across the brand’s communications to ensure coherence and recognition.",
-    },
-    {
-      title: "Brand Voice",
-      description:
-        " The distinct personality and tone used in all written and spoken communication which reflects the brand’s values and target audience.",
-    },
-    {
-      title: "Brand Guidelines",
-      description:
-        " A set of rules on how the brand’s identity should be communicated across various channels. This includes the correct use of the logo, color palette, typography, and the overall tone of the brand.",
-    },
-    {
-      title: "Brand Strategy",
-      description:
-        "The overall plan for the development of the brand to ensure it meets the set goals, including understanding the target audience, brand positioning, and competitive analysis.",
-    },
-  ],
-};
+export const brandingData = [
+  {
+    title: "Desi Dharti",
+    thumbnail: brandDesiDhartiThumbnail,
+    image: brandDesiDharti,
+    description:
+      "For Desi Dharti, we developed an earthy and authentic brand identity rooted in tradition, purity, and wellness. Inspired by India’s agricultural heritage, the design combines warm, natural tones with rustic typography to reflect the brand’s promise of farm-fresh, A2 cow ghee. The visuals celebrate the richness of the land and the purity of ancestral practices bringing health and heritage to every home.",
+  },
+  {
+    title: "Holy Kicks",
+    thumbnail: brandHolyKicksThumbnail,
+    image: brandHolyKicks,
+    description:
+      "For Holykicks, we created a fresh, street-smart identity that elevates sneaker care into a lifestyle. The brand design blends urban minimalism with a clean, crisp aesthetic—reflecting precision, attention to detail, and sneakerhead culture. From the logo to the tone of voice, every element reinforces Holykicks as the go-to destination for premium shoe cleaning with soul.",
+  },
+  {
+    title: "Tickle Pickle",
+    thumbnail: brandTicklePickleThumbnail,
+    image: brandTicklePickle,
+    description:
+      "For Tickle Pickle, we crafted a playful and energetic brand identity that blends the fun of pickleball with quirky, lighthearted charm. Centered around a cheerful pickle mascot and a rooftop court concept, the design features vibrant colors, dynamic visuals, and a touch of humor—making it an unforgettable hangout spot that’s equal parts game, grub, and good vibes.",
+  },
+  {
+    title: "UMI Matcha",
+    thumbnail: brandUmiThumbnail,
+    image: brandUmi,
+    description:
+      "For Umi Matcha, we crafted a brand identity that reflects the serenity and tradition of Japanese tea culture, while appealing to a modern, health-conscious audience. Our branding elements including the logo, typography, and color palette evoke freshness, calm, and purity, aligning with the brand’s commitment to quality and mindfulness.",
+  },
+  {
+    title: "Needle",
+    thumbnail: brandNeedleThumbnail,
+    image: brandNeedle,
+    description:
+      "For Needle Boutique, we developed a sophisticated and feminine brand identity that highlights the elegance and craftsmanship of bespoke fashion. Our visual language combined delicate typography, refined color choices, and timeless design elements to convey luxury, attention to detail, and a personalized shopping experience.",
+  },
+  {
+    title: "TruVault",
+    thumbnail: brandTruVaultThumbnail,
+    image: brandTruVault,
+    description:
+      "For TruVault, a premium luggage brand, we created a bold and reliable identity that speaks to strength, security, and travel innovation. The branding features clean, structured design elements and a color palette that evokes trust and durability. Our goal was to position TruVault as a modern, dependable companion for the smart traveler.",
+  },
+  {
+    title: "Unnssry",
+    thumbnail: brandUnnssryThumbnail,
+    image: brandUnnssry,
+    description:
+      "For Unnecessary Clothing, we built a rebellious and edgy brand identity that challenges fashion norms with confidence and attitude. The design direction embraced bold typography, high-contrast visuals, and a streetwear-inspired aesthetic to reflect the brand’s unapologetic, trend-defying spirit aimed at a bold, expressive audience.",
+  },
+];
 
 export const websiteData = [
   {
