@@ -1,6 +1,6 @@
 import { Box, Stack, Typography, useTheme } from "@mui/material";
 import React, { useState, useEffect } from "react";
-import { brandingData } from "../../data";
+import { brandingData } from "../../cdnData";
 
 const Branding = () => {
   const theme = useTheme();
@@ -16,6 +16,16 @@ const Branding = () => {
 
   // Set the default selected brand to be the first one
   const [selectedBrand, setSelectedBrand] = useState(brandingData[0]);
+
+  // Preload images and other assets
+  useEffect(() => {
+    // Preload all images in the brandingData array
+    brandingData.forEach((item) => {
+      const img = new Image();
+      img.src = item.thumbnail; // Preload thumbnail image
+      img.src = item.image; // Preload main image
+    });
+  }, []);
 
   const handleThumbnailClick = (brand) => {
     setSelectedBrand(brand);

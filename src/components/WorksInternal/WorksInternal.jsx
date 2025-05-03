@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
-import { worksData } from "../../data";
+import { worksData } from "../../cdnData";
 import ImageSlider from "../ImageSlider/ImageSlider";
+import { Box, useTheme, Typography, useMediaQuery } from "@mui/material";
+import { useState, useEffect } from "react";
 
 import "./WorksInternal.scss";
-import { Box, useTheme, Typography, useMediaQuery } from "@mui/material";
 
 const WorksInternal = () => {
   const theme = useTheme();
@@ -11,8 +12,51 @@ const WorksInternal = () => {
   const { slug } = useParams();
   const workItem = worksData.find((item) => item.redirect === `/works/${slug}`);
 
-  if (!workItem) {
-    return <div>No work item found.</div>;
+  const [isLoading, setIsLoading] = useState(true); // State to track image loading
+  const [loadedImages, setLoadedImages] = useState(0); // Track number of loaded images
+
+  // Preload images
+  useEffect(() => {
+    if (!workItem) return;
+
+    let imagesLoaded = 0;
+    const totalImages = [
+      ...workItem.images.one,
+      ...workItem.images.two,
+      ...workItem.images.three,
+      workItem.logo,
+      ...workItem.images.misc,
+    ].length;
+
+    const checkIfAllImagesLoaded = () => {
+      if (imagesLoaded === totalImages) {
+        setIsLoading(false); // Set loading to false once all images are loaded
+      }
+    };
+
+    // Preload images
+    const preloadImages = (images) => {
+      images.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => {
+          imagesLoaded += 1;
+          checkIfAllImagesLoaded();
+        };
+      });
+    };
+
+    preloadImages([
+      ...workItem.images.one,
+      ...workItem.images.two,
+      ...workItem.images.three,
+      workItem.logo,
+      ...workItem.images.misc,
+    ]);
+  }, [workItem]);
+
+  if (isLoading) {
+    return <div>Loading...</div>; // Show loading state until images are loaded
   }
 
   return isMobile ? (
@@ -60,7 +104,7 @@ const WorksInternal = () => {
             }}
           />
         </Box>
-        <Box borderRadius={2} overflow="hidden" width={"60%"}>
+        <Box borderRadius={2} overflow="hidden" width={"60%"} height="100%">
           <Box
             component="img"
             src={workItem.images.misc[0]}

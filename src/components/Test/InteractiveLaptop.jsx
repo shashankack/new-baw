@@ -2,8 +2,7 @@ import { useEffect, useRef } from "react";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { gsap } from "gsap";
 
-import laptop from "../../assets/web/laptop.png";
-import { websiteData } from "../../data";
+import { websiteData } from "../../cdnData";
 
 const InteractiveLaptop = () => {
   const theme = useTheme();
@@ -146,7 +145,7 @@ const InteractiveLaptop = () => {
     >
       <Box
         component="img"
-        src={laptop}
+        src="https://res.cloudinary.com/dsxowwoxw/image/upload/v1746283394/laptop_rl2lxr.png"
         ref={laptopRef}
         sx={{
           width: "100%",

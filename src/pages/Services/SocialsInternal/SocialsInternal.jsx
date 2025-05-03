@@ -1,17 +1,32 @@
 import { Grid, Box, Typography, useTheme } from "@mui/material";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 
-import { socialsGrids } from "../../../data";
-
-gsap.registerPlugin(ScrollTrigger);
+import { socialsGrids } from "../../../cdnData";
 
 const SocialsInternal = () => {
   const theme = useTheme();
   const imageRefs = useRef([]);
-
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
+    let imagesLoaded = 0;
+    const totalImages = socialsGrids.length;
+
+    const checkIfAllImagesLoaded = () => {
+      if (imagesLoaded === totalImages) {
+        setIsLoading(false);
+      }
+    };
+
+    socialsGrids.forEach((image, index) => {
+      const img = new Image();
+      img.src = image;
+      img.onload = () => {
+        imagesLoaded += 1;
+        checkIfAllImagesLoaded();
+      };
+    });
+
     gsap.fromTo(
       imageRefs.current,
       { opacity: 0 },
@@ -24,6 +39,10 @@ const SocialsInternal = () => {
       }
     );
   }, []);
+
+  if (isLoading) {
+    return <Box>Loading...</Box>;
+  }
 
   return (
     <Box

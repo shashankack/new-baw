@@ -4,12 +4,11 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { useEffect, useRef, Fragment } from "react";
 
 import carTimelapse from "../../assets/videos/car_timelapse.mp4";
-import poster from "../../assets/images/branding_poster.png";
 import mellowVideo from "../../assets/videos/mellow.mp4";
 
 import { Grid, Typography } from "@mui/material";
 
-import { socialsImages, productionData } from "../../data";
+import { socialsImages, productionData } from "../../cdnData";
 
 import logoAnim from "../../assets/videos/logo_anim.mp4";
 

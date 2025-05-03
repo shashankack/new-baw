@@ -11,7 +11,7 @@ import {
 import gsap from "gsap";
 
 import whiteArrow from "../../assets/images/white_arrow.png";
-import { aboutUsVideos } from "../../data";
+import { aboutUsVideos } from "../../cdnData";
 
 const KnowMore = () => {
   const theme = useTheme();
@@ -20,6 +20,8 @@ const KnowMore = () => {
   const [loadedVideos, setLoadedVideos] = useState(
     new Array(aboutUsVideos.length).fill(false)
   );
+
+  const [isVideosLoaded, setIsVideosLoaded] = useState(false); // Track video loading status
 
   const handleVideoLoad = (index) => {
     setLoadedVideos((prev) => {
@@ -56,6 +58,27 @@ const KnowMore = () => {
     { text: "SOCIAL", redirect: "/services?type=social" },
     { text: "PRODUCTION", redirect: "/services?type=production" },
   ];
+
+  // Preload videos
+  useEffect(() => {
+    let videosLoaded = 0;
+    const totalVideos = aboutUsVideos.length;
+
+    const checkIfAllVideosLoaded = () => {
+      if (videosLoaded === totalVideos) {
+        setIsVideosLoaded(true); // Set loaded status to true once all videos are loaded
+      }
+    };
+
+    aboutUsVideos.forEach((video, index) => {
+      const videoElement = document.createElement("video");
+      videoElement.src = video.video;
+      videoElement.onloadeddata = () => {
+        videosLoaded += 1;
+        checkIfAllVideosLoaded();
+      };
+    });
+  }, []);
 
   return (
     <Box p={1} gap={2} display="flex" flexDirection="column">
@@ -130,7 +153,7 @@ const KnowMore = () => {
             const realIndex = index % aboutUsVideos.length;
             return (
               <Box key={index} sx={{ position: "relative", marginRight: 2 }}>
-                {!loadedVideos[realIndex] && (
+                {!isVideosLoaded && (
                   <Skeleton
                     variant="rectangular"
                     animation="wave"
@@ -153,7 +176,7 @@ const KnowMore = () => {
                     height: 300,
                     objectFit: "cover",
                     borderRadius: 3,
-                    display: loadedVideos[realIndex] ? "block" : "none",
+                    display: isVideosLoaded ? "block" : "none",
                   }}
                 />
               </Box>

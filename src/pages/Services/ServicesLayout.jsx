@@ -14,6 +14,7 @@ const ServicesLayout = ({ data }) => {
   const [searchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState("branding");
   const [animating, setAnimating] = useState(false);
+  const [isLoading, setIsLoading] = useState(true); // Track loading status
   const paragraphRef = useRef(null);
   const tagsRef = useRef([]);
   tagsRef.current = [];
@@ -96,6 +97,42 @@ const ServicesLayout = ({ data }) => {
   });
 
   const current = data[activeTab];
+
+  // Preload images
+  useEffect(() => {
+    let imagesLoaded = 0;
+    const totalImages = current.sliderImages.length + current.gridImages.length;
+
+    const checkIfAllImagesLoaded = () => {
+      if (imagesLoaded === totalImages) {
+        setIsLoading(false); // Set loading to false once all images are loaded
+      }
+    };
+
+    // Preload slider images
+    current.sliderImages.forEach((image) => {
+      const img = new Image();
+      img.src = image;
+      img.onload = () => {
+        imagesLoaded += 1;
+        checkIfAllImagesLoaded();
+      };
+    });
+
+    // Preload grid images
+    current.gridImages.forEach((image) => {
+      const img = new Image();
+      img.src = image;
+      img.onload = () => {
+        imagesLoaded += 1;
+        checkIfAllImagesLoaded();
+      };
+    });
+  }, [current]);
+
+  if (isLoading) {
+    return <div>Loading...</div>; // Show loading state until images are preloaded
+  }
 
   return (
     <Box

@@ -1,11 +1,12 @@
 import { useTheme, Box, Typography } from "@mui/material";
 import React from "react";
 
-import { aboutUsVideos } from "../data";
+import { aboutUsVideos } from "../cdnData";
 import LogoShowcase from "./LogoShowcase/LogoShowcase";
 
 const BrandsComponent = () => {
   const theme = useTheme();
+  const isMobile = window.innerWidth <= 768;
   return (
     <>
       <Box
@@ -26,7 +27,9 @@ const BrandsComponent = () => {
             loop
             playsInline
             onClick={() => {
-              window.location.href = video.redirect;
+              window.location.href = isMobile
+                ? video.redirect.mobile
+                : video.redirect.desktop;
             }}
             sx={{
               cursor: "pointer",

@@ -73,8 +73,9 @@ const MobileHomePage = () => {
             },
           }}
         >
-          We are a <span>creative studio</span> based in Bengaluru specializing
-          in <span>design, motion, web</span> and <span>social</span>
+          We are a <span>creative studio</span> based in Bengaluru <br />{" "}
+          specializing in <span>design, motion, web</span> and{" "}
+          <span>social</span>
         </Typography>
         <Button
           variant="contained"

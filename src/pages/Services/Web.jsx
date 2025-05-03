@@ -1,12 +1,43 @@
 import { Box, Typography, useTheme, Grid, Tooltip, Zoom } from "@mui/material";
 import InteractiveLaptop from "../../components/Test/InteractiveLaptop";
 import MarqueeSlider from "../../components/MarqueeSlider/MarqueeSlider";
-import { websiteData } from "../../data";
-import React, { useState, useCallback } from "react";
+import { websiteData } from "../../cdnData";
+import React, { useState, useEffect, useCallback } from "react";
 
 const Web = () => {
   const [isHovered, setIsHovered] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const theme = useTheme();
+
+  useEffect(() => {
+    let imagesLoaded = 0;
+    let videosLoaded = 0;
+    const totalItems = websiteData.length * 2;
+
+    const checkIfAllLoaded = () => {
+      if (imagesLoaded + videosLoaded === totalItems) {
+        setIsLoading(false);
+      }
+    };
+
+    websiteData.forEach((item) => {
+      const img = new Image();
+      img.src = item.thumbnail;
+      img.onload = () => {
+        imagesLoaded += 1;
+        checkIfAllLoaded();
+      };
+    });
+
+    websiteData.forEach((item) => {
+      const video = document.createElement("video");
+      video.src = item.video;
+      video.oncanplaythrough = () => {
+        videosLoaded += 1;
+        checkIfAllLoaded();
+      };
+    });
+  }, []);
 
   const handleMouseEnter = useCallback((index) => {
     setIsHovered(index);
@@ -15,6 +46,10 @@ const Web = () => {
   const handleMouseLeave = useCallback(() => {
     setIsHovered(null);
   }, []);
+
+  if (isLoading) {
+    return <Box>Loading...</Box>;
+  }
 
   return (
     <Box

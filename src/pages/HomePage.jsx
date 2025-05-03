@@ -4,12 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 
-// import introVideo from "../assets/videos/intro_video.mp4";
-import carVid from "../assets/videos/car_timelapse.mp4";
-import stepImage from "../assets/images/slide2.png";
-import webVideo from "../assets/videos/mellow.mp4";
-
-import { productionData, socialsImages } from "../data";
+import { productionData, socialsImages } from "../cdnData";
 import BrandsComponent from "../components/BrandsComponent";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -341,7 +336,10 @@ const HomePage = () => {
         <h1 className="scroll-title">SERVICES</h1>
         <div className="slides" ref={slidesRef}>
           {/* Slide 1 */}
-          <VideoSlide src={carVid} className="slide slide1" />
+          <VideoSlide
+            src="https://res.cloudinary.com/dsxowwoxw/video/upload/v1746283166/car_timelapse_yae2zd.mp4"
+            className="slide slide1"
+          />
 
           {/* Slide 2 */}
           <section className="slide slide2">
@@ -354,7 +352,7 @@ const HomePage = () => {
             </div>
             <div className="image-container">
               <img
-                src={stepImage}
+                src="https://res.cloudinary.com/dsxowwoxw/image/upload/v1746282679/holykicks_aqtrlk.png"
                 alt="Step"
                 onClick={() => (window.location.href = "/services/branding")}
               />
@@ -370,7 +368,7 @@ const HomePage = () => {
             <div className="video-container">
               <video
                 ref={slide3VideoRef}
-                src={webVideo}
+                src="https://res.cloudinary.com/dsxowwoxw/video/upload/v1746283185/mellow_m5m1s1.mp4"
                 muted
                 autoPlay
                 playsInline

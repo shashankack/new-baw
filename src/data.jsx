@@ -7,11 +7,12 @@ import yawnMockup from "./assets/images/pages/services/socials/yawn_mockup.png";
 
 // Production Images
 import productionAmpere from "./assets/images/pages/services/production/AMPERE/thumbnail.png";
-import productionAureka from "./assets/images/pages/services/production/AUREKA/thumbnail.png";
-import productionCocaCola from "./assets/images/pages/services/production/COCACOLA/thumbnail.png";
+import productionAukera from "./assets/images/pages/services/production/AUKERA/thumbnail.png";
+
 import productionBenz from "./assets/images/pages/services/production/BENZ/thumbnail.png";
 import productionFastrack from "./assets/images/pages/services/production/FASTRACK/thumbnail.png";
-import productionJewelOne from "./assets/images/pages/services/production/FASTRACK/thumbnail.png";
+
+import productionJewelOne from "./assets/images/pages/services/production/JEWELONE/thumbnail.png";
 import productionId from "./assets/images/pages/services/production/ID/thumbnail.png";
 import productionLanguage from "./assets/images/pages/services/production/LANGUAGE/thumbnail.png";
 import productionShakaharry from "./assets/images/pages/services/production/SHAKAHARRY/thumbnail.png";
@@ -45,19 +46,19 @@ import astroMisc1 from "./assets/images/pages/works/ASTRO/misc_1.png";
 import astroMisc2 from "./assets/images/pages/works/ASTRO/misc_2.png";
 import astroMisc3 from "./assets/images/pages/works/ASTRO/misc_3.png";
 
-// Aureka
+// AUKERA
 
-import aukeraLogo from "./assets/images/pages/works/AUREKA/logo.png";
-import aukeraThumbnail from "./assets/images/pages/works/AUREKA/thumbnail.png";
-import aurekaHorizontal1 from "./assets/images/pages/works/AUREKA/horizontal_1.webp";
-import aurekaHorizontal2 from "./assets/images/pages/works/AUREKA/horizontal_2.webp";
-import aurekaHorizontal3 from "./assets/images/pages/works/AUREKA/horizontal_3.webp";
-import aurekaHorizontal4 from "./assets/images/pages/works/AUREKA/horizontal_4.webp";
-import aurekaVertical1 from "./assets/images/pages/works/AUREKA/vertical_1.webp";
-import aurekaVertical2 from "./assets/images/pages/works/AUREKA/vertical_2.webp";
-import aurekaMisc1 from "./assets/images/pages/works/AUREKA/misc_1.png";
-import aurekaMisc2 from "./assets/images/pages/works/AUREKA/misc_2.png";
-import aurekaMisc3 from "./assets/images/pages/works/AUREKA/misc_3.png";
+import aukeraLogo from "./assets/images/pages/works/AUKERA/logo.png";
+import aukeraThumbnail from "./assets/images/pages/works/AUKERA/thumbnail.png";
+import AUKERAHorizontal1 from "./assets/images/pages/works/AUKERA/horizontal_1.webp";
+import AUKERAHorizontal2 from "./assets/images/pages/works/AUKERA/horizontal_2.webp";
+import AUKERAHorizontal3 from "./assets/images/pages/works/AUKERA/horizontal_3.webp";
+import AUKERAHorizontal4 from "./assets/images/pages/works/AUKERA/horizontal_4.webp";
+import AUKERAVertical1 from "./assets/images/pages/works/AUKERA/vertical_1.webp";
+import AUKERAVertical2 from "./assets/images/pages/works/AUKERA/vertical_2.webp";
+import AUKERAMisc1 from "./assets/images/pages/works/AUKERA/misc_1.png";
+import AUKERAMisc2 from "./assets/images/pages/works/AUKERA/misc_2.png";
+import AUKERAMisc3 from "./assets/images/pages/works/AUKERA/misc_3.png";
 
 // Bharat Benz
 import benzThumbnail from "./assets/images/pages/works/BENZ/thumbnail.png";
@@ -527,7 +528,7 @@ export const productionData = [
   },
   {
     id: 2,
-    thumbnail: productionAureka,
+    thumbnail: productionAukera,
     redirect: "/production/jewel-one",
     title: "Jewel One",
     title_one: "Jewel",
@@ -677,10 +678,10 @@ export const worksData = [
     description:
       "We handled full-scale production for Aukera Jewelers, from creative concept and art direction to styling and set design. Our focus was on capturing the intricate details and craftsmanship of each piece through high-quality photo and video content tailored for digital and print use.",
     images: {
-      one: [aurekaHorizontal1, aurekaHorizontal2],
-      two: [aurekaHorizontal3, aurekaHorizontal4],
-      three: [aurekaVertical1, aurekaVertical2],
-      misc: [aurekaMisc1, aurekaMisc2, aurekaMisc3],
+      one: [AUKERAHorizontal1, AUKERAHorizontal2],
+      two: [AUKERAHorizontal3, AUKERAHorizontal4],
+      three: [AUKERAVertical1, AUKERAVertical2],
+      misc: [AUKERAMisc1, AUKERAMisc2, AUKERAMisc3],
     },
   },
   {

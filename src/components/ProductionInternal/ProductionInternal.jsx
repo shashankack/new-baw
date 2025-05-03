@@ -1,12 +1,14 @@
 import React from "react";
 import "./ProductionInternal.scss";
 import ImageSlider from "../ImageSlider/ImageSlider";
-import { productionData } from "../../data";
+import { productionData } from "../../cdnData";
 import { useParams } from "react-router-dom";
 import arrow from "../../assets/images/black_arrow.png";
 
 const ProductionInternal = () => {
   const [isMobile, setIsMobile] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(true); // Track loading state
+  const [loadedImages, setLoadedImages] = React.useState(0); // Track number of loaded images
 
   const handleResize = () => {
     if (window.innerWidth <= 768) {
@@ -24,10 +26,38 @@ const ProductionInternal = () => {
     };
   }, []);
 
+  // Preload images
   const { slug } = useParams();
   const productionItem = productionData.find(
     (item) => item.redirect === `/production/${slug}`
   );
+
+  React.useEffect(() => {
+    if (!productionItem) return;
+
+    let imagesLoaded = 0;
+    const totalImages = productionItem.images.length;
+
+    const checkIfAllImagesLoaded = () => {
+      if (imagesLoaded === totalImages) {
+        setIsLoading(false); // Set loading to false once all images are loaded
+      }
+    };
+
+    // Preload images
+    productionItem.images.forEach((image) => {
+      const img = new Image();
+      img.src = image;
+      img.onload = () => {
+        imagesLoaded += 1;
+        checkIfAllImagesLoaded();
+      };
+    });
+  }, [productionItem]);
+
+  if (isLoading) {
+    return <div>Loading...</div>; // Show loading state until images are loaded
+  }
 
   return (
     <div className="production-internal-container">

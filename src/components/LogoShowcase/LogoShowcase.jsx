@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useTheme, Grid, Box, useMediaQuery } from "@mui/material";
-import { worksData } from "../../data";
+import { worksData } from "../../cdnData";
 import gsap from "gsap";
 
 const TOTAL_VISIBLE = 6;
@@ -12,6 +12,7 @@ const LogoShowcase = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const totalLogos = worksData.length;
   const containerRefs = useRef([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const [logoIndexes, setLogoIndexes] = useState(() => {
     const initial = [];
@@ -31,6 +32,24 @@ const LogoShowcase = () => {
 
   // Replace all logos in one batch
   useEffect(() => {
+    let imagesLoaded = 0;
+    const totalImages = worksData.length;
+
+    const checkIfAllImagesLoaded = () => {
+      if (imagesLoaded === totalImages) {
+        setIsLoading(false); // Set loading to false once all images are loaded
+      }
+    };
+
+    worksData.forEach((item) => {
+      const img = new Image();
+      img.src = item.logo;
+      img.onload = () => {
+        imagesLoaded += 1;
+        checkIfAllImagesLoaded();
+      };
+    });
+
     const interval = setInterval(() => {
       // If queue is empty, reset it
       if (queue.current.length < TOTAL_VISIBLE) {
@@ -92,6 +111,10 @@ const LogoShowcase = () => {
 
     return () => clearInterval(interval);
   }, [logoIndexes]);
+
+  if (isLoading) {
+    return <div>Loading...</div>; // Show loading state until images are preloaded
+  }
 
   return (
     <Grid
