@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 
-import introVideo from "../assets/videos/intro_video.mp4";
+// import introVideo from "../assets/videos/intro_video.mp4";
 import carVid from "../assets/videos/car_timelapse.mp4";
 import stepImage from "../assets/images/slide2.png";
 import webVideo from "../assets/videos/mellow.mp4";
@@ -334,7 +334,7 @@ const HomePage = () => {
   return (
     <>
       {/* Intro Video */}
-      <VideoSection src={introVideo} />
+      <VideoSection src="https://res.cloudinary.com/dsxowwoxw/video/upload/v1746283173/intro_video_fmuw9w.mp4" />
 
       {/* Horizontal Scroll */}
       <section className="horizontal-scroll" ref={horizontalRef}>
