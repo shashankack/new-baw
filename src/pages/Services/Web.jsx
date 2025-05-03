@@ -52,6 +52,9 @@ const Web = () => {
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
                 onClick={() => window.open(item.redirect, "_blank")}
+                sx={{
+                  cursor: "pointer",
+                }}
               >
                 {isHovered === index ? (
                   <Box

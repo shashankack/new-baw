@@ -1,4 +1,4 @@
-import { Box, Stack, useTheme, Typography, Button, Grid } from "@mui/material";
+import { Box, Stack, useTheme, Typography, Button } from "@mui/material";
 import { useEffect, useRef } from "react";
 import SplitType from "split-type";
 import gsap from "gsap";

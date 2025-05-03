@@ -72,9 +72,10 @@ const HomePage = () => {
 
     gsap.fromTo(
       ".video-section video",
-      { scale: 1, rotation: 0 },
+      { scale: 1, rotation: 0, opacity: 1 },
       {
         scale: 0.7,
+        opacity: 0,
         rotation: -20,
         ease: "power2.out",
         scrollTrigger: {

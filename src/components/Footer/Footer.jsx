@@ -9,7 +9,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 
-import { useRef, useLayoutEffect } from "react";
+import { useRef, useEffect } from "react";
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -32,8 +32,14 @@ const Footer = () => {
   const rightLinksRef = useRef(null);
   const dividerRef = useRef(null);
 
-  useLayoutEffect(() => {
-    gsap.context(() => {
+  useEffect(() => {
+    if (
+      footerRef.current &&
+      logoRef.current &&
+      leftLinksRef.current &&
+      rightLinksRef.current &&
+      dividerRef.current
+    ) {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: footerRef.current,
@@ -66,7 +72,6 @@ const Footer = () => {
             duration: 0.5,
           }
         )
-
         .fromTo(
           rightLinksRef.current,
           { opacity: 0, x: -100 },
@@ -76,8 +81,8 @@ const Footer = () => {
             duration: 0.5,
           }
         );
-    }, footerRef);
-  });
+    }
+  }, []);
 
   const linkStyles = {
     color: theme.palette.white,
@@ -106,7 +111,82 @@ const Footer = () => {
   };
 
   return isMobile ? (
-    <div>Mobile</div>
+    <Box
+      ref={footerRef}
+      py={5}
+      px={1}
+      display="flex"
+      justifyContent="center"
+      flexDirection="column"
+      alignItems="start"
+      gap={2}
+    >
+      <Box
+        ref={logoRef}
+        component="img"
+        src={whiteLogo}
+        sx={{
+          width: "250px",
+          height: "auto",
+          display: "block",
+          objectFit: "contain",
+        }}
+      />
+      <Stack direction="row" ref={leftLinksRef}>
+        <Link sx={{ ...linkStyles, fontSize: 15, mr: 0.8 }}> Design - </Link>
+        <Link sx={{ ...linkStyles, fontSize: 15, mr: 0.8 }}>
+          Social Media -
+        </Link>
+        <Link sx={{ ...linkStyles, fontSize: 15, mr: 0.8 }}> Websites - </Link>
+        <Link sx={{ ...linkStyles, fontSize: 15, mr: 0.8 }}> Production </Link>
+      </Stack>
+      <Box
+        display="flex"
+        justifyContent="space-between"
+        alignItems="end"
+        width="100%"
+      >
+        <Box>
+          <Stack direction="column" ref={rightLinksRef} gap={1}>
+            <Typography>Contact Us</Typography>
+            <Link
+              href="tel:8083333328"
+              sx={{ ...linkStyles, fontSize: 12, textAlign: "start" }}
+            >
+              +91 80833 33328
+            </Link>
+            <Link
+              href="mailto:bawstudios55@gmail.com"
+              sx={{ ...linkStyles, fontSize: 12, textAlign: "start" }}
+            >
+              bawstudios55@gmail .com
+            </Link>
+          </Stack>
+        </Box>
+        <Box>
+          <Stack direction="row" mt={2}>
+            <IconButton>
+              <InstagramIcon sx={{ ...iconStyles, fontSize: 30 }} />
+            </IconButton>
+            <IconButton>
+              <LinkedInIcon sx={{ ...iconStyles, fontSize: 30 }} />
+            </IconButton>
+            <IconButton>
+              <WhatsAppIcon sx={{ ...iconStyles, fontSize: 30 }} />
+            </IconButton>
+          </Stack>
+        </Box>
+      </Box>
+      <Typography
+        variant="caption"
+        mt={2}
+        fontSize={10}
+        textAlign="center"
+        width="100%"
+      >
+        Copyrights2024 BAW @ All Rights Reserved
+      </Typography>
+    </Box>
   ) : (
     <Box
       width="100%"
