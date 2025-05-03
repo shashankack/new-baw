@@ -210,7 +210,7 @@ const MobileNavbar = ({ navbarTheme = "light" }) => {
                 </Link>
                 <Link
                   style={{ ...linkStyles, color: theme.palette.blue }}
-                  to={"/services?type=social"}
+                  to={"/services?type=socials"}
                   sx={{ fontSize: 14 }}
                   onClick={() => {
                     setIsMenuOpen(false), setIsDropdownOpen(false);
