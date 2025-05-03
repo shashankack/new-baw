@@ -146,9 +146,10 @@ const WorksInternal = () => {
             height="100%"
             bgcolor={theme.palette.white}
             p={5}
-            alignItems="center"
+            alignItems="start"
             display="flex"
             justifyContent="center"
+            overflow={"auto"}
           >
             <Typography
               color={theme.palette.black}

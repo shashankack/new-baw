@@ -172,7 +172,14 @@ const Footer = () => {
             >
               <InstagramIcon sx={{ ...iconStyles, fontSize: 30 }} />
             </IconButton>
-            <IconButton>
+            <IconButton
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/baw-studios-242378350/",
+                  "_blank"
+                )
+              }
+            >
               <LinkedInIcon sx={{ ...iconStyles, fontSize: 30 }} />
             </IconButton>
             <IconButton>
@@ -275,13 +282,29 @@ const Footer = () => {
               bawstudios55@gmail.com
             </Link>
             <Stack direction="row">
-              <IconButton>
+              <IconButton
+                onClick={() =>
+                  window.open(
+                    "https://www.instagram.com/baw.studios/",
+                    "_blank"
+                  )
+                }
+              >
                 <InstagramIcon sx={iconStyles} />
               </IconButton>
-              <IconButton>
+              <IconButton
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/baw-studios-242378350/",
+                    "_blank"
+                  )
+                }
+              >
                 <LinkedInIcon sx={iconStyles} />
               </IconButton>
-              <IconButton>
+              <IconButton
+                onClick={() => window.open("https://wa.me/918083333328")}
+              >
                 <WhatsAppIcon sx={iconStyles} />
               </IconButton>
             </Stack>
