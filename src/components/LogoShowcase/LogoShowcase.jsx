@@ -98,7 +98,7 @@ const LogoShowcase = () => {
       container
       bgcolor={theme.palette.white}
       width={"100%"}
-      p={2}
+      p={isMobile ? 0 : 2}
       height={"100%"}
     >
       {logoIndexes.map((logoIndex, i) => (
@@ -118,8 +118,8 @@ const LogoShowcase = () => {
             src={worksData[logoIndex].logo}
             alt={`logo-${logoIndex}`}
             sx={{
-              width: isMobile ? "100px" : "200px",
-              height: isMobile ? "100px" : "200px",
+              width: isMobile ? "70px" : "200px",
+              height: isMobile ? "70px" : "200px",
               objectFit: "contain",
               opacity: 1,
               transform: "scale(1)",
