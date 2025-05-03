@@ -6,6 +6,7 @@ import {
   useTheme,
   Typography,
   IconButton,
+  useMediaQuery,
 } from "@mui/material";
 
 import { useRef, useLayoutEffect } from "react";
@@ -24,6 +25,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
   const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const footerRef = useRef(null);
   const logoRef = useRef(null);
   const leftLinksRef = useRef(null);
@@ -103,8 +105,11 @@ const Footer = () => {
     },
   };
 
-  return (
+  return isMobile ? (
+    <div>Mobile</div>
+  ) : (
     <Box
+      width="100%"
       ref={footerRef}
       bgcolor={theme.palette.black}
       height={300}
