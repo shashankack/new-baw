@@ -1,7 +1,7 @@
 import { Box, Typography, useTheme, Grid, Tooltip, Zoom } from "@mui/material";
 import InteractiveLaptop from "../../components/Test/InteractiveLaptop";
 import MarqueeSlider from "../../components/MarqueeSlider/MarqueeSlider";
-import { websiteData } from "../../cdnData";
+import { websiteData } from "../../data";
 import React, { useState, useEffect, useCallback } from "react";
 
 const Web = () => {

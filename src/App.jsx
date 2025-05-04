@@ -4,7 +4,7 @@ import IntroLoader from "./components/IntroLoader/IntroLoader";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./pages/About";
 import AboutMobile from "./pages/Mobile/AboutMobile.jsx";
-import { mobileServicesData } from "./cdnData.jsx";
+import { mobileServicesData } from "./data.jsx";
 import Branding from "./pages/Services/Branding";
 import Web from "./pages/Services/Web";
 import Footer from "./components/Footer/Footer";
@@ -15,6 +15,7 @@ import HomePage from "./pages/HomePage";
 import MobileHomePage from "./pages/Mobile/MobileHomePage";
 import SocialsInternal from "./pages/Services/SocialsInternal/SocialsInternal";
 import MobileNavbar from "./components/Navbar/MobileNavbar";
+import { Analytics } from "@vercel/analytics/react";
 
 import { createTheme, ThemeProvider } from "@mui/material";
 import KnowMore from "./pages/Mobile/KnowMore";
@@ -45,6 +46,7 @@ const AppRoutes = ({ isMobile }) => {
   return (
     <ThemeProvider theme={theme}>
       {isMobile ? <MobileNavbar /> : <Navbar dark={isDark} />}
+      <Analytics />
       <Routes>
         <Route path="/" element={<HomeRenderedPage />} />
         <Route path="/about" element={<AboutRenderedPage />} />

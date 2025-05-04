@@ -662,7 +662,6 @@ export const worksData = [
     logo: astroLogo,
     description:
       "For World of Astro, we focused on banner and tent designs. Our work emphasized visually striking and engaging layouts that captured the brand's essence, ensuring they stood out at events and promotional setups.",
-    logo: astroLogo,
     images: {
       one: [astroHorizontal1, astroHorizontal2],
       two: [astroHorizontal3, astroHorizontal4],
