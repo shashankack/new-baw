@@ -19,7 +19,9 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 import whiteLogo from "../../assets/images/white_logo.png";
-import React from "react";
+import blueLogo from "../../assets/images/blue_logo.png";
+
+import { useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,6 +33,7 @@ const Footer = () => {
   const leftLinksRef = useRef(null);
   const rightLinksRef = useRef(null);
   const dividerRef = useRef(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     if (
@@ -149,15 +152,13 @@ const Footer = () => {
           sx={{ ...linkStyles, fontSize: 14, mr: 0.8 }}
           href="/services?type=web"
         >
-          {" "}
-          Websites -{" "}
+          Websites -
         </Link>
         <Link
           sx={{ ...linkStyles, fontSize: 14, mr: 0.8 }}
           href="/services?type=production"
         >
-          {" "}
-          Production{" "}
+          Production
         </Link>
       </Stack>
       <Box
@@ -233,13 +234,17 @@ const Footer = () => {
     >
       <Box
         ref={logoRef}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
         component="img"
-        src={whiteLogo}
+        src={isHovered ? blueLogo : whiteLogo}
+        onClick={() => (window.location.href = "/")}
         sx={{
           width: "700px",
           height: "auto",
           display: "block",
           objectFit: "contain",
+          cursor: "pointer",
         }}
       />
       <Box

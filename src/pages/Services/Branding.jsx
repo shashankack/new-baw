@@ -1,4 +1,4 @@
-import { Box, Stack, Typography, useTheme } from "@mui/material";
+import { Box, Stack, Typography, useTheme, Skeleton } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import { brandingData } from "../../cdnData";
 
@@ -14,22 +14,34 @@ const Branding = () => {
     "Brand Strategy",
   ];
 
-  // Set the default selected brand to be the first one
   const [selectedBrand, setSelectedBrand] = useState(brandingData[0]);
+  const [imageLoading, setImageLoading] = useState(true);
 
-  // Preload images and other assets
   useEffect(() => {
-    // Preload all images in the brandingData array
     brandingData.forEach((item) => {
+      const thumb = new Image();
+      thumb.src = item.thumbnail;
+
       const img = new Image();
-      img.src = item.thumbnail; // Preload thumbnail image
-      img.src = item.image; // Preload main image
+      img.src = item.image;
     });
   }, []);
 
   const handleThumbnailClick = (brand) => {
     setSelectedBrand(brand);
+    setImageLoading(true);
   };
+
+  useEffect(() => {
+    setImageLoading(true);
+
+    const img = new Image();
+    img.src = selectedBrand.image;
+
+    img.onload = () => {
+      setImageLoading(false);
+    };
+  }, [selectedBrand.image]);
 
   return (
     <Box py={10} px={10} width="100%" display="flex">
@@ -40,6 +52,7 @@ const Branding = () => {
         gap={1}
         height="100%"
         mr={5}
+        zIndex={100}
       >
         {brandingData.map((item, index) => (
           <Box
@@ -51,9 +64,9 @@ const Branding = () => {
               width: "100%",
               height: "100%",
               objectFit: "cover",
-              cursor: "pointer", // Add cursor pointer to indicate it's clickable
+              cursor: "pointer",
               border:
-                selectedBrand.title === item.title ? "3px solid #000" : "none", // Highlight the selected thumbnail
+                selectedBrand.title === item.title ? "3px solid #000" : "none",
             }}
             onClick={() => handleThumbnailClick(item)}
           />
@@ -84,7 +97,6 @@ const Branding = () => {
           </Stack>
         </Box>
 
-        {/* Right Box */}
         <Box
           height="100%"
           width="100%"
@@ -125,21 +137,34 @@ const Branding = () => {
               {selectedBrand.description}
             </Typography>
           </Box>
+
           <Box
             width="60%"
             display="flex"
             justifyContent="center"
             alignItems="center"
           >
-            <Box
-              component="img"
-              src={selectedBrand.image}
-              sx={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-            />
+            {imageLoading ? (
+              <Skeleton
+                variant="rectangular"
+                animation="wave"
+                width="100%"
+                height={700}
+                sx={{ borderRadius: 2 }}
+              />
+            ) : (
+              <Box
+                component="img"
+                src={selectedBrand.image}
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  transition: "opacity 0.3s ease",
+                  opacity: imageLoading ? 0 : 1,
+                }}
+              />
+            )}
           </Box>
         </Box>
       </Box>

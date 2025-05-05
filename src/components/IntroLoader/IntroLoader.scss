@@ -28,4 +28,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  @media screen and (max-width: 500px) {
+    .monogram1 {
+      width:  120px;
+      height: 120px;
+    }
+
+    .monogram2 {
+      width:  200px;
+      height: 200px;
+    }
+  }
 }

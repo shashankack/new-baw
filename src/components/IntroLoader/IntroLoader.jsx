@@ -13,7 +13,7 @@ const IntroLoader = ({ nextComponent: NextComponent, onComplete }) => {
     if (sessionStorage.getItem("introSeen")) {
       setHideLoader(true);
       setIsComponentReady(true);
-      if (onComplete) onComplete(); // Skip animation path
+      if (onComplete) onComplete();
       return;
     }
 
@@ -22,7 +22,7 @@ const IntroLoader = ({ nextComponent: NextComponent, onComplete }) => {
         sessionStorage.setItem("introSeen", "true");
         setHideLoader(true);
         setIsComponentReady(true);
-        if (onComplete) onComplete(); // Notify parent
+        if (onComplete) onComplete();
       },
     });
 

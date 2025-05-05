@@ -22,6 +22,7 @@ import KnowMore from "./pages/Mobile/KnowMore";
 import ServicesLayout from "./pages/Services/ServicesLayout";
 import Works from "./pages/Works/Works.jsx";
 import InteractiveLaptop from "./components/Test/InteractiveLaptop.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 const AppRoutes = ({ isMobile }) => {
   const location = useLocation();
@@ -66,7 +67,7 @@ const AppRoutes = ({ isMobile }) => {
         <Route path="/services/socials" element={<SocialsInternal />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/test" element={<InteractiveLaptop />} />
-        <Route path="*" element={"NOT FOUND"} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </ThemeProvider>

@@ -171,7 +171,7 @@ export const productionData = [
     id: 2,
     thumbnail:
       "https://res.cloudinary.com/dsxowwoxw/image/upload/f_auto,q_auto,w_auto,dpr_auto/v1746288257/aukera_lltghc.png",
-    redirect: "/production/jewel-one",
+    redirect: "/production/aukera",
     title: "Aukera",
     title_one: "Aukera",
     title_two: "",
@@ -181,8 +181,8 @@ export const productionData = [
     description:
       "Aukera is where timeless elegance meets modern design. Crafted with precision, every piece tells a story of beauty and grace.From everyday sparkle to statement luxury, we’ve got you covered.Because you deserve jewelry that shines as bright as you.",
     images: [
-      "https://res.cloudinary.com/dsxowwoxw/image/upload/f_auto,q_auto,w_auto,dpr_auto/v1746290184/vertical_1_s6iqin.webp",
-      "https://res.cloudinary.com/dsxowwoxw/image/upload/f_auto,q_auto,w_auto,dpr_auto/v1746290307/vertical_2_rfktz7.webp",
+      "https://res.cloudinary.com/dsxowwoxw/image/upload/f_auto,q_auto,w_auto,dpr_auto/v1746290093/vertical_1_dgxgas.webp",
+      "https://res.cloudinary.com/dsxowwoxw/image/upload/f_auto,q_auto,w_auto,dpr_auto/v1746289519/vertical_2_o8v3dd.webp",
     ],
   },
   {
