@@ -2,7 +2,7 @@ import { Grid, Box, Typography, useTheme } from "@mui/material";
 import gsap from "gsap";
 import { useEffect, useState, useRef } from "react";
 
-import { socialsGrids } from "../../../data";
+import { socialsGrids } from "../../../cdnData";
 
 const SocialsInternal = () => {
   const theme = useTheme();

@@ -21,7 +21,7 @@ const KnowMore = () => {
     new Array(aboutUsVideos.length).fill(false)
   );
 
-  const [isVideosLoaded, setIsVideosLoaded] = useState(false); // Track video loading status
+  const [isVideosLoaded, setIsVideosLoaded] = useState(false);
 
   const handleVideoLoad = (index) => {
     setLoadedVideos((prev) => {
@@ -66,7 +66,7 @@ const KnowMore = () => {
 
     const checkIfAllVideosLoaded = () => {
       if (videosLoaded === totalVideos) {
-        setIsVideosLoaded(true); // Set loaded status to true once all videos are loaded
+        setIsVideosLoaded(true);
       }
     };
 
@@ -170,7 +170,7 @@ const KnowMore = () => {
                   loop
                   playsInline
                   onLoadedData={() => handleVideoLoad(realIndex)}
-                  onClick={() => (window.location.href = video.redirect)}
+                  onClick={() => (window.location.href = video.redirect.mobile)}
                   sx={{
                     width: 150,
                     height: 300,

@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { gsap } from "gsap";
 
-import { websiteData } from "../../data";
+import { websiteData } from "../../cdnData";
 
 const InteractiveLaptop = () => {
   const theme = useTheme();
