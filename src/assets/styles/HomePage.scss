@@ -104,21 +104,21 @@
 .slide3 {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 100vw;
   padding: 20px;
 
   .video-container {
-    max-width: 1200px;
+    max-width: 1000px;
     width: 100%;
-    height: 600px;
+    height: 500px;
     z-index: 100;
     position: relative;
 
     .video-glow {
       position: absolute;
       width: 200px;
-      height: 200px;
+      height: 100px;
       border-radius: 50%;
       pointer-events: none;
       background: radial-gradient(circle, #1563ff 0%, transparent 70%);

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import {
   Box,
   Button,
@@ -6,7 +6,6 @@ import {
   Stack,
   Typography,
   useTheme,
-  Skeleton,
 } from "@mui/material";
 import gsap from "gsap";
 
@@ -17,20 +16,6 @@ const KnowMore = () => {
   const theme = useTheme();
   const trackRef = useRef(null);
 
-  const [loadedVideos, setLoadedVideos] = useState(
-    new Array(aboutUsVideos.length).fill(false)
-  );
-
-  const [isVideosLoaded, setIsVideosLoaded] = useState(false);
-
-  const handleVideoLoad = (index) => {
-    setLoadedVideos((prev) => {
-      const updated = [...prev];
-      updated[index] = true;
-      return updated;
-    });
-  };
-
   useEffect(() => {
     const ctx = gsap.context(() => {
       const track = trackRef.current;
@@ -39,7 +24,7 @@ const KnowMore = () => {
       gsap.to(track, {
         x: `-${totalWidth / 2}px`,
         ease: "none",
-        duration: 25,
+        duration: 15,
         repeat: -1,
       });
     });
@@ -58,27 +43,6 @@ const KnowMore = () => {
     { text: "SOCIAL", redirect: "/services?type=social" },
     { text: "PRODUCTION", redirect: "/services?type=production" },
   ];
-
-  // Preload videos
-  useEffect(() => {
-    let videosLoaded = 0;
-    const totalVideos = aboutUsVideos.length;
-
-    const checkIfAllVideosLoaded = () => {
-      if (videosLoaded === totalVideos) {
-        setIsVideosLoaded(true);
-      }
-    };
-
-    aboutUsVideos.forEach((video, index) => {
-      const videoElement = document.createElement("video");
-      videoElement.src = video.video;
-      videoElement.onloadeddata = () => {
-        videosLoaded += 1;
-        checkIfAllVideosLoaded();
-      };
-    });
-  }, []);
 
   return (
     <Box p={1} gap={2} display="flex" flexDirection="column">
@@ -135,13 +99,7 @@ const KnowMore = () => {
         ))}
       </Stack>
 
-      <Box
-        mt={5}
-        sx={{
-          overflow: "hidden",
-          width: "100%",
-        }}
-      >
+      <Box mt={5} sx={{ overflow: "hidden", width: "100%" }}>
         <Box
           ref={trackRef}
           sx={{
@@ -149,39 +107,25 @@ const KnowMore = () => {
             width: "max-content",
           }}
         >
-          {[...aboutUsVideos, ...aboutUsVideos].map((video, index) => {
-            const realIndex = index % aboutUsVideos.length;
-            return (
-              <Box key={index} sx={{ position: "relative", marginRight: 2 }}>
-                {!isVideosLoaded && (
-                  <Skeleton
-                    variant="rectangular"
-                    animation="wave"
-                    width={150}
-                    height={300}
-                    sx={{ borderRadius: 3, bgcolor: theme.palette.black }}
-                  />
-                )}
-                <Box
-                  component="video"
-                  src={video.video}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  onLoadedData={() => handleVideoLoad(realIndex)}
-                  onClick={() => (window.location.href = video.redirect.mobile)}
-                  sx={{
-                    width: 150,
-                    height: 300,
-                    objectFit: "cover",
-                    borderRadius: 3,
-                    display: isVideosLoaded ? "block" : "none",
-                  }}
-                />
-              </Box>
-            );
-          })}
+          {[...aboutUsVideos, ...aboutUsVideos].map((video, index) => (
+            <Box key={index} sx={{ position: "relative", marginRight: 4 }}>
+              <Box
+                component="video"
+                src={video.video}
+                autoPlay
+                muted
+                loop
+                playsInline
+                onClick={() => (window.location.href = video.redirect.mobile)}
+                sx={{
+                  width: 150,
+                  height: 300,
+                  objectFit: "cover",
+                  borderRadius: 3,
+                }}
+              />
+            </Box>
+          ))}
         </Box>
       </Box>
     </Box>

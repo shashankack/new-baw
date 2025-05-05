@@ -25,8 +25,8 @@ const HomePage = () => {
     xl: {
       slide1: { start: "top+=100 top", end: "bottom+=400 bottom" },
       slide2: { start: "top+=1000 top", end: "bottom+=1900 bottom" },
-      slide3: { start: "top+=2600 top", end: "bottom+=2800 bottom" },
-      slide4: { start: "top+=3000 top", end: "bottom+=7300 bottom" },
+      slide3: { start: "top+=4200 top", end: "bottom+=4500 bottom" },
+      slide4: { start: "top+=1500 top", end: "bottom+=4300 bottom" },
       slide5: { start: "top+=5500 top", end: "bottom+=5800 bottom" },
     },
 
@@ -34,16 +34,16 @@ const HomePage = () => {
       //
       slide1: { start: "top+=100 top", end: "bottom+=400 bottom" },
       slide2: { start: "top+=1000 top", end: "bottom+=1900 bottom" },
-      slide3: { start: "top+=2500 top", end: "bottom+=2800 bottom" },
-      slide4: { start: "top+=3000 top", end: "bottom+=7300 bottom" },
-      slide5: { start: "top+=5500 top", end: "bottom+=5800 bottom" },
+      slide3: { start: "top+=4500 top", end: "bottom+=4700 bottom" },
+      slide4: { start: "top+=2000 top", end: "bottom+=5300 bottom" },
+      slide5: { start: "top+=5800 top", end: "bottom+=6000 bottom" },
     },
     xxxl: {
       slide1: { start: "top+=100 top", end: "bottom+=400 bottom" },
       slide2: { start: "top+=1000 top", end: "bottom+=1900 bottom" },
-      slide3: { start: "top+=3700 top", end: "bottom+=2800 bottom" },
-      slide4: { start: "top+=4000 top", end: "bottom+=7300 bottom" },
-      slide5: { start: "top+=7400 top", end: "bottom+=7800 bottom" },
+      slide3: { start: "top+=5400 top", end: "bottom+=5800 bottom" },
+      slide4: { start: "top+=2300 top", end: "bottom+=5300 bottom" },
+      slide5: { start: "top+=7400 top", end: "bottom+=7500 bottom" },
     },
   };
 
@@ -224,7 +224,7 @@ const HomePage = () => {
           boxShadow: `${glowX}px ${glowY}px 5px #1563FF`,
           rotateX: -percentY * 5,
           rotateY: percentX * 5,
-          scale: 1.1,
+          scale: 1.05,
           transformPerspective: 800,
           transformOrigin: "center",
           duration: 0.3,
@@ -360,26 +360,6 @@ const HomePage = () => {
           </section>
 
           {/* Slide 3 */}
-          <section className="slide slide3">
-            <div className="text-container">
-              <h2 className="title">WEB</h2>
-              <h2 className="title">SITE</h2>
-            </div>
-            <div className="video-container">
-              <video
-                ref={slide3VideoRef}
-                src="https://res.cloudinary.com/dsxowwoxw/video/upload/v1746283185/mellow_m5m1s1.mp4"
-                muted
-                autoPlay
-                playsInline
-                loop
-                preload="none"
-                onClick={() => (window.location.href = "/services/web")}
-              />
-            </div>
-          </section>
-
-          {/* Slide 4 */}
           <section className="slide slide4" id="#social">
             <div className="image-slider-wrapper">
               <div className="image-slider">
@@ -401,6 +381,26 @@ const HomePage = () => {
 
             <div className="text-slider" style={{ color: "#1563FF" }}>
               <h3>GET YOUR FEED ALIGNED & GET YOUR FEED ALIGNED</h3>
+            </div>
+          </section>
+
+          {/* Slide 4 */}
+          <section className="slide slide3">
+            <div className="text-container">
+              <h2 className="title">WEB</h2>
+              <h2 className="title">SITE</h2>
+            </div>
+            <div className="video-container">
+              <video
+                ref={slide3VideoRef}
+                src="https://res.cloudinary.com/dsxowwoxw/video/upload/v1746283185/mellow_m5m1s1.mp4"
+                muted
+                autoPlay
+                playsInline
+                loop
+                preload="none"
+                onClick={() => (window.location.href = "/services/web")}
+              />
             </div>
           </section>
 

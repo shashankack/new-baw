@@ -8,7 +8,7 @@ import {
   Collapse,
   Divider,
 } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import gsap from "gsap";
@@ -19,31 +19,6 @@ const MobileNavbar = ({ navbarTheme = "light" }) => {
   const theme = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropDownOpen, setIsDropdownOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
-    const threshold = 50;
-
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (Math.abs(currentScrollY - lastScrollY) < threshold) return;
-
-      if (currentScrollY > lastScrollY) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-
-      lastScrollY = currentScrollY;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const linkStyles = {
     textDecoration: "none",
@@ -58,16 +33,7 @@ const MobileNavbar = ({ navbarTheme = "light" }) => {
   };
 
   return (
-    <Box
-      position={"sticky"}
-      top={0}
-      zIndex={2000}
-      bgcolor={"transparent"}
-      sx={{
-        transition: "all 0.3s ease",
-        transform: isScrolled ? "translateY(-100%)" : "translateY(0)",
-      }}
-    >
+    <Box position="relative" top={0} zIndex={2000} bgcolor={"transparent"}>
       <Stack
         direction="row-reverse"
         justifyContent="space-between"
