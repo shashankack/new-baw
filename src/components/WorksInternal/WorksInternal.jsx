@@ -5,6 +5,7 @@ import { Box, useTheme, Typography, useMediaQuery } from "@mui/material";
 import { useState, useEffect } from "react";
 
 import "./WorksInternal.scss";
+import Loader from "../Loader";
 
 const WorksInternal = () => {
   const theme = useTheme();
@@ -56,7 +57,7 @@ const WorksInternal = () => {
   }, [workItem]);
 
   if (isLoading) {
-    return <div>Loading...</div>; // Show loading state until images are loaded
+    return <Loader />;
   }
 
   return isMobile ? (

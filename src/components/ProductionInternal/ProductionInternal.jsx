@@ -4,6 +4,7 @@ import ImageSlider from "../ImageSlider/ImageSlider";
 import { productionData } from "../../cdnData";
 import { useParams } from "react-router-dom";
 import arrow from "../../assets/images/black_arrow.png";
+import Loader from "../Loader";
 
 const ProductionInternal = () => {
   const [isMobile, setIsMobile] = React.useState(false);
@@ -56,7 +57,7 @@ const ProductionInternal = () => {
   }, [productionItem]);
 
   if (isLoading) {
-    return <div>Loading...</div>; // Show loading state until images are loaded
+    return <Loader />;
   }
 
   return (

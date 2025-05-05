@@ -3,6 +3,7 @@ import InteractiveLaptop from "../../components/Test/InteractiveLaptop";
 import MarqueeSlider from "../../components/MarqueeSlider/MarqueeSlider";
 import { websiteData } from "../../cdnData";
 import React, { useState, useEffect, useCallback } from "react";
+import Loader from "../../components/Loader";
 
 const Web = () => {
   const [isHovered, setIsHovered] = useState(null);
@@ -48,7 +49,7 @@ const Web = () => {
   }, []);
 
   if (isLoading) {
-    return <Box>Loading...</Box>;
+    return <Loader />;
   }
 
   return (

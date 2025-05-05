@@ -3,6 +3,7 @@ import { Box, Button, Grid, Typography, useTheme } from "@mui/material";
 import { useSearchParams } from "react-router-dom";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { EffectCreative, Autoplay } from "swiper/modules";
+import Loader from "../../components/Loader";
 import gsap from "gsap";
 
 import "swiper/css";
@@ -14,7 +15,7 @@ const ServicesLayout = ({ data }) => {
   const [searchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState("branding");
   const [animating, setAnimating] = useState(false);
-  const [isLoading, setIsLoading] = useState(true); // Track loading status
+  const [isLoading, setIsLoading] = useState(true);
   const paragraphRef = useRef(null);
   const tagsRef = useRef([]);
   tagsRef.current = [];
@@ -32,29 +33,34 @@ const ServicesLayout = ({ data }) => {
   }, [searchParams, data]);
 
   useEffect(() => {
-    gsap.fromTo(
-      tagsRef.current,
-      { opacity: 0, y: 20 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.4,
-        stagger: 0.05,
-        ease: "power2.out",
-      }
-    );
+    const validTags = tagsRef.current.filter(Boolean);
+    if (validTags.length > 0) {
+      gsap.fromTo(
+        validTags,
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.4,
+          stagger: 0.05,
+          ease: "power2.out",
+        }
+      );
+    }
 
-    gsap.fromTo(
-      paragraphRef.current,
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.4,
-        ease: "power2.out",
-        onComplete: () => setAnimating(false),
-      }
-    );
+    if (paragraphRef.current) {
+      gsap.fromTo(
+        paragraphRef.current,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.4,
+          ease: "power2.out",
+          onComplete: () => setAnimating(false),
+        }
+      );
+    }
   }, [activeTab]);
 
   const handleTabClick = (tab) => {
@@ -105,7 +111,7 @@ const ServicesLayout = ({ data }) => {
 
     const checkIfAllImagesLoaded = () => {
       if (imagesLoaded === totalImages) {
-        setIsLoading(false); // Set loading to false once all images are loaded
+        setIsLoading(false);
       }
     };
 
@@ -131,7 +137,7 @@ const ServicesLayout = ({ data }) => {
   }, [current]);
 
   if (isLoading) {
-    return <div>Loading...</div>; // Show loading state until images are preloaded
+    return <Loader />;
   }
 
   return (

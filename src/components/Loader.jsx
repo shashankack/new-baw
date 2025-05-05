@@ -21,6 +21,7 @@ const Loader = () => {
           muted
           playsInline
           loop
+          sx={{ mixBlendMode: "lighten" }}
         />
       </Box>
     </Box>

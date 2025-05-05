@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { useEffect, useState, useRef } from "react";
 
 import { socialsGrids } from "../../../cdnData";
+import Loader from "../../../components/Loader";
 
 const SocialsInternal = () => {
   const theme = useTheme();
@@ -41,7 +42,7 @@ const SocialsInternal = () => {
   }, []);
 
   if (isLoading) {
-    return <Box>Loading...</Box>;
+    return <Loader />;
   }
 
   return (

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { worksData } from "../../cdnData";
+import Loader from "../../components/Loader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -69,7 +70,7 @@ const Works = () => {
   };
 
   if (isLoading) {
-    return <div>Loading...</div>; // Show loading state until images are loaded
+    return <Loader />;
   }
 
   return (
