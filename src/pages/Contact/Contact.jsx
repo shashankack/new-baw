@@ -20,7 +20,9 @@ const Contact = () => {
             <div className="image-wrapper">
               <img src={whiteLogo} />
             </div>
-            <a href="mailto: bawstudios@gmail.com">bawstudios@gmail.com</a>
+            <a href="mailto: saberazehra37@gmail.com">
+              saberazehra37@gmail.com
+            </a>
           </div>
         </div>
         <div className="right">
