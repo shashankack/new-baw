@@ -174,13 +174,13 @@ const Footer = () => {
               href="tel:8083333328"
               sx={{ ...linkStyles, fontSize: 12, textAlign: "start" }}
             >
-              +91 80833 33328
+              +91 89511 97342
             </Link>
             <Link
               href="mailto:bawstudios55@gmail.com"
               sx={{ ...linkStyles, fontSize: 12, textAlign: "start" }}
             >
-              bawstudios55@gmail .com
+              saberazehra37@gmail.com
             </Link>
           </Stack>
         </Box>
@@ -298,13 +298,13 @@ const Footer = () => {
               href="tel:8083333328"
               sx={{ ...linkStyles, textAlign: "start" }}
             >
-              +91 80833 33328
+              +91 89511 97342
             </Link>
             <Link
               href="mailto:bawstudios55@gmail.com"
               sx={{ ...linkStyles, textAlign: "start" }}
             >
-              bawstudios55@gmail.com
+              saberazehra37@gmail.com
             </Link>
             <Stack direction="row">
               <IconButton
