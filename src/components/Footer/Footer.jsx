@@ -47,7 +47,7 @@ const Footer = () => {
         scrollTrigger: {
           trigger: footerRef.current,
           start: "top 80%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
 
@@ -115,6 +115,7 @@ const Footer = () => {
 
   return isMobile ? (
     <Box
+      bgcolor={theme.palette.black}
       ref={footerRef}
       py={5}
       px={1}
@@ -123,6 +124,7 @@ const Footer = () => {
       flexDirection="column"
       alignItems="start"
       gap={2}
+      position="relative"
     >
       <Box
         ref={logoRef}
@@ -203,7 +205,9 @@ const Footer = () => {
             >
               <LinkedInIcon sx={{ ...iconStyles, fontSize: 30 }} />
             </IconButton>
-            <IconButton>
+            <IconButton
+              onClick={() => window.open("https://wa.me/918083333328")}
+            >
               <WhatsAppIcon sx={{ ...iconStyles, fontSize: 30 }} />
             </IconButton>
           </Stack>
