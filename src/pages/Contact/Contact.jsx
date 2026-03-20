@@ -204,7 +204,7 @@ const Contact = () => {
 
             <Typography
               component="a"
-              href="mailto:saberazehra37@gmail.com"
+              href="mailto:bawstudio55@gmail.com"
               sx={{
                 fontFamily: "Helvetica",
                 fontSize: "1.4rem",
@@ -224,7 +224,7 @@ const Contact = () => {
                 },
               }}
             >
-              saberazehra37@gmail.com
+              bawstudio55@gmail.com
             </Typography>
           </Box>
         </Box>

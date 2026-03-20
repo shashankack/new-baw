@@ -58,13 +58,13 @@ const Footer = () => {
           opacity: 1,
           y: 0,
           duration: 0.5,
-        }
+        },
       )
         .fromTo(
           dividerRef.current,
           { height: "0%" },
           { height: "100%", duration: 0.5 },
-          "-=0.5"
+          "-=0.5",
         )
         .fromTo(
           leftLinksRef.current,
@@ -73,7 +73,7 @@ const Footer = () => {
             opacity: 1,
             x: 0,
             duration: 0.5,
-          }
+          },
         )
         .fromTo(
           rightLinksRef.current,
@@ -82,7 +82,7 @@ const Footer = () => {
             opacity: 1,
             x: 0,
             duration: 0.5,
-          }
+          },
         );
     }
   }, []);
@@ -199,7 +199,7 @@ const Footer = () => {
               onClick={() =>
                 window.open(
                   "https://www.linkedin.com/in/baw-studios-242378350/",
-                  "_blank"
+                  "_blank",
                 )
               }
             >
@@ -299,23 +299,23 @@ const Footer = () => {
             height="100%"
           >
             <Link
-              href="tel:8951197342"
+              href="tel:8083333328"
               sx={{ ...linkStyles, textAlign: "start" }}
             >
-              +91 89511 97342
+              +91 80833 33328
             </Link>
             <Link
-              href="mailto:saberazehra37@gmail.com"
+              href="mailto:bawstudio55@gmail.com"
               sx={{ ...linkStyles, textAlign: "start" }}
             >
-              saberazehra37@gmail.com
+              bawstudio55@gmail.com
             </Link>
             <Stack direction="row">
               <IconButton
                 onClick={() =>
                   window.open(
                     "https://www.instagram.com/baw.studios/",
-                    "_blank"
+                    "_blank",
                   )
                 }
               >
@@ -325,7 +325,7 @@ const Footer = () => {
                 onClick={() =>
                   window.open(
                     "https://www.linkedin.com/in/baw-studios-242378350/",
-                    "_blank"
+                    "_blank",
                   )
                 }
               >
