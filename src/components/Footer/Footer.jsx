@@ -173,16 +173,16 @@ const Footer = () => {
           <Stack direction="column" ref={rightLinksRef} gap={1}>
             <Typography>Contact Us</Typography>
             <Link
-              href="tel:8951197342"
+              href="tel:8083333328"
               sx={{ ...linkStyles, fontSize: 12, textAlign: "start" }}
             >
-              +91 89511 97342
+              +91 80833 33328
             </Link>
             <Link
-              href="mailto:saberazehra37@gmail.com"
+              href="mailto:bawstudio55@gmail.com"
               sx={{ ...linkStyles, fontSize: 12, textAlign: "start" }}
             >
-              saberazehra37@gmail.com
+              bawstudio55@gmail.com
             </Link>
           </Stack>
         </Box>
