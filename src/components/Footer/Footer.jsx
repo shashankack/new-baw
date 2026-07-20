@@ -179,10 +179,10 @@ const Footer = () => {
               +91 80833 33328
             </Link>
             <Link
-              href="mailto:bawstudio55@gmail.com"
+              href="mailto:bawstudios55@gmail.com"
               sx={{ ...linkStyles, fontSize: 12, textAlign: "start" }}
             >
-              bawstudio55@gmail.com
+              bawstudios55@gmail.com
             </Link>
           </Stack>
         </Box>
@@ -305,10 +305,10 @@ const Footer = () => {
               +91 80833 33328
             </Link>
             <Link
-              href="mailto:bawstudio55@gmail.com"
+              href="mailto:bawstudios55@gmail.com"
               sx={{ ...linkStyles, textAlign: "start" }}
             >
-              bawstudio55@gmail.com
+              bawstudios55@gmail.com
             </Link>
             <Stack direction="row">
               <IconButton
